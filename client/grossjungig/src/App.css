@@ -1,0 +1,89 @@
+.App {
+  background-color: #aad7ee;
+  text-align: center;
+  font-family: "Cabin", sans-serif;
+  color: rgb(116, 109, 109);
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0086ad;
+  height: 100px;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo-link {
+  margin-left: 2vw;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 12vw;
+  width: 48vw;
+}
+
+.login-nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 4vw;
+  width: 15vw;
+}
+
+.navilink a {
+  /* This is a link */
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navilink a:hover {
+  color: #97ebdb;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 48px;
+  color: #fff;
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

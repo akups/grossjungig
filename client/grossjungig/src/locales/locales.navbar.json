@@ -1,0 +1,29 @@
+{
+  "home": {
+    "en": "Home",
+    "de": "Startseite"
+  },
+  "login": {
+    "en": "Login",
+    "de": "Einloggen"
+  },
+  "signup": {
+    "en": "Sign Up",
+    "de": "Registrieren"
+  },
+
+  "logout": {
+    "en": "Log Out",
+    "de": "Abmelden"
+  },
+
+  "berlin": {
+    "en": "Berlin",
+    "de": "berlin"
+  },
+
+  "munich": {
+    "en": "Munich",
+    "de": "München"
+  }
+}
