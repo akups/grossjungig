@@ -11,8 +11,8 @@
 nav {
   display: flex;
   justify-content: space-between;
-  background-color: #0086ad;
-  height: 100px;
+  background-color: white;
+  height: 80px;
   align-items: center;
   padding: 10px;
 }
@@ -38,19 +38,33 @@ nav {
 .navilink a {
   /* This is a link */
   text-decoration: none;
-  color: #ffffff;
+  color: grey;
   font-size: 20px;
   font-weight: bold;
 }
 
 .navilink a:hover {
-  color: #97ebdb;
+  color: grey;
 }
 
 h1 {
   font-family: "Open Sans", sans-serif;
   font-size: 48px;
-  color: #fff;
+  color: grey;
+}
+
+/* home */
+
+.home-component {
+  min-height: 65vh;
+}
+.logo_nb {
+  height: 40vh;
+}
+
+.benefits {
+  display: flex;
+  align-items: flex-end;
 }
 
 /* .App-logo {

@@ -62,7 +62,7 @@ const Navbar = (props) => {
         <img
           src="/image/grossjungig_logo.png"
           alt="Grossjungig Logo"
-          height="85px"
+          height="65px"
         ></img>
       </Link>
       <div className="main-nav">

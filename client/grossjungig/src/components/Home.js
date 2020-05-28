@@ -18,16 +18,15 @@ class Home extends Component {
     return (
       <div className="home-component">
         <img
-          src="/image/grossjungig_log_nb.png"
+          className="logo_nb"
+          src="/image/grossjungig_logo_nb.png"
           alt="grossjungig logo with no background"
         />
         <div>
           <h1>{homeLocales.welcome[lang]}</h1>
         </div>
-        <div>
+        <div className="benefits">
           <p>{homeLocales.seniors[lang]}</p>
-        </div>
-        <div>
           <p>{homeLocales.youth[lang]}</p>
         </div>
       </div>
