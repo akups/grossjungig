@@ -1,0 +1,22 @@
+{
+  "title": {
+    "en": "Rooms",
+    "de": "Zimmer"
+  },
+  "neighborhood": {
+    "en": "District",
+    "de": "Bezirk"
+  },
+  "add": {
+    "en": "Add New Room",
+    "de": "Neue Zimmer hinzufügen"
+  },
+  "suburb": {
+    "en": "Suburb",
+    "de": "Stadteil"
+  },
+  "name": {
+    "en": "Room",
+    "de": "Zimmer"
+  }
+}

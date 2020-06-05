@@ -26,8 +26,15 @@ class Home extends Component {
           <h1>{homeLocales.welcome[lang]}</h1>
         </div>
         <div className="benefits">
-          <p>{homeLocales.seniors[lang]}</p>
-          <p>{homeLocales.youth[lang]}</p>
+          <p className="benefits_a">
+            <b>{homeLocales.seniorsB[lang]} </b> <br />
+            {homeLocales.seniors[lang]}
+          </p>
+          <p className="benefits_b">
+            {" "}
+            <b>{homeLocales.youthB[lang]}</b> <br />
+            {homeLocales.youth[lang]}
+          </p>
         </div>
       </div>
     );

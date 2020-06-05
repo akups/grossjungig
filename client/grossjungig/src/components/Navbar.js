@@ -58,7 +58,7 @@ const Navbar = (props) => {
   //   }
   return (
     <nav className="navilink">
-      <Link className="logo-link" to="/">
+      <Link to="/" className="logo-link">
         <img
           src="/image/grossjungig_logo.png"
           alt="Grossjungig Logo"
@@ -66,15 +66,19 @@ const Navbar = (props) => {
         ></img>
       </Link>
       <div className="main-nav">
-        <Link to="/berlin">{navbarLocales.berlin[lang]}</Link>
-        <Link to="/munich">{navbarLocales.munich[lang]}</Link>
+        <Link to="/berlin">
+          <button className="berlin">{navbarLocales.berlin[lang]}</button>
+        </Link>
+        <Link to="/munich">
+          <button>{navbarLocales.munich[lang]}</button>
+        </Link>
       </div>
       <div className="login-nav">
         <Link to="/login">{navbarLocales.login[lang]}</Link>
         <Link to="/signup">{navbarLocales.signup[lang]}</Link>
         <img
           onClick={imageChange}
-          height="30px"
+          height="20px"
           src={img}
           alt="Language Switcher"
         />

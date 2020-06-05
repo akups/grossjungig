@@ -9,8 +9,10 @@ router.get("/", (req, res) => {
   res.send("This is home");
 });
 
-router.use("/api", usersRoutes);
-router.use("/api", commentsRoutes);
+//To connect frontend and backend, we need to make a route first
+
+router.use("/api/auth", usersRoutes);
 router.use("/api", roomsRoutes);
+// router.use("/api", commentsRoutes);
 
 module.exports = router;

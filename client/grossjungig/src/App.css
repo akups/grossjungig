@@ -2,7 +2,7 @@
   background-color: #aad7ee;
   text-align: center;
   font-family: "Cabin", sans-serif;
-  color: rgb(116, 109, 109);
+  color: rgb(82, 75, 75);
   margin: 0;
   padding: 0;
 }
@@ -10,7 +10,8 @@
 /* Nav bar */
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-content: flex-start;
   background-color: white;
   height: 80px;
   align-items: center;
@@ -18,21 +19,41 @@ nav {
 }
 
 .logo-link {
-  margin-left: 2vw;
+  padding-left: 2vw;
 }
 
 .main-nav {
   display: flex;
-  justify-content: space-evenly;
-  padding-left: 12vw;
-  width: 48vw;
+  justify-content: flex-start;
+  padding-bottom: 15px;
+  width: 60vw;
+  color: rgb(82, 75, 75);
+}
+
+.main-nav button {
+  /* display: block; */
+  height: 55px;
+  width: 120px;
+  margin-top: 3vh;
+  font-size: 20px;
+  border-radius: 20px;
+  border-width: medium;
+  border-color: rgb(82, 75, 75);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  padding: 10px;
+  color: rgb(82, 75, 75);
+}
+
+.berlin {
+  margin-right: 1vw;
 }
 
 .login-nav {
   display: flex;
   justify-content: space-evenly;
   padding-left: 4vw;
-  width: 15vw;
+  width: 20vw;
 }
 
 .navilink a {
@@ -50,7 +71,7 @@ nav {
 h1 {
   font-family: "Open Sans", sans-serif;
   font-size: 48px;
-  color: grey;
+  color: rgb(82, 75, 75) ey;
 }
 
 /* home */
@@ -59,12 +80,32 @@ h1 {
   min-height: 65vh;
 }
 .logo_nb {
-  height: 40vh;
+  height: 35vh;
 }
 
 .benefits {
   display: flex;
-  align-items: flex-end;
+  justify-content: space-evenly;
+  align-content: center;
+  font-size: 20px;
+  width: 100vw;
+  text-align: inherit;
+}
+.benefits_a {
+  width: 20vw;
+  flex-wrap: wrap;
+}
+
+.benefits_b {
+  width: 20vw;
+  flex-wrap: wrap;
+}
+
+.home-component h1 {
+  margin-top: 0;
+  padding-top: 35px;
+  font-size: 25px;
+  flex-wrap: wrap;
 }
 
 /* .App-logo {
