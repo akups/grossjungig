@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const passport = require("passport");
 const Room = require("../models/Room");
 /* Here we'll write the routes for the rooms */
 
@@ -35,7 +34,6 @@ router.post("/addRoom", (req, res) => {
     phoneNumber,
     email,
     neighbourhood,
-    coordinates,
   } = req.body;
   console.log("BACKEND", req.body);
   //3. then create a new room with information from the frontend
@@ -48,14 +46,13 @@ router.post("/addRoom", (req, res) => {
     phoneNumber: phoneNumber,
     email: email,
     neighbourhood: neighbourhood,
-    coordinates: coordinates,
     description: description,
     price: price,
   })
     .then((newRoom) => {
       console.log("whats name?");
       console.log("NEWROOM", newRoom);
-      res - json(newRoom);
+      res.json(newRoom);
     })
     .catch((err) => {
       res.status(500).json({
