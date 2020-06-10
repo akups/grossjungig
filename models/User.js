@@ -16,8 +16,11 @@ const userSchema = new Schema({
   role: {
     type: String,
     enum: ["youth", "senior"],
+    required: true,
   },
   timestamps: {
+    type: Date,
+    default: Date.now,
     createdAt: "created_at",
     updatedAt: "updated_at",
   },

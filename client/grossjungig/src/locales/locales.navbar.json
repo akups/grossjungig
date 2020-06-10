@@ -16,6 +16,10 @@
     "en": "Log Out",
     "de": "Abmelden"
   },
+  "add": {
+    "en": "Add a new room",
+    "de": "Neue raum hinzufügen"
+  },
 
   "berlin": {
     "en": "Berlin",

@@ -11,6 +11,10 @@
     "en": "Add New Room",
     "de": "Neue Zimmer hinzufügen"
   },
+  "images": {
+    "en": "Upload your pictures",
+    "de": "Bildern hochladen"
+  },
   "suburb": {
     "en": "Suburb",
     "de": "Stadteil"

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-// import React from "react";
 import { Link } from "react-router-dom";
-// import axios from "axios";
+import axios from "axios";
 import navbarLocales from "../locales/locales.navbar.json";
 
 const Navbar = (props) => {
@@ -22,40 +21,40 @@ const Navbar = (props) => {
     //This is coming from App.js
   };
 
-  //   const logout = () => {
-  //     axios.delete("/api/auth/logout").then(() => {
-  //       props.setUser(null);
-  //     });
-  //   };
+  const logout = () => {
+    axios.delete("/api/auth/logout").then(() => {
+      props.setUser(null);
+    });
+  };
 
   const lang = localStorage.getItem("lang");
-
-  //   if (props.user) {
-  //     return (
-  //       <nav className="navilink">
-  //         <Link className="logo-link" to="/">
-  //           <img
-  //             src="/image/grossjungig_logo.png"
-  //             alt="Grossjungig Logo"
-  //             height="85px"
-  //           ></img>
-  //         </Link>
-  //         <div className="main-nav">
-  //           <Link to="/berlin">{navbarLocales.berlin[lang]}</Link>
-  //           <Link to="/munich">{navbarLocales.munich[lang]}</Link>
-  //         </div>
-  //         <div className="login-nav">
-  //           <Link onClick={logout} to="/">
-  //             {navbarLocales.logout[lang]}
-  //           </Link>
-  //           <img onClick={imageChange} height="30px" src={img} alt="" />
-  //           <Link to="/userportal">
-  //             <img height="30px" src="/image/user.png" alt="User Portal" />
-  //           </Link>
-  //         </div>
-  //       </nav>
-  //     );
-  //   }
+  console.log(props.user);
+  if (props.user) {
+    return (
+      <nav className="navilink">
+        <Link className="logo-link" to="/">
+          <img
+            src="/image/grossjungig_logo.png"
+            alt="Grossjungig Logo"
+            height="85px"
+          ></img>
+        </Link>
+        <div className="main-nav">
+          <Link to="/berlin">{navbarLocales.berlin[lang]}</Link>
+          <Link to="/munich">{navbarLocales.munich[lang]}</Link>
+        </div>
+        <div className="login-nav">
+          <Link onClick={logout} to="/">
+            {navbarLocales.logout[lang]}
+          </Link>
+          <img onClick={imageChange} height="30px" src={img} alt="" />
+          <Link to="/userportal">
+            <img height="30px" src="/image/user.png" alt="User Portal" />
+          </Link>
+        </div>
+      </nav>
+    );
+  }
   return (
     <nav className="navilink">
       <Link to="/" className="logo-link">

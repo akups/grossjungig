@@ -1,9 +1,15 @@
 import React from "react";
-import { BrowserRouter as Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./components/Navbar.js";
+import Footer from "./components/Footer.js";
+import Signup from "./components/Signup.js";
+import Login from "./components/Login.js";
+import UserPortal from "./components/UserPortal.js";
+import Rooms from "./components/Rooms.js";
+import AddRoom from "./components/AddRoom.js";
+import UploadPhotos from "./components/UploadPhotos";
 
 class App extends React.Component {
   state = {
@@ -20,17 +26,6 @@ class App extends React.Component {
     this.forceUpdate();
   };
 
-  // Language Switcher
-  // changeLang = () => {
-  //   const lang = localStorage.getItem("lang");
-  //   if (lang === "de") {
-  //     localStorage.setItem("lang", "en");
-  //   } else if (lang === "en") {
-  //     localStorage.setItem("lang", "de");
-  //   }
-  //   this.forceUpdate();
-  // };
-
   render() {
     //console.log("APP", this.state.user);
     return (
@@ -41,8 +36,42 @@ class App extends React.Component {
           updatePage={this.updatePage}
           //This means exporting "updatePage" to Navbar
         />
-        {/* <Route exact path="/" component={Home} /> */}
-        <Home />
+        <Route exact path="/" component={Home} />
+        <Route
+          exact
+          path="/signup"
+          render={(props) => (
+            <Signup
+              history={props.history}
+              user={this.state.user}
+              setUser={this.setUser}
+            />
+          )}
+        />
+        <Route
+          exact
+          path="/login"
+          render={(props) => (
+            <Login history={props.history} setUser={this.setUser} />
+          )}
+        />
+        <Route
+          exact
+          path="/userportal"
+          render={(props) => <UserPortal {...props} user={this.state.user} />}
+        />
+        <Route
+          exact
+          path="/rooms"
+          render={(props) => <Rooms {...props} user={this.state.user} />}
+        />
+        {/* <Route
+          exact
+          path="/rooms/:id"
+          render={(props) => <Detail {...props} user={this.state.user} />}
+        /> */}
+        <Route exact path="/addRoom" component={AddRoom} />
+        <Route exact path="/uploadphotos" component={UploadPhotos} />
         <Footer />
       </div>
     );

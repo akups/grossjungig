@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
-//import roomsLocales from "../locales/locales.rooms.json";
+import roomsLocales from "../locales/locales.rooms.json";
+//import addroomLocales from "../locales/locales.addrooms.json";
 
 class AddRoom extends Component {
   state = {
@@ -28,7 +30,7 @@ class AddRoom extends Component {
     event.preventDefault();
     //1. post the data to backend -> routes kitas.js
     axios
-      .post("/api/addRoom", {
+      .post("http://localhost:5555/api/addRoom", {
         name: this.state.name,
         district: this.state.district,
         postcode: this.state.postcode,
@@ -51,14 +53,14 @@ class AddRoom extends Component {
 
   render() {
     //console.log(this.state);
-
+    const lang = localStorage.getItem("lang");
     if (this.state.redirect) {
       return <Redirect to="/rooms" />;
     }
 
     return (
-      <div>
-        <h1>Add a room</h1>
+      <div style={{ height: "60vh" }}>
+        <h1>{roomsLocales.add[lang]}</h1>
         <label htmlFor="name">name:</label>
         <input
           type="text"
@@ -133,6 +135,9 @@ class AddRoom extends Component {
           value={this.state.price}
           onChange={this.setFormState}
         />
+        <Link to="/uploadphotos">
+          <button>{roomsLocales.images[lang]}</button>
+        </Link>
         <button type="submit" onClick={this.addNewRoom}>
           submit
         </button>

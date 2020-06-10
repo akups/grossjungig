@@ -6,18 +6,14 @@ const Room = require("../models/Room");
 //1. to retrieve rooms from mongo and make available to frontend
 router.get("/rooms", (req, res, next) => {
   console.log("Rooms", req.body);
-
   Room.find({}).then((result) => {
     res.send({ rooms: result });
   });
 });
 
-router.get("/rooms/:_id", (req, res, next) => {
-  console.log("Rooms");
-
-  Room.find({}).then((result) => {
-    console.log(result);
-    res.send({ rooms: result });
+router.get("/rooms/:id", (req, res) => {
+  Room.findById(req.params.id).then((room) => {
+    res.json(room);
   });
 });
 

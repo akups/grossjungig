@@ -16,7 +16,7 @@ class Signup extends Component {
     event.preventDefault();
 
     axios
-      .post("/api/auth/signup", {
+      .post("http://localhost:5555/api/auth/signup", {
         name: this.state.name,
         email: this.state.email,
         password: this.state.password,
@@ -29,15 +29,16 @@ class Signup extends Component {
 
         // this.props.setUser(this.response.data);
         // this.setState({
-        //   redirect: true
+        //   redirect: true,
         // });
         this.props.setUser(response.data);
         this.props.history.push("/userportal");
       })
       .catch((err) => {
-        this.setState({
+        console.log("this is the error", err);
+        /*  this.setState({
           message: err.response.data.message,
-        });
+        }); */
       });
   };
 
@@ -48,7 +49,14 @@ class Signup extends Component {
   };
 
   onChange = (event) => {
-    this.setState({ role: event.target.value });
+    let role = event.target.value;
+    if (role === "Senioren") {
+      role = "senior";
+    }
+    if (role === "Jungend") {
+      role = "youth";
+    }
+    this.setState({ role });
   };
 
   render() {
@@ -60,7 +68,7 @@ class Signup extends Component {
     return (
       <div className="signup-component">
         <h1>{signupLocales.title[lang]}</h1>
-        <p>{signupLocales.welcome[lang]}</p>
+        <h3>{signupLocales.welcome[lang]}</h3>
         <div className="signup-container">
           <form>
             <label htmlFor="name">Name</label>
@@ -71,7 +79,7 @@ class Signup extends Component {
               onChange={this.setFormState}
               type="text"
             />
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">{signupLocales.email[lang]}</label>
             <input
               name="email"
               id="email"
@@ -79,7 +87,7 @@ class Signup extends Component {
               value={this.state.email}
               onChange={this.setFormState}
             />
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">{signupLocales.password[lang]}</label>
             <input
               type="password"
               name="password"
@@ -87,26 +95,17 @@ class Signup extends Component {
               value={this.state.password}
               onChange={this.setFormState}
             />
-            <label htmlFor="role">Role</label>
+            <label htmlFor="role">{signupLocales.role[lang]}</label>
             <select
               name="role"
               id="role"
               value={this.state.role}
               onChange={this.onChange}
             >
-              {/* <option value="">Parent</option>
-            <option value="">Government</option>
-            <option value="">Owner</option>
-
-            <option
-              value={this.state.role}
-              onChange={this.onChange}
-              id="role"
-            /> */}
-              <option>Parent</option>
-              <option>Government Official</option>
-              <option>Kita Owner</option>
+              <option>{signupLocales.senior[lang]}</option>
+              <option>{signupLocales.youth[lang]}</option>
             </select>
+            <br />
             <button onClick={this.handleSubmit} type="submit">
               {signupLocales.submit[lang]}
             </button>

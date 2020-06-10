@@ -15,10 +15,10 @@ const roomSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "User",
   },
-  pictures: [
+  images: [
     {
       type: Schema.Types.ObjectId,
-      ref: "Images",
+      ref: "Image",
     },
   ],
   comments: [
