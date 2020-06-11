@@ -5,6 +5,7 @@ import axios from "axios";
 const UploadPhotos = () => {
   const [image, setImage] = useState("");
   const [loading, setLoading] = useState(false);
+
   const uploadImage = async (event) => {
     const files = event.target.files;
     const data = new FormData();
@@ -24,9 +25,9 @@ const UploadPhotos = () => {
     setLoading(false);
   };
 
-  // const saveImage = async () => {
+  // const uploadImage = async () => {
   //   const formData = new FormData();
-  //   formData.append("file", image);
+  //   formData.append("file", image[0]);
   //   formData.append("upload_preset", "pictures");
   //   try {
   //     setLoading(true);
@@ -35,7 +36,7 @@ const UploadPhotos = () => {
   //       formData
   //     );
   //     const imageUrl = res.data.secure_url;
-  //     const image = await axios.post("http://localhost:5555/upload", {
+  //     const image = await axios.post("http://localhost:3000/upload", {
   //       imageUrl,
   //     });
   //     setLoading(false);
@@ -59,9 +60,7 @@ const UploadPhotos = () => {
       ) : (
         <img src={image} style={{ width: "300px" }} />
       )}
-      <button type="submit" onClick={saveImage}>
-        Submit
-      </button>
+      <button type="submit">Submit</button>
     </div>
   );
 };
