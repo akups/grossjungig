@@ -8,7 +8,7 @@ const logger = require("morgan");
 const app = express();
 const cors = require("cors");
 
-app.use(cors({ origin: ["http://localhost:3000"] }));
+app.use(cors({ origin: [process.env.FRONTEND_ENDPOINT] }));
 require("./passport")(app);
 app.use(fileUpload());
 
