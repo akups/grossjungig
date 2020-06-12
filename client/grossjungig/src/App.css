@@ -111,7 +111,7 @@ h1 {
 
 /* Signup */
 .signup-component {
-  height: 66vh;
+  height: 60vh;
   padding-left: 19vw;
   padding-right: 19vw;
 }
@@ -198,4 +198,31 @@ h1 {
   font-weight: 800;
   padding: 10px;
   margin: 5px;
+}
+
+/* /berlin/ */
+.table-container {
+  text-align: left;
+  margin: 20px auto;
+}
+
+th {
+  border: 2px solid #040759;
+  width: 300px;
+}
+
+td {
+  border: 2px solid #040759;
+  width: 300px;
+}
+
+tbody {
+  /* background-color: #6ba6da; */
+  color: white;
+  font-family: "Oswald", sans-serif;
+}
+
+theader {
+  text-align: center;
+  margin-top: 5px;
 }

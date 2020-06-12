@@ -4,6 +4,7 @@ const { Schema } = mongoose;
 const roomSchema = new Schema({
   name: String,
   description: String,
+  district: String,
   price: String,
   postcode: Number,
   address: String,

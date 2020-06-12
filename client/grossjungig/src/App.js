@@ -7,7 +7,7 @@ import Footer from "./components/Footer.js";
 import Signup from "./components/Signup.js";
 import Login from "./components/Login.js";
 import UserPortal from "./components/UserPortal.js";
-import Rooms from "./components/Rooms.js";
+import Berlin from "./components/Berlin.js";
 import AddRoom from "./components/AddRoom.js";
 import UploadPhotos from "./components/UploadPhotos";
 
@@ -62,8 +62,8 @@ class App extends React.Component {
         />
         <Route
           exact
-          path="/rooms"
-          render={(props) => <Rooms {...props} user={this.state.user} />}
+          path="/berlin"
+          render={(props) => <Berlin {...props} user={this.state.user} />}
         />
         {/* <Route
           exact

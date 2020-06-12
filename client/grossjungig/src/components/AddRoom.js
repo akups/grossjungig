@@ -135,6 +135,8 @@ class AddRoom extends Component {
           value={this.state.price}
           onChange={this.setFormState}
         />
+        <label htmlFor="uploadphotos">Upload your pictures</label>
+        <input type="file" />
         <Link to="/uploadphotos">
           <button>{roomsLocales.images[lang]}</button>
         </Link>
