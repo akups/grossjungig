@@ -1,4 +1,4 @@
-import axois from "axios";
+import axios from "axios";
 
 const handleUpload = (theFile) => {
   // console.log('file in service: ', theFile)

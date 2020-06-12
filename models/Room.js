@@ -11,17 +11,12 @@ const roomSchema = new Schema({
   phoneNumber: Number,
   email: String,
   neighbourhood: String,
+  images: { type: Array },
   coordinates: [Number],
   owner: {
     type: Schema.Types.ObjectId,
     ref: "User",
   },
-  images: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Image",
-    },
-  ],
   comments: [
     {
       type: Schema.Types.ObjectId,

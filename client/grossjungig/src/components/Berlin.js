@@ -5,22 +5,7 @@ import roomsLocales from "../locales/locales.rooms.json";
 
 class Berlin extends Component {
   state = {
-    rooms: [
-      // {
-      //   address: "Wilmersdorfer str 33",
-      //   comments: [],
-      //   coordinates: [],
-      //   description: "cozy big room with enough light",
-      //   email: "younglady",
-      //   images: [],
-      //   name: "cozy",
-      //   phoneNumber: 305555,
-      //   postcode: 10719,
-      //   price: "200",
-      //   __v: 0,
-      //   _id: "5ee0b77e5cc432266100c61a",
-      // },
-    ],
+    rooms: [],
     search: "",
     select: "--",
     searchedRoom: [],
@@ -55,6 +40,10 @@ class Berlin extends Component {
       }
       return room.district === this.state.select;
     });
+
+    // const filteredRooms = filteredRoomsBySelect.filter((room) => {
+    //   return room.postcode.includes(this.state.search);
+    // });
 
     const filteredRooms = filteredRoomsBySelect.filter((room) => {
       if (this.state.search === "") {
