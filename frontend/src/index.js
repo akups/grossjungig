@@ -11,6 +11,8 @@ if (!localStorage.getItem("lang")) {
   localStorage.setItem("lang", "de");
 }
 
+console.log(process.env.REACT_APP_BACKENDURL)
+
 axios.get(`${process.env.REACT_APP_BACKENDURL}api/auth/loggedin`).then((response) => {
   if (response.data) {
     ReactDOM.render(
