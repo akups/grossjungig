@@ -11,7 +11,7 @@ if (!localStorage.getItem("lang")) {
   localStorage.setItem("lang", "de");
 }
 
-axios.get("/api/auth/loggedin").then((response) => {
+axios.get(`${process.env.REACT_APP_BACKENDURL}api/auth/loggedin`).then((response) => {
   if (response.data) {
     ReactDOM.render(
       <BrowserRouter>
