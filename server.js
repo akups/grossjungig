@@ -8,7 +8,13 @@ const logger = require("morgan");
 const app = express();
 const cors = require("cors");
 
-app.use(cors({ origin: [process.env.FRONTEND_ENDPOINT] }));
+app.use(
+  cors({
+    credentials: true,
+    origin: ["http://localhost:3001", "https://grossjungig-delta.vercel.app/"],
+  })
+);
+
 require("./passport")(app);
 app.use(fileUpload());
 
