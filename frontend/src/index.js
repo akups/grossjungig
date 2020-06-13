@@ -11,9 +11,9 @@ if (!localStorage.getItem("lang")) {
   localStorage.setItem("lang", "de");
 }
 
-//axios.get(`${process.env.REACT_APP_BACKENDURL}api/auth/loggedin`).then((response) => {
+axios.get(`${process.env.REACT_APP_BACKENDURL}api/auth/loggedin`).then((response) => {
 
-axios.get(`https://grossjungig-backend.herokuapp.com/api/auth/loggedin`).then((response) => {
+  //axios.get(`https://grossjungig-backend.herokuapp.com/api/auth/loggedin`).then((response) => {
   if (response.data) {
     console.log(process.env.REACT_APP_BACKENDURL)
 
