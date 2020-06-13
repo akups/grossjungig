@@ -16,7 +16,7 @@ class Signup extends Component {
     event.preventDefault();
 
     axios
-      .post("http://localhost:5555/api/auth/signup", {
+      .post(`${process.env.REACT_APP_API_production}/auth/signup`, {
         name: this.state.name,
         email: this.state.email,
         password: this.state.password,

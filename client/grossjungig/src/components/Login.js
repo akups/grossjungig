@@ -15,7 +15,7 @@ class Login extends Component {
     //1)
 
     axios
-      .post("/api/auth/login", {
+      .post(`${process.env.REACT_APP_API_production}/auth/signup`, {
         email: this.state.email,
         password: this.state.password,
       })

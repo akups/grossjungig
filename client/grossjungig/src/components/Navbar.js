@@ -22,9 +22,11 @@ const Navbar = (props) => {
   };
 
   const logout = () => {
-    axios.delete("/api/auth/logout").then(() => {
-      props.setUser(null);
-    });
+    axios
+      .delete(`${process.env.REACT_APP_API_production}/auth/logout`)
+      .then(() => {
+        props.setUser(null);
+      });
   };
 
   const lang = localStorage.getItem("lang");

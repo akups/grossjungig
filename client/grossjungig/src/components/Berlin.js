@@ -13,12 +13,14 @@ class Berlin extends Component {
   };
   //1. from frontend, axios request a room data-> route rooms.js
   componentDidMount() {
-    axios.get("/api/rooms").then((response) => {
-      console.log(response.data.rooms);
-      this.setState({
-        rooms: response.data.rooms,
+    axios
+      .get(`${process.env.REACT_APP_API_production}/rooms`)
+      .then((response) => {
+        console.log(response.data.rooms);
+        this.setState({
+          rooms: response.data.rooms,
+        });
       });
-    });
   }
   searchedName = (event) => {
     this.setState({

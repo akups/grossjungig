@@ -30,7 +30,7 @@ class AddRoom extends Component {
     event.preventDefault();
     //1. post the data to backend -> routes kitas.js
     axios
-      .post("http://localhost:5555/api/addRoom", {
+      .post(`${process.env.REACT_APP_API_production}/addRoom`, {
         name: this.state.name,
         district: this.state.district,
         postcode: this.state.postcode,
