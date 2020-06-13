@@ -11,7 +11,7 @@ const cors = require("cors");
 app.use(
   cors({
     credentials: true,
-    origin: ["http://localhost:3001", "https://grossjungig-delta.vercel.app/"],
+    origin: ["http://localhost:3001", "https://grossjungig-delta.vercel.app"],
   })
 );
 
