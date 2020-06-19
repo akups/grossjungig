@@ -8,7 +8,7 @@ class Signup extends Component {
     name: "",
     email: "",
     password: "",
-    role: "senior",
+    role: "--",
     redirect: false,
   };
 
@@ -52,8 +52,7 @@ class Signup extends Component {
     let role = event.target.value;
     if (role === "Senioren") {
       role = "senior";
-    }
-    if (role === "Jungend") {
+    } else if (role === "Jugend") {
       role = "youth";
     }
     this.setState({ role });
