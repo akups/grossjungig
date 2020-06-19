@@ -8,6 +8,7 @@ class Login extends Component {
     email: "",
     password: "",
     redirect: false,
+    message: ""
   };
 
   handleSubmit = (event) => {
@@ -15,7 +16,7 @@ class Login extends Component {
     //1)
 
     axios
-      .post(`${process.env.REACT_APP_BACKENDURL}api/auth/signup`, {
+      .post(`${process.env.REACT_APP_BACKENDURL}api/auth/login`, {
         email: this.state.email,
         password: this.state.password,
       })
@@ -30,9 +31,9 @@ class Login extends Component {
       })
       .catch((err) => {
         console.log("this is the error", err);
-        // this.setState({
-        //   message: err.response.data.message
-        // });
+        this.setState({
+          message: err.response.data.message
+        });
       });
   };
 
