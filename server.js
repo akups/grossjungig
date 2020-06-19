@@ -19,7 +19,6 @@ app.use(logger("dev")); // this middleware will log every response that is issue
 
 app.use(
   cors({
-    credentials: true,
     origin: ["http://localhost:3000", "https://grossjungig.vercel.app/"],
   })
 );
