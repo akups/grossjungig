@@ -16,6 +16,7 @@ class AddRoom extends Component {
     phoneNumber: "",
     email: "",
     neighbourhood: "",
+    owner: "",
     redirect: false,
   };
 
@@ -28,7 +29,7 @@ class AddRoom extends Component {
   addNewRoom = (event) => {
     //console.log("WORKING?");
     event.preventDefault();
-    //1. post the data to backend -> routes kitas.js
+    //1. post the data to backend -> routes rooms.js
     axios
       .post(`${process.env.REACT_APP_BACKENDURL}api/addRoom`, {
         name: this.state.name,
@@ -39,6 +40,7 @@ class AddRoom extends Component {
         email: this.state.email,
         description: this.state.description,
         price: this.state.price,
+        owner: this.props.user._id,
       })
       .then((response) => {
         this.props.history.push("/rooms");
@@ -53,9 +55,10 @@ class AddRoom extends Component {
 
   render() {
     //console.log(this.state);
+    console.log(this.props.user);
     const lang = localStorage.getItem("lang");
     if (this.state.redirect) {
-      return <Redirect to="/rooms" />;
+      return <Redirect to="/berlin" />;
     }
 
     return (
@@ -135,11 +138,6 @@ class AddRoom extends Component {
           value={this.state.price}
           onChange={this.setFormState}
         />
-        <label htmlFor="uploadphotos">Upload your pictures</label>
-        <input type="file" />
-        <Link to="/uploadphotos">
-          <button>{roomsLocales.images[lang]}</button>
-        </Link>
         <button type="submit" onClick={this.addNewRoom}>
           submit
         </button>

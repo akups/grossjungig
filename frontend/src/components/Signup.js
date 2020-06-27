@@ -8,7 +8,7 @@ class Signup extends Component {
     name: "",
     email: "",
     password: "",
-    role: "--",
+    role: "senior",
     redirect: false,
   };
 
@@ -49,14 +49,18 @@ class Signup extends Component {
   };
 
   onChange = (event) => {
-    let role = event.target.value;
-    if (role === "Senioren") {
-      role = "senior";
-    } else if (role === "Jugend") {
-      role = "youth";
-    }
-    this.setState({ role });
+    this.setState({ role: event.target.value });
   };
+
+  // onChange = (event) => {
+  //   let role = event.target.value;
+  //   if (role === "Senioren") {
+  //     role = "senior";
+  //   } else if (role === "Jugend") {
+  //     role = "youth";
+  //   }
+  //   this.setState({ role });
+  // };
 
   render() {
     const lang = localStorage.getItem("lang");
@@ -101,8 +105,10 @@ class Signup extends Component {
               value={this.state.role}
               onChange={this.onChange}
             >
-              <option>{signupLocales.senior[lang]}</option>
-              <option>{signupLocales.youth[lang]}</option>
+              <option value={"senior"}>{signupLocales.senior[lang]}</option>
+              <option value={"youth"}>{signupLocales.youth[lang]}</option>
+              {/* <option>{signupLocales.senior[lang]}</option>
+              <option>{signupLocales.youth[lang]}</option> */}
             </select>
             <br />
             <button onClick={this.handleSubmit} type="submit">

@@ -3,7 +3,7 @@
     "en": "Rooms",
     "de": "Zimmer"
   },
-  "neighborhood": {
+  "district": {
     "en": "District",
     "de": "Bezirk"
   },
@@ -25,8 +25,8 @@
     "de": "Stadteil"
   },
 
-  "name": {
-    "en": "Room",
-    "de": "Zimmer"
+  "postcode": {
+    "en": "Postcode",
+    "de": "Postleitzahl"
   }
 }

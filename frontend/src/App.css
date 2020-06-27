@@ -226,3 +226,54 @@ theader {
   text-align: center;
   margin-top: 5px;
 }
+
+/* Detail */
+.detail-container {
+  height: 55vh;
+  padding-right: 19vw;
+  padding-left: 19vw;
+  padding-bottom: 5vh;
+}
+
+/* .markus-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-container-text {
+  width: 40%;
+  flex-direction: column;
+} */
+
+.detail-container button {
+  height: 55px;
+  width: 220px;
+  margin-top: 3vh;
+  background-color: #00c2c7;
+  color: #005582;
+  font-size: 18px;
+  border-radius: 7px;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  padding: 10px;
+  margin: 5px;
+}
+
+.detail-container-text a {
+  color: #fff !important;
+}
+
+.detail-container-text a:hover {
+  color: #97ebdb !important;
+}
+
+.detail-container a {
+  text-decoration: none;
+  color: black;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}

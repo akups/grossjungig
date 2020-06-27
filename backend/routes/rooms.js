@@ -14,6 +14,7 @@ router.get("/rooms", (req, res, next) => {
 router.get("/rooms/:id", (req, res) => {
   Room.findById(req.params.id).then((room) => {
     res.json(room);
+    console.log("This is the room", room);
   });
 });
 
@@ -30,6 +31,7 @@ router.post("/addRoom", (req, res) => {
     phoneNumber,
     email,
     neighbourhood,
+    owner,
   } = req.body;
   console.log("BACKEND", req.body);
   //3. then create a new room with information from the frontend
@@ -44,6 +46,7 @@ router.post("/addRoom", (req, res) => {
     neighbourhood: neighbourhood,
     description: description,
     price: price,
+    owner: owner,
   })
     .then((newRoom) => {
       console.log("whats name?");
@@ -56,7 +59,20 @@ router.post("/addRoom", (req, res) => {
       });
     });
 });
-
+router.patch("/updateroom/:roomId", (req, res) => {
+  const { roomId } = req.params;
+  console.log(roomId);
+  console.log(req.body);
+  const { secureUrl } = req.body;
+  Room.findByIdAndUpdate(
+    roomId,
+    { $push: { images: { secureUrl } } },
+    { safe: true, upsert: true, new: true },
+    function (err, model) {
+      console.log(err);
+    }
+  );
+});
 //delete room from list
 router.delete("/rooms/:id/delete", (req, res) => {
   //console.log('whats req?', req.params.id);

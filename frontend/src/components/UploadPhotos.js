@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const UploadPhotos = () => {
+const UploadPhotos = (props) => {
   const [image, setImage] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -22,6 +22,22 @@ const UploadPhotos = () => {
     const file = await res.json();
 
     setImage(file.secure_url);
+    console.log(file.secure_url);
+    const { roomId } = props.match.params;
+    //console.log(roomId);
+
+    axios
+      .patch(`${process.env.REACT_APP_BACKENDURL}api/updateroom/${roomId}`, {
+        secureUrl: file.secure_url,
+      }) // passing roomId to the axios call
+      .then(({ data }) => {
+        console.log(data);
+        // this.setState({
+        //   data, //same as data:data,shorthand notation for objects
+        // });
+        // console.log(this.state.data);
+      });
+
     setLoading(false);
   };
 

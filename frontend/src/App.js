@@ -10,6 +10,7 @@ import UserPortal from "./components/UserPortal.js";
 import Berlin from "./components/Berlin.js";
 import AddRoom from "./components/AddRoom.js";
 import UploadPhotos from "./components/UploadPhotos";
+import Details from "./components/Details";
 
 class App extends React.Component {
   state = {
@@ -65,13 +66,17 @@ class App extends React.Component {
           path="/berlin"
           render={(props) => <Berlin {...props} user={this.state.user} />}
         />
-        {/* <Route
+        <Route
           exact
-          path="/rooms/:id"
-          render={(props) => <Detail {...props} user={this.state.user} />}
-        /> */}
-        <Route exact path="/addRoom" component={AddRoom} />
-        <Route exact path="/uploadphotos" component={UploadPhotos} />
+          path="/berlin/:id"
+          render={(props) => <Details {...props} user={this.state.user} />}
+        />
+        <Route
+          exact
+          path="/addRoom"
+          render={(props) => <AddRoom {...props} user={this.state.user} />}
+        />
+        <Route exact path="/uploadphotos/:roomId" component={UploadPhotos} />
         <Footer />
       </div>
     );
