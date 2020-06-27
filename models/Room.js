@@ -11,7 +11,7 @@ const roomSchema = new Schema({
   phoneNumber: Number,
   email: String,
   neighbourhood: String,
-  images: { type: Array },
+  images: [{ secureUrl: String }],
   coordinates: [Number],
   owner: {
     type: Schema.Types.ObjectId,

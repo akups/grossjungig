@@ -56,9 +56,9 @@ router.post("/signup", (req, res) => {
 router.post("/login", (req, res, next) => {
   console.log("backenduser", req.body);
   passport.authenticate("local", (err, user, info) => {
-    if (err) {
-      return res.status(500).json({ message: "Error while logging in" });
-    }
+    // if (err) {
+    //   return res.status(500).json({ message: "Error while logging in" });
+    // }
     if (!user) {
       // no user found with username or password didn't match
       return res.status(400).json({ message: info.message });
@@ -66,9 +66,11 @@ router.post("/login", (req, res, next) => {
     // passport req.login
     req.login(user, (err) => {
       console.log("USER???????", user);
+
       if (err) {
         return res.status(500).json({ message: "Error while logging in" });
       }
+      // req.user = user; //setting user to be the requested user
       res.json(user);
     });
   })(req, res, next);
@@ -82,11 +84,12 @@ router.delete("/logout", (req, res) => {
 
 router.get("/loggedin", (req, res) => {
   //console.log("USER LOGGED IN", req.user);
-  if (req.user) {
-    res.json(req.user);
-  } else {
-    res.json(null);
-  }
+  // if (req.user) {
+  res.json(req.user);
+  // }
+  // else {
+  //   res.json(null);
+  // }
 });
 
 module.exports = router;
