@@ -48,34 +48,40 @@ class Details extends Component {
         <div className="detail-container">
           <h2>{this.state.data.name}</h2>
           <div className="markus-container">
-            <div className="detail-image-container">
-              <img
-                height="200px"
-                width="200px"
-                src="/image/kitaimage.png"
-                alt=""
-              />
-            </div>
             <div className="detail-container-text">
-              <h3>{detailsLocales.address[lang]}</h3>
-              <p>{this.state.data.address}</p>
-              <h3>{detailsLocales.postcode[lang]}:</h3>
-              <p>{this.state.data.postcode}</p>
-              <h3>{detailsLocales.district[lang]}</h3>
-              <p>{this.state.data.district}</p>
-              <h3>{detailsLocales.phone[lang]}</h3>
               <p>
+                <h3>{detailsLocales.address[lang]}</h3>
+                {this.state.data.address}
+              </p>
+              <p>
+                <h3>{detailsLocales.postcode[lang]}:</h3>
+                {this.state.data.postcode}
+              </p>
+              <p>
+                <h3>{detailsLocales.district[lang]}</h3>
+                {this.state.data.district}
+              </p>
+              <p>
+                <h3>{detailsLocales.phone[lang]}</h3>
                 <a href={"tel:" + this.state.data.phoneNumber}>
                   {this.state.data.phoneNumber}
                 </a>
               </p>
-              <h3>{detailsLocales.email[lang]}</h3>
               <p>
+                <h3>{detailsLocales.email[lang]}</h3>
                 <a href={"mailto:" + this.state.data.email}>
                   {this.state.data.email}
                 </a>
               </p>
             </div>
+          </div>
+          <div>
+            {this.state.data.images.map((image) => {
+              console.log(image.secureUrl);
+              return (
+                <img width="200px" height="auto" src={image.secureUrl}></img>
+              );
+            })}
           </div>
           <div className="buttons">
             <Link to={`/uploadphotos/${roomId}`}>
@@ -88,62 +94,56 @@ class Details extends Component {
               <button>{detailsLocales.return[lang]}</button>
             </Link>
           </div>
-          <div>
-            {this.state.data.images.map((image) => {
-              console.log(image.secureUrl);
-              return (
-                <img width="200px" height="auto" src={image.secureUrl}></img>
-              );
-            })}
-          </div>
         </div>
       );
     }
     return (
       <div className="detail-container">
-        <h1>{this.state.data.name}</h1>
+        <h2>{this.state.data.name}</h2>
         <div className="markus-container">
-          <div className="detail-image-container">
-            <img
-              height="200px"
-              width="200px"
-              src="/image/kitaimage.png"
-              alt=""
-            />
-          </div>
           <div className="detail-container-text">
-            <h3>{detailsLocales.address[lang]}</h3>
-            <p>{this.state.data.address}</p>
-            <h3>{detailsLocales.postcode[lang]}:</h3>
-            <p>{this.state.data.postcode}</p>
-            <h3>{detailsLocales.district[lang]}</h3>
-            <p>{this.state.data.district}</p>
-            <h3>{detailsLocales.phone[lang]}</h3>
-            <p>
-              <a href={"tel:" + this.state.data.phoneNumber}>
-                {this.state.data.phoneNumber}
-              </a>
-            </p>
-            <h3>{detailsLocales.email[lang]}</h3>
-            <p>
-              <a href={"mailto:" + this.state.data.email}>
-                {this.state.data.email}
-              </a>
-            </p>
+            <div className="paragraphs">
+              <h3>{detailsLocales.address[lang]}:</h3>
+              <p>{this.state.data.address}</p>
+            </div>
+            <div className="paragraphs">
+              <h3>{detailsLocales.postcode[lang]}:</h3>
+              <p>{this.state.data.postcode}</p>
+            </div>
+            <div className="paragraphs">
+              <h3>{detailsLocales.district[lang]}:</h3>
+              <p>{this.state.data.district}</p>
+            </div>
+            <div className="paragraphs">
+              <h3>{detailsLocales.phone[lang]}:</h3>
+              <p>
+                <a href={"tel:" + this.state.data.phoneNumber}>
+                  {this.state.data.phoneNumber}
+                </a>
+              </p>
+            </div>
+            <div className="paragraphs">
+              <h3>{detailsLocales.email[lang]}:</h3>
+              <p>
+                <a href={"mailto:" + this.state.data.email}>
+                  {this.state.data.email}
+                </a>
+              </p>
+            </div>
           </div>
         </div>
-        <Link to="/berlin">
-          <button>{detailsLocales.return[lang]}</button>
-        </Link>
-        <div>
+        <div className="photo-container">
           {this.state.data.images &&
             this.state.data.images.map((image) => {
               console.log(image.secureUrl);
               return (
-                <img width="200px" height="auto" src={image.secureUrl}></img>
+                <img width="300px" height="auto" src={image.secureUrl}></img>
               );
             })}
         </div>
+        <Link to="/berlin">
+          <button>{detailsLocales.return[lang]}</button>
+        </Link>
       </div>
     );
   }
