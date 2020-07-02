@@ -32,35 +32,10 @@ const UploadPhotos = (props) => {
       }) // passing roomId to the axios call
       .then(({ data }) => {
         console.log(data);
-        // this.setState({
-        //   data, //same as data:data,shorthand notation for objects
-        // });
-        // console.log(this.state.data);
       });
 
     setLoading(false);
   };
-
-  // const uploadImage = async () => {
-  //   const formData = new FormData();
-  //   formData.append("file", image[0]);
-  //   formData.append("upload_preset", "pictures");
-  //   try {
-  //     setLoading(true);
-  //     const res = await axios.post(
-  //       "https://api.cloudinary.com/v1_1/akups/image/upload",
-  //       formData
-  //     );
-  //     const imageUrl = res.data.secure_url;
-  //     const image = await axios.post("http://localhost:3000/upload", {
-  //       imageUrl,
-  //     });
-  //     setLoading(false);
-  //     setImage(image.data);
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // };
 
   return (
     <div style={{ height: "60vh" }}>

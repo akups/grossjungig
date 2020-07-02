@@ -49,37 +49,45 @@ class Details extends Component {
           <h2>{this.state.data.name}</h2>
           <div className="markus-container">
             <div className="detail-container-text">
-              <p>
-                <h3>{detailsLocales.address[lang]}</h3>
-                {this.state.data.address}
-              </p>
-              <p>
+              <div className="paragraphs">
+                <h3>{detailsLocales.address[lang]}:</h3>
+                <p>{this.state.data.address}</p>
+              </div>
+              <div className="paragraphs">
                 <h3>{detailsLocales.postcode[lang]}:</h3>
-                {this.state.data.postcode}
-              </p>
-              <p>
-                <h3>{detailsLocales.district[lang]}</h3>
-                {this.state.data.district}
-              </p>
-              <p>
-                <h3>{detailsLocales.phone[lang]}</h3>
-                <a href={"tel:" + this.state.data.phoneNumber}>
-                  {this.state.data.phoneNumber}
-                </a>
-              </p>
-              <p>
-                <h3>{detailsLocales.email[lang]}</h3>
-                <a href={"mailto:" + this.state.data.email}>
-                  {this.state.data.email}
-                </a>
-              </p>
+                <p>{this.state.data.postcode}</p>
+              </div>
+              <div className="paragraphs">
+                <h3>{detailsLocales.district[lang]}:</h3>
+                <p>{this.state.data.district}</p>
+              </div>
+              <div className="paragraphs">
+                <h3>{detailsLocales.describe[lang]}:</h3>
+                <p>{this.state.data.description}</p>
+              </div>
+              <div className="paragraphs">
+                <h3>{detailsLocales.phone[lang]}:</h3>
+                <p>
+                  <a href={"tel:" + this.state.data.phoneNumber}>
+                    {this.state.data.phoneNumber}
+                  </a>
+                </p>
+              </div>
+              <div className="paragraphs">
+                <h3>{detailsLocales.email[lang]}:</h3>
+                <p>
+                  <a href={"mailto:" + this.state.data.email}>
+                    {this.state.data.email}
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
-          <div>
+          <div className="photo-container">
             {this.state.data.images.map((image) => {
               console.log(image.secureUrl);
               return (
-                <img width="200px" height="auto" src={image.secureUrl}></img>
+                <img width="300px" height="auto" src={image.secureUrl}></img>
               );
             })}
           </div>
@@ -113,6 +121,10 @@ class Details extends Component {
             <div className="paragraphs">
               <h3>{detailsLocales.district[lang]}:</h3>
               <p>{this.state.data.district}</p>
+            </div>
+            <div className="paragraphs">
+              <h3>{detailsLocales.describe[lang]}:</h3>
+              <p>{this.state.data.description}</p>
             </div>
             <div className="paragraphs">
               <h3>{detailsLocales.phone[lang]}:</h3>

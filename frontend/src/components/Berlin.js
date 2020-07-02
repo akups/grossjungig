@@ -48,10 +48,12 @@ class Berlin extends Component {
     // });
 
     const filteredRooms = filteredRoomsBySelect.filter((room) => {
+      console.log("working");
+      console.log(this.state.search);
       if (this.state.search === "") {
         return true;
       }
-      return room.postcode === this.state.search;
+      return room.postcode == this.state.search;
     });
 
     const lang = localStorage.getItem("lang");
