@@ -26,7 +26,9 @@ class UserPortal extends Component {
           <button>{portalLocales.map[lang]}</button>
         </Link>
         <Link to="/addroom">
-          {this.props.user.role === "senior" ? <button>Add room</button> : null}
+          {this.props.user.role === "senior" ? (
+            <button>{portalLocales.add[lang]}</button>
+          ) : null}
         </Link>
       </div>
     );
