@@ -31,20 +31,27 @@ const Navbar = (props) => {
 
   const lang = localStorage.getItem("lang");
   console.log(props.user);
-  if (props.user) {
-    return (
-      <nav className="navilink">
-        <Link className="logo-link" to="/">
-          <img
-            src="/image/grossjungig_logo.png"
-            alt="Grossjungig Logo"
-            height="85px"
-          ></img>
+
+  return (
+    <nav className="navilink">
+      <Link className="logo-link" to="/">
+        <img
+          src="/image/grossjungig_logo.png"
+          alt="Grossjungig Logo"
+          height="65px"
+        ></img>
+      </Link>
+      <div className="main-nav">
+        <Link to="/berlin">
+          {" "}
+          <button className="berlin">{navbarLocales.berlin[lang]}</button>
         </Link>
-        <div className="main-nav">
-          <Link to="/berlin">{navbarLocales.berlin[lang]}</Link>
-          <Link to="/munich">{navbarLocales.munich[lang]}</Link>
-        </div>
+        <Link to="/munich">
+          {" "}
+          <button>{navbarLocales.munich[lang]}</button>
+        </Link>
+      </div>
+      {props.user ? (
         <div className="login-nav">
           <Link onClick={logout} to="/">
             {navbarLocales.logout[lang]}
@@ -54,36 +61,18 @@ const Navbar = (props) => {
             <img height="30px" src="/image/user.png" alt="User Portal" />
           </Link>
         </div>
-      </nav>
-    );
-  }
-  return (
-    <nav className="navilink">
-      <Link to="/" className="logo-link">
-        <img
-          src="/image/grossjungig_logo.png"
-          alt="Grossjungig Logo"
-          height="65px"
-        ></img>
-      </Link>
-      <div className="main-nav">
-        <Link to="/berlin">
-          <button className="berlin">{navbarLocales.berlin[lang]}</button>
-        </Link>
-        <Link to="/munich">
-          <button>{navbarLocales.munich[lang]}</button>
-        </Link>
-      </div>
-      <div className="login-nav">
-        <Link to="/login">{navbarLocales.login[lang]}</Link>
-        <Link to="/signup">{navbarLocales.signup[lang]}</Link>
-        <img
-          onClick={imageChange}
-          height="20px"
-          src={img}
-          alt="Language Switcher"
-        />
-      </div>
+      ) : (
+        <div className="login-nav">
+          <Link to="/login">{navbarLocales.login[lang]}</Link>
+          <Link to="/signup">{navbarLocales.signup[lang]}</Link>
+          <img
+            onClick={imageChange}
+            height="20px"
+            src={img}
+            alt="Language Switcher"
+          />
+        </div>
+      )}
     </nav>
   );
 };
