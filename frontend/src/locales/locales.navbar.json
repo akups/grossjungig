@@ -29,5 +29,9 @@
   "munich": {
     "en": "Munich",
     "de": "München"
+  },
+  "maps": {
+    "en": "Map",
+    "de": "Karte"
   }
 }
