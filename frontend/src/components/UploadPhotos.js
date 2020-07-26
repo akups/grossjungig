@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 
 const UploadPhotos = (props) => {
@@ -49,7 +48,7 @@ const UploadPhotos = (props) => {
       {loading ? (
         <h3>Loading....</h3>
       ) : (
-        <img src={image} style={{ width: "300px" }} />
+        <img src={image} style={{ width: "300px" }} alt="" />
       )}
       <button type="submit">Submit</button>
     </div>

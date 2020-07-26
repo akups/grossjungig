@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar.js";
@@ -11,6 +11,7 @@ import Berlin from "./components/Berlin.js";
 import AddRoom from "./components/AddRoom.js";
 import UploadPhotos from "./components/UploadPhotos";
 import Details from "./components/Details";
+import MapView from "./components/MapView";
 
 class App extends React.Component {
   state = {
@@ -77,6 +78,7 @@ class App extends React.Component {
           render={(props) => <AddRoom {...props} user={this.state.user} />}
         />
         <Route exact path="/uploadphotos/:roomId" component={UploadPhotos} />
+        <Route exact path="/maps" component={MapView} />
         <Footer />
       </div>
     );

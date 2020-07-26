@@ -48,7 +48,11 @@ const Navbar = (props) => {
         </Link>
         <Link to="/munich">
           {" "}
-          <button>{navbarLocales.munich[lang]}</button>
+          <button className="munich">{navbarLocales.munich[lang]}</button>
+        </Link>
+        <Link to="/maps">
+          {" "}
+          <button>{navbarLocales.maps[lang]}</button>
         </Link>
       </div>
       {props.user ? (
