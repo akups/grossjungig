@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import { Marker } from "@react-google-maps/api";
+import Geocode from "react-geocode";
+import axios from "axios";
+
+Geocode.setApiKey(process.env.REACT_APP_MY_MAP_API_KEY);
+
+// set response region. Its optional.
+// A Geocoding request with region=de (German) will return the Spanish city.
+Geocode.setRegion("de");
 
 const positions = [
   {
@@ -23,6 +31,35 @@ const onLoad = (marker) => {
 };
 
 function MyComponent() {
+  const [data, setData] = useState({ rooms: [] });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios(
+        `${process.env.REACT_APP_BACKENDURL}api/rooms`
+      );
+
+      setData(result.data);
+    };
+
+    fetchData();
+  }, []);
+
+  if (data.rooms.length) {
+    data.rooms.map((room) => {
+      // Get latidude & longitude from address.
+      Geocode.fromAddress(room.address).then(
+        (response) => {
+          const { lat, lng } = response.results[0].geometry.location;
+          console.log(lat, lng);
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
+    });
+  }
+  console.log(data, "these are our rooms");
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_MY_MAP_API_KEY}>
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
