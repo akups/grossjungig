@@ -10,12 +10,12 @@ Geocode.setApiKey(process.env.REACT_APP_MY_MAP_API_KEY);
 // A Geocoding request with region=de (German) will return the Spanish city.
 Geocode.setRegion("de");
 
-const positions = [
-  {
-    lat: 52.5540631,
-    lng: 13.3487178,
-  },
-  { lat: 52.5219814, lng: 13.4111173 },
+let positions = [
+  // {
+  //   lat: 52.5540631,
+  //   lng: 13.3487178,
+  // },
+  // { lat: 52.5219814, lng: 13.4111173 },
 ];
 const containerStyle = {
   width: "400px",
@@ -53,6 +53,7 @@ function MyComponent() {
           const { lat, lng } = response.results[0].geometry.location;
           console.log(lat, lng);
           room.coordinates.push({ lat, lng });
+          positions.push({ lat, lng });
         },
         (error) => {
           console.error(error);
@@ -61,6 +62,7 @@ function MyComponent() {
     });
   }
   console.log(data, "these are our rooms");
+  console.log(positions);
 
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_MY_MAP_API_KEY}>
