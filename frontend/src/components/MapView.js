@@ -52,6 +52,7 @@ function MyComponent() {
         (response) => {
           const { lat, lng } = response.results[0].geometry.location;
           console.log(lat, lng);
+          room.coordinates.push({ lat, lng });
         },
         (error) => {
           console.error(error);
