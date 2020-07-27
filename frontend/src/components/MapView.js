@@ -60,12 +60,13 @@ function MyComponent() {
     });
   }
   console.log(data, "these are our rooms");
+
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_MY_MAP_API_KEY}>
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
         {/* Child components, such as markers, info windows, etc. */}
-        {positions.map((position) => (
-          <Marker onLoad={onLoad} position={position} />
+        {positions.map((position, index) => (
+          <Marker key={index} onLoad={onLoad} position={position} />
         ))}
         <></>
       </GoogleMap>
