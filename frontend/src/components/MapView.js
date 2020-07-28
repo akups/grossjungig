@@ -7,15 +7,15 @@ import axios from "axios";
 Geocode.setApiKey(process.env.REACT_APP_MY_MAP_API_KEY);
 
 // set response region. Its optional.
-// A Geocoding request with region=de (German) will return the Spanish city.
+// A Geocoding request with region=de (German) will return the German city.
 Geocode.setRegion("de");
 
 let positions = [
-  // {
-  //   lat: 52.5540631,
-  //   lng: 13.3487178,
-  // },
-  // { lat: 52.5219814, lng: 13.4111173 },
+  {
+    lat: 52.5540631,
+    lng: 13.3487178,
+  },
+  { lat: 52.5219814, lng: 13.4111173 },
 ];
 const containerStyle = {
   width: "400px",
