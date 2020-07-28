@@ -18,8 +18,8 @@ let positions = [
   { lat: 52.5219814, lng: 13.4111173 },
 ];
 const containerStyle = {
-  width: "400px",
-  height: "400px",
+  width: "50vw",
+  height: "60vh",
 };
 
 const center = {
