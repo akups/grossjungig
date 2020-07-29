@@ -31,7 +31,10 @@ const onLoad = (marker) => {
 };
 
 function MyComponent() {
-  const [data, setData] = useState({ rooms: [] });
+  const [
+    data /*data acts like a getter it can also be called getData*/,
+    setData /*this is the steer*/,
+  ] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,38 +42,39 @@ function MyComponent() {
         `${process.env.REACT_APP_BACKENDURL}api/rooms`
       );
 
-      setData(result.data);
+      setData(result.data.rooms);
     };
 
     fetchData();
   }, []);
 
-  if (data.rooms.length) {
-    data.rooms.map((room) => {
+  if (data.length) {
+    let newRooms = [];
+    data.map((room, index) => {
       // Get latidude & longitude from address.
       Geocode.fromAddress(room.address).then(
         (response) => {
           const { lat, lng } = response.results[0].geometry.location;
-          console.log(lat, lng);
-          room.coordinates.push({ lat, lng });
-          positions.push({ lat, lng });
+          newRooms[index] = { ...room, coordinates: { lat, lng } };
         },
         (error) => {
           console.error(error);
         }
       );
     });
+    setData(newRooms);
   }
   console.log(data, "these are our rooms");
-  console.log(positions);
-
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_MY_MAP_API_KEY}>
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
         {/* Child components, such as markers, info windows, etc. */}
-        {positions.map((position, index) => (
-          <Marker key={index} onLoad={onLoad} position={position} />
-        ))}
+        {data.map((room, index) => {
+          console.log(room);
+          return (
+            <Marker key={index} onLoad={onLoad} position={room.coordinates} />
+          );
+        })}
         <></>
       </GoogleMap>
     </LoadScript>
