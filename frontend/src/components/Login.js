@@ -8,7 +8,7 @@ class Login extends Component {
     email: "",
     password: "",
     redirect: false,
-    message: ""
+    message: "",
   };
 
   handleSubmit = (event) => {
@@ -32,7 +32,7 @@ class Login extends Component {
       .catch((err) => {
         console.log("this is the error", err);
         this.setState({
-          message: err.response.data.message
+          message: err.response.data.message,
         });
       });
   };
@@ -41,10 +41,6 @@ class Login extends Component {
     this.setState({
       [event.target.name]: event.target.value,
     });
-  };
-
-  onChange = (event) => {
-    this.setState({ name: event.target.value });
   };
 
   render() {
