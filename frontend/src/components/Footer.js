@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer" data-testid="footer-root">
       <div className="footer-flex">
         <div className="social-icons">
           <span className="Facebook">
