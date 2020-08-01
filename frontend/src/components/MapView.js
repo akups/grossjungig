@@ -31,7 +31,7 @@ const onLoad = (marker) => {
 };
 
 function MyComponent() {
-  const [data, setData] = useState({ rooms: [] });
+  const [rooms, setRooms] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,38 +39,36 @@ function MyComponent() {
         `${process.env.REACT_APP_BACKENDURL}api/rooms`
       );
 
-      setData(result.data);
+      const getGeo = async (rooms) => {
+        let newRooms = [];
+
+        await rooms.map(async (room) => {
+          const { results } = await Geocode.fromAddress(
+            `${room.address} ${room.postcode}`
+          );
+          const { lat, lng } = results[0].geometry.location;
+          newRooms.push({ ...room, coordinates: { lat, lng } });
+        });
+
+        return newRooms;
+      };
+
+      const newRooms = await getGeo(result.data.rooms);
+
+      setRooms(newRooms);
     };
 
     fetchData();
   }, []);
 
-  if (data.rooms.length) {
-    data.rooms.map((room) => {
-      // Get latidude & longitude from address.
-      Geocode.fromAddress(room.address).then(
-        (response) => {
-          const { lat, lng } = response.results[0].geometry.location;
-          console.log(lat, lng);
-          room.coordinates.push({ lat, lng });
-          positions.push({ lat, lng });
-        },
-        (error) => {
-          console.error(error);
-        }
-      );
-    });
-  }
-  console.log(data, "these are our rooms");
-  console.log(positions);
-
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_MY_MAP_API_KEY}>
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
         {/* Child components, such as markers, info windows, etc. */}
-        {positions.map((position, index) => (
-          <Marker key={index} onLoad={onLoad} position={position} />
-        ))}
+        {rooms.length &&
+          rooms.map(({ coordinates: { lat, lng } }, index) => (
+            <Marker key={index} onLoad={onLoad} position={{ lat, lng }} />
+          ))}
         <></>
       </GoogleMap>
     </LoadScript>
