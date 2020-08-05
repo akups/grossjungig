@@ -31,17 +31,17 @@ const onLoad = (marker) => {
 };
 
 const getGeo = async (rooms) => {
-  let newRooms = [];
+  let coordinates = [];
 
   await rooms.map(async (room) => {
     const { results } = await Geocode.fromAddress(
       `${room.address} ${room.postcode}`
     );
     const { lat, lng } = results[0].geometry.location;
-    newRooms.push({ ...room, coordinates: { lat, lng } });
+    coordinates.push({ lat, lng });
   });
 
-  return newRooms;
+  return coordinates;
 };
 
 function MyComponent() {
@@ -73,8 +73,8 @@ function MyComponent() {
     <LoadScript googleMapsApiKey={process.env.REACT_APP_MY_MAP_API_KEY}>
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
         {/* Child components, such as markers, info windows, etc. */}
-        {rooms.length &&
-          rooms.map(({ coordinates: { lat, lng } }, index) => (
+        {coordinates.length &&
+          coordinates.map(({ lat, lng }, index) => (
             <Marker key={index} onLoad={onLoad} position={{ lat, lng }} />
           ))}
         <></>
