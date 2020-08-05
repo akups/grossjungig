@@ -30,36 +30,44 @@ const onLoad = (marker) => {
   console.log("marker: ", marker);
 };
 
+const getGeo = async (rooms) => {
+  let newRooms = [];
+
+  await rooms.map(async (room) => {
+    const { results } = await Geocode.fromAddress(
+      `${room.address} ${room.postcode}`
+    );
+    const { lat, lng } = results[0].geometry.location;
+    newRooms.push({ ...room, coordinates: { lat, lng } });
+  });
+
+  return newRooms;
+};
+
 function MyComponent() {
   const [rooms, setRooms] = useState([]);
+  const [coordinates, setCoordinates] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
         `${process.env.REACT_APP_BACKENDURL}api/rooms`
       );
-
-      const getGeo = async (rooms) => {
-        let newRooms = [];
-
-        await rooms.map(async (room) => {
-          const { results } = await Geocode.fromAddress(
-            `${room.address} ${room.postcode}`
-          );
-          const { lat, lng } = results[0].geometry.location;
-          newRooms.push({ ...room, coordinates: { lat, lng } });
-        });
-
-        return newRooms;
-      };
-
-      const newRooms = await getGeo(result.data.rooms);
-
-      setRooms(newRooms);
+      setRooms(result.data.rooms);
     };
 
     fetchData();
   }, []);
+
+  useEffect(() => {
+    const fetchCoordinates = async () => {
+      const newCoordinates = await getGeo(rooms);
+
+      setCoordinates(newCoordinates);
+    };
+
+    fetchCoordinates();
+  }, [rooms]);
 
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_MY_MAP_API_KEY}>
