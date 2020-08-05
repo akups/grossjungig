@@ -10,13 +10,6 @@ Geocode.setApiKey(process.env.REACT_APP_MY_MAP_API_KEY);
 // A Geocoding request with region=de (German) will return the German city.
 Geocode.setRegion("de");
 
-let positions = [
-  {
-    lat: 52.5540631,
-    lng: 13.3487178,
-  },
-  { lat: 52.5219814, lng: 13.4111173 },
-];
 const containerStyle = {
   width: "50vw",
   height: "60vh",
@@ -30,58 +23,32 @@ const onLoad = (marker) => {
   console.log("marker: ", marker);
 };
 
-const getGeo = async (rooms) => {
-  let coordinates = [];
-  const { results } = await Geocode.fromAddress(
-    `${rooms[0].address} ${rooms[0].postcode}`
-  );
-  const { lat, lng } = results[0].geometry.location;
-  coordinates.push({ lat, lng });
-
-  // await rooms.map(async (room) => {
-  //   const { results } = await Geocode.fromAddress(
-  //     `${room.address} ${room.postcode}`
-  //   );
-  //   const { lat, lng } = results[0].geometry.location;
-  //   coordinates.push({ lat, lng });
-  // });
-
-  return coordinates;
-};
-
 function MyComponent() {
-  const [rooms, setRooms] = useState([]);
-  const [coordinates, setCoordinates] = useState([]);
+  const [rooms, setRooms] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios(
-        `${process.env.REACT_APP_BACKENDURL}api/rooms`
+      const {
+        data: { rooms },
+      } = await axios(`${process.env.REACT_APP_BACKENDURL}api/rooms`);
+      const { results } = await Geocode.fromAddress(
+        `${rooms[0].address} ${rooms[0].postcode}`
       );
-      setRooms(result.data.rooms);
+      const { lat, lng } = results[0].geometry.location;
+
+      setRooms({ lat, lng });
     };
 
     fetchData();
   }, []);
 
-  useEffect(() => {
-    const fetchCoordinates = async () => {
-      const newCoordinates = await getGeo(rooms);
-
-      setCoordinates(newCoordinates);
-    };
-
-    fetchCoordinates();
-  }, [rooms]);
+  const { lat, lng } = rooms;
 
   return (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_MY_MAP_API_KEY}>
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
         {/* Child components, such as markers, info windows, etc. */}
-        {coordinates.length &&
-          coordinates.map(({ lat, lng }, index) => (
-            <Marker key={index} onLoad={onLoad} position={{ lat, lng }} />
-          ))}
+        {rooms && <Marker onLoad={onLoad} position={{ lat, lng }} />}
         <></>
       </GoogleMap>
     </LoadScript>
