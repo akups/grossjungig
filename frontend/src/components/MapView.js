@@ -32,14 +32,19 @@ const onLoad = (marker) => {
 
 const getGeo = async (rooms) => {
   let coordinates = [];
+  const { results } = await Geocode.fromAddress(
+    `${rooms[0].address} ${rooms[0].postcode}`
+  );
+  const { lat, lng } = results[0].geometry.location;
+  coordinates.push({ lat, lng });
 
-  await rooms.map(async (room) => {
-    const { results } = await Geocode.fromAddress(
-      `${room.address} ${room.postcode}`
-    );
-    const { lat, lng } = results[0].geometry.location;
-    coordinates.push({ lat, lng });
-  });
+  // await rooms.map(async (room) => {
+  //   const { results } = await Geocode.fromAddress(
+  //     `${room.address} ${room.postcode}`
+  //   );
+  //   const { lat, lng } = results[0].geometry.location;
+  //   coordinates.push({ lat, lng });
+  // });
 
   return coordinates;
 };
