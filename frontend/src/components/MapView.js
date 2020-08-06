@@ -24,34 +24,49 @@ const onLoad = (marker) => {
 };
 
 function MyComponent() {
-  const [rooms, setRooms] = useState({});
+  const [coordinates, setCoordinates] = useState([]);
 
   useEffect(() => {
+    // Fetch rooms from own backend
     const fetchData = async () => {
       const {
         data: { rooms },
       } = await axios(`${process.env.REACT_APP_BACKENDURL}api/rooms`);
-      const { results } = await Geocode.fromAddress(
-        `${rooms[0].address} ${rooms[0].postcode}`
-      );
-      const { lat, lng } = results[0].geometry.location;
 
-      setRooms({ lat, lng });
+      // Extract adresses
+      const adresses = rooms.map(
+        ({ address, postcode }) => `${address} ${postcode}`
+      );
+      // Empty coordinates array
+      let coordinates = [];
+      // Find geocode for each adress and add it to the coordinates array
+      await adresses.reduce(async (acc, adress) => {
+        const { results } = await Geocode.fromAddress(adress);
+
+        const { lat, lng } = results[0].geometry.location;
+
+        coordinates.push({ lat, lng });
+      }, []);
+
+      // once all coordinates ready, push them to the state
+      setCoordinates(coordinates);
     };
 
     fetchData();
   }, []);
-
-  const { lat, lng } = rooms;
-
-  return (
+  console.log(coordinates, coordinates.length);
+  return coordinates.length ? (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_MY_MAP_API_KEY}>
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
         {/* Child components, such as markers, info windows, etc. */}
-        {rooms.lat && <Marker onLoad={onLoad} position={{ lat, lng }} />}
+        {coordinates.map(({ lat, lng }) => (
+          <Marker onLoad={onLoad} position={{ lat, lng }} />
+        ))}
         <></>
       </GoogleMap>
     </LoadScript>
+  ) : (
+    <p>Loading..</p>
   );
 }
 
