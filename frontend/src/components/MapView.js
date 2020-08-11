@@ -1,14 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import { Marker } from "@react-google-maps/api";
-import Geocode from "react-geocode";
 import axios from "axios";
 
-Geocode.setApiKey(process.env.REACT_APP_MY_MAP_API_KEY);
-
-// set response region. Its optional.
-// A Geocoding request with region=de (German) will return the German city.
-Geocode.setRegion("de");
+import getGeocodes from "../api/getGeocodes";
 
 const containerStyle = {
   width: "50vw",
@@ -37,18 +32,7 @@ function MyComponent() {
       const addresses = rooms.map(
         ({ address, postcode }) => `${address} ${postcode}`
       );
-      // Empty coordinates array
-
-      // Find geocode for each address and add it to the coordinates array
-      Promise.all(
-        addresses.map(async (address) => {
-          const { results } = await Geocode.fromAddress(address);
-
-          const { lat, lng } = results[0].geometry.location;
-
-          return { lat, lng };
-        })
-      ).then((values) => setCoordinates(values));
+      getGeocodes(addresses).then((values) => setCoordinates(values));
     };
 
     fetchData();
@@ -58,8 +42,8 @@ function MyComponent() {
     <LoadScript googleMapsApiKey={process.env.REACT_APP_MY_MAP_API_KEY}>
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
         {/* Child components, such as markers, info windows, etc. */}
-        {coordinates.map(({ lat, lng }) => (
-          <Marker onLoad={onLoad} position={{ lat, lng }} />
+        {coordinates.map(({ lat, lng, id }) => (
+          <Marker key={id} onLoad={onLoad} position={{ lat, lng }} />
         ))}
         <></>
       </GoogleMap>
