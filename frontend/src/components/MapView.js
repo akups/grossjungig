@@ -34,22 +34,21 @@ function MyComponent() {
       } = await axios(`${process.env.REACT_APP_BACKENDURL}api/rooms`);
 
       // Extract adresses
-      const adresses = rooms.map(
+      const addresses = rooms.map(
         ({ address, postcode }) => `${address} ${postcode}`
       );
       // Empty coordinates array
-      let coordinates = [];
-      // Find geocode for each adress and add it to the coordinates array
-      await adresses.reduce(async (acc, adress) => {
-        const { results } = await Geocode.fromAddress(adress);
 
-        const { lat, lng } = results[0].geometry.location;
+      // Find geocode for each address and add it to the coordinates array
+      Promise.all(
+        addresses.map(async (address) => {
+          const { results } = await Geocode.fromAddress(address);
 
-        coordinates.push({ lat, lng });
-      }, []);
+          const { lat, lng } = results[0].geometry.location;
 
-      // once all coordinates ready, push them to the state
-      setCoordinates(coordinates);
+          return { lat, lng };
+        })
+      ).then((values) => setCoordinates(values));
     };
 
     fetchData();
