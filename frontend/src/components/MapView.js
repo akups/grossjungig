@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import { Marker } from "@react-google-maps/api";
-import axios from "axios";
 
 import getGeocodes from "../api/getGeocodes";
+import getAddresses from "../api/getAddresses";
 
 const containerStyle = {
   width: "50vw",
@@ -24,20 +24,15 @@ function MyComponent() {
   useEffect(() => {
     // Fetch rooms from own backend
     const fetchData = async () => {
-      const {
-        data: { rooms },
-      } = await axios(`${process.env.REACT_APP_BACKENDURL}api/rooms`);
-
       // Extract adresses
-      const addresses = rooms.map(
-        ({ address, postcode }) => `${address} ${postcode}`
-      );
-      getGeocodes(addresses).then((values) => setCoordinates(values));
+      const addresses = await getAddresses();
+      const coordinates = await getGeocodes(addresses);
+      setCoordinates(coordinates);
     };
 
     fetchData();
   }, []);
-  console.log(coordinates, coordinates.length);
+
   return coordinates.length ? (
     <LoadScript googleMapsApiKey={process.env.REACT_APP_MY_MAP_API_KEY}>
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
