@@ -24,4 +24,10 @@ describe("getApiData", () => {
     const data = await getAddresses(roomsEndpoint);
     expect(mockedAxios).toBeCalledTimes(1);
   });
+  it("should getApiData the specified room", async () => {
+    mockedAxios.mockResolvedValueOnce({ data: { rooms: [mockData] } });
+    const data = await getAddresses(roomsEndpoint);
+    expect(mockedAxios).toBeCalledTimes(1);
+    expect(data).toEqual([`${mockData.address} ${mockData.postcode}`]);
+  });
 });
