@@ -20,7 +20,7 @@ describe("getApiData", () => {
     mockedAxios.mockReset();
   });
   it("should getApiData", async () => {
-    mockedAxios.mockResolvedValueOnce({ data: [{ test: "I am working" }] });
+    mockedAxios.mockResolvedValueOnce({ data: { rooms: [] } });
     const data = await getAddresses(roomsEndpoint);
     expect(mockedAxios).toBeCalledTimes(1);
   });
