@@ -5,6 +5,8 @@
   background-image: url("./header_image.png");
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
 }
 .logo_nb {
   height: 35vh;
