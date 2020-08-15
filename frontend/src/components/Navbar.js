@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import navbarLocales from "../locales/locales.navbar.json";
+import Logo from "./Logo";
 
 const Navbar = (props) => {
   const [img, setImage] = useState("/image/germany.png");
@@ -35,11 +36,12 @@ const Navbar = (props) => {
   return (
     <nav className="navilink">
       <Link className="logo-link" to="/">
-        <img
+        {/* <img
           src="/image/grossjungig_logo.png"
           alt="Grossjungig Logo"
           height="65px"
-        ></img>
+        /> */}
+        <Logo />
       </Link>
       <div className="main-nav">
         <Link to="/berlin">
