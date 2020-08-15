@@ -1,0 +1,36 @@
+/* home */
+
+.home-component {
+  height: 600px;
+  background-image: url("./header_image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logo_nb {
+  height: 35vh;
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  font-size: 20px;
+  width: 100vw;
+  text-align: inherit;
+}
+.benefits_a {
+  width: 20vw;
+  flex-wrap: wrap;
+}
+
+.benefits_b {
+  width: 20vw;
+  flex-wrap: wrap;
+}
+
+.home-component h1 {
+  margin-top: 0;
+  padding-top: 35px;
+  font-size: 25px;
+  flex-wrap: wrap;
+}
