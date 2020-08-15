@@ -23,14 +23,12 @@ class Login extends Component {
       //3)
       .then((response) => {
         console.log("loginuser", response.data);
-        // this.setState({
-        //   redirect: true,
-        // });
         this.props.setUser(response.data);
-        this.props.history.push("/userportal");
+        this.setState({
+          redirect: true,
+        });
       })
       .catch((err) => {
-        console.log("this is the error", err);
         this.setState({
           message: err.response.data.message,
         });
@@ -45,7 +43,7 @@ class Login extends Component {
 
   render() {
     const lang = localStorage.getItem("lang");
-
+    // TODO: local should be injected using the context api, reading localStorage is expensive
     if (this.state.redirect) {
       return <Redirect to="/userportal" />;
     }

@@ -20,7 +20,7 @@ const Navbar = (props) => {
     props.updatePage();
     //This is coming from App.js
   };
-
+  // TODO:refactor this and get rid of update page (we will refactor to global state)
   const logout = () => {
     axios
       .delete(`${process.env.REACT_APP_BACKENDURL}api/auth/logout`)
