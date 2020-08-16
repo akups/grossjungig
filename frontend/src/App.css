@@ -2,10 +2,14 @@
   height: 95vh;
   background-color: #aad7ee;
   text-align: center;
-  font-family: "Cabin", sans-serif;
+
   color: rgb(82, 75, 75);
   margin: 0;
   padding: 0;
+}
+
+* {
+  font-family: "Cabin", sans-serif;
 }
 
 /* Nav bar */
@@ -21,6 +25,7 @@ nav {
 
 .logo-link {
   padding-left: 2vw;
+  position: absolute;
 }
 
 .main-nav {
@@ -74,43 +79,7 @@ nav {
 }
 
 h1 {
-  font-family: "Open Sans", sans-serif;
-  font-size: 48px;
   color: rgb(82, 75, 75) ey;
-}
-
-/* home */
-
-.home-component {
-  min-height: 60vh;
-}
-.logo_nb {
-  height: 35vh;
-}
-
-.benefits {
-  display: flex;
-  justify-content: space-evenly;
-  align-content: center;
-  font-size: 20px;
-  width: 100vw;
-  text-align: inherit;
-}
-.benefits_a {
-  width: 20vw;
-  flex-wrap: wrap;
-}
-
-.benefits_b {
-  width: 20vw;
-  flex-wrap: wrap;
-}
-
-.home-component h1 {
-  margin-top: 0;
-  padding-top: 35px;
-  font-size: 25px;
-  flex-wrap: wrap;
 }
 
 /* Signup */
