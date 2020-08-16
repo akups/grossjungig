@@ -25,6 +25,7 @@ nav {
 
 .logo-link {
   padding-left: 2vw;
+  position: absolute;
 }
 
 .main-nav {
