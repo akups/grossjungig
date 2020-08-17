@@ -37,7 +37,7 @@ const MainPanel = styled.div`
   padding: 6rem;
   margin: 6rem;
   width: 870px;
-  height: 320px;
+  height: 220px;
   left: 285px;
   top: 200px;
 `;
