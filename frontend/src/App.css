@@ -66,6 +66,22 @@ nav {
   width: 20vw;
 }
 
+.login-nav button {
+  width: 100px;
+  height: 36px;
+  border-radius: 34px;
+}
+
+.signup-button {
+  border-style: none;
+  background-color: #ed8707;
+  text-decoration-color: black;
+}
+
+.login-button {
+  background-color: white;
+}
+
 .navilink a {
   /* This is a link */
   text-decoration: none;

@@ -36,11 +36,6 @@ const Navbar = (props) => {
   return (
     <nav className="navilink">
       <Link className="logo-link" to="/">
-        {/* <img
-          src="/image/grossjungig_logo.png"
-          alt="Grossjungig Logo"
-          height="65px"
-        /> */}
         <Logo />
       </Link>
       <div className="main-nav">
@@ -69,8 +64,16 @@ const Navbar = (props) => {
         </div>
       ) : (
         <div className="login-nav">
-          <Link to="/login">{navbarLocales.login[lang]}</Link>
-          <Link to="/signup">{navbarLocales.signup[lang]}</Link>
+          <Link to="/login">
+            <button className="login-button">
+              {navbarLocales.login[lang]}
+            </button>
+          </Link>
+          <Link to="/signup">
+            <button className="signup-button">
+              {navbarLocales.signup[lang]}
+            </button>
+          </Link>
           <img
             onClick={imageChange}
             height="20px"

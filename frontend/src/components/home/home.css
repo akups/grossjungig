@@ -1,8 +1,8 @@
 /* home */
 
 .home-component {
-  height: 720px;
-  width: 1440px;
+  /* height: 720px; */
+  /* width: 1440px; */
   background-image: url("./header_image.png");
   background-repeat: no-repeat;
   background-size: cover;
