@@ -2,6 +2,7 @@ import React, { Component } from "react";
 //import homeLocales from "../../locales/locales.home.json";
 import styled from "styled-components";
 import "./home.css";
+import { H1 } from "../typography";
 
 class Home extends Component {
   /* select = () => {
@@ -19,7 +20,7 @@ class Home extends Component {
     return (
       <div className="home-component">
         <MainPanel>
-          <h1>Find your second grand family</h1>
+          <H1>Find your second grand family</H1>
         </MainPanel>
       </div>
     );

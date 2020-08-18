@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components";
 
 export const basicButtonCSS = css`
-  padding: 1rem 3rem;
+  padding: 0.5rem 1.5rem;
+  margin: 0.25rem;
   border-radius: 34px;
 `;
 
