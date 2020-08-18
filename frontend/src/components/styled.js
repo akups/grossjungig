@@ -8,10 +8,25 @@ export const basicButtonCSS = css`
 
 export const Button = styled.button`
   ${basicButtonCSS};
+  border: 1px solid grey;
+  background-color: white;
 `;
 
 export const PrimaryButton = styled.button`
   ${basicButtonCSS};
   background-color: ${(props) => props.theme.main};
   border-style: none;
+`;
+
+export const SecButton = styled.button`
+  ${basicButtonCSS};
+  border: 1px solid grey;
+  background-color: black;
+  color: white;
+`;
+
+export const SearchField = styled.input`
+  ${basicButtonCSS};
+  border: 1px solid grey;
+  background-color: white;
 `;
