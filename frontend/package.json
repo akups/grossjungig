@@ -22,10 +22,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "node_modules/.bin/eslint --ext js src"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "semi": 0,
+      "no-console": 0
+    }
   },
   "browserslist": {
     "production": [
@@ -40,6 +45,13 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^4.2.4"
+    "@testing-library/jest-dom": "^4.2.4",
+    "babel-eslint": "^10.1.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0"
   }
 }

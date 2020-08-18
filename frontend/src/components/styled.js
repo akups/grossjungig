@@ -6,11 +6,11 @@ export const basicButtonCSS = css`
 `;
 
 export const Button = styled.button`
-  ${basicButtonCSS}
+  ${basicButtonCSS};
 `;
 
 export const PrimaryButton = styled.button`
-${basicButtonCSS} 
-background-color: ${(props) => props.theme.main};
-border-style: none;
+  ${basicButtonCSS};
+  background-color: ${(props) => props.theme.main};
+  border-style: none;
 `;

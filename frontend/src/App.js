@@ -1,6 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
+
 import "./App.css";
 import Home from "./components/home/Home";
 import Navbar from "./components/Navbar.js";
@@ -90,8 +91,7 @@ class App extends React.Component {
   }
 }
 
-export default (
-  <ThemeProvider theme={theme}>
-    <App />
-  </ThemeProvider>
-);
+export default <App />;
+// <ThemeProvider theme={theme}>
+
+// </ThemeProvider>
