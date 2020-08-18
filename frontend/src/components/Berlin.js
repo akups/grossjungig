@@ -40,7 +40,7 @@ class Berlin extends Component {
       if (this.state.select === "--") {
         return true;
       }
-      return room.district === parseInt(this.state.select);
+      return room.district === this.state.select;
     });
 
     // const filteredRooms = filteredRoomsBySelect.filter((room) => {
@@ -53,7 +53,7 @@ class Berlin extends Component {
       if (this.state.search === "") {
         return true;
       }
-      return room.postcode === this.state.search;
+      return room.postcode === parseInt(this.state.search);
     });
 
     const lang = localStorage.getItem("lang");
