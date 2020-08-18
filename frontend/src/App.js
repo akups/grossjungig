@@ -38,60 +38,59 @@ class App extends React.Component {
     //console.log("APP", this.state.user);
     return (
       <div className="App">
-        <Navbar
-          setUser={this.setUser}
-          user={this.state.user}
-          updatePage={this.updatePage}
-          //This means exporting "updatePage" to Navbar
-        />
-        <Route exact path="/" component={Home} />
-        <Route
-          exact
-          path="/signup"
-          render={(props) => (
-            <Signup
-              history={props.history}
-              user={this.state.user}
-              setUser={this.setUser}
-            />
-          )}
-        />
-        <Route
-          exact
-          path="/login"
-          render={(props) => (
-            <Login history={props.history} setUser={this.setUser} />
-          )}
-        />
-        <Route
-          exact
-          path="/userportal"
-          render={(props) => <UserPortal {...props} user={this.state.user} />}
-        />
-        <Route
-          exact
-          path="/berlin"
-          render={(props) => <Berlin {...props} user={this.state.user} />}
-        />
-        <Route
-          exact
-          path="/berlin/:id"
-          render={(props) => <Details {...props} user={this.state.user} />}
-        />
-        <Route
-          exact
-          path="/addRoom"
-          render={(props) => <AddRoom {...props} user={this.state.user} />}
-        />
-        <Route exact path="/uploadphotos/:roomId" component={UploadPhotos} />
-        <Route exact path="/maps" component={MapView} />
-        <Footer />
+        <ThemeProvider theme={theme}>
+          <Navbar
+            setUser={this.setUser}
+            user={this.state.user}
+            updatePage={this.updatePage}
+            //This means exporting "updatePage" to Navbar
+          />
+          <Route exact path="/" component={Home} />
+          <Route
+            exact
+            path="/signup"
+            render={(props) => (
+              <Signup
+                history={props.history}
+                user={this.state.user}
+                setUser={this.setUser}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/login"
+            render={(props) => (
+              <Login history={props.history} setUser={this.setUser} />
+            )}
+          />
+          <Route
+            exact
+            path="/userportal"
+            render={(props) => <UserPortal {...props} user={this.state.user} />}
+          />
+          <Route
+            exact
+            path="/berlin"
+            render={(props) => <Berlin {...props} user={this.state.user} />}
+          />
+          <Route
+            exact
+            path="/berlin/:id"
+            render={(props) => <Details {...props} user={this.state.user} />}
+          />
+          <Route
+            exact
+            path="/addRoom"
+            render={(props) => <AddRoom {...props} user={this.state.user} />}
+          />
+          <Route exact path="/uploadphotos/:roomId" component={UploadPhotos} />
+          <Route exact path="/maps" component={MapView} />
+          <Footer />
+        </ThemeProvider>
       </div>
     );
   }
 }
 
-export default <App />;
-// <ThemeProvider theme={theme}>
-
-// </ThemeProvider>
+export default App;
