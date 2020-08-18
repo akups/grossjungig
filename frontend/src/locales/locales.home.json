@@ -30,5 +30,13 @@
   "requests": {
     "en": "Requests",
     "de": "Anfrage"
+  },
+  "choose": {
+    "en": "Choose One",
+    "de": "Eine Wählen"
+  },
+  "search": {
+    "en": "Search",
+    "de": "Suche"
   }
 }

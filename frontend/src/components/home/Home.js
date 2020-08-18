@@ -24,18 +24,18 @@ class Home extends Component {
         <MainPanel>
           <H1>Find your second grand family</H1>
           <Row>
-            Choose One:
+            {homeLocales.choose[lang]}:
             <Link to="/berlin">
               <Button>{homeLocales.offers[lang]}</Button>
             </Link>
-            <SecButton>Requests</SecButton>
+            <SecButton>{homeLocales.requests[lang]}</SecButton>
           </Row>
           <Row>
             <SearchField
               placeholder={homeLocales.city[lang]}
               input=""
             ></SearchField>
-            <PrimaryButton>Search</PrimaryButton>
+            <PrimaryButton>{homeLocales.search[lang]}</PrimaryButton>
           </Row>
         </MainPanel>
       </div>
