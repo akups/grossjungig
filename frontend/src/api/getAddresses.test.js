@@ -24,7 +24,7 @@ describe("getApiData", () => {
   });
   it("should getApiData", async () => {
     mockedAxios.mockResolvedValueOnce({ data: { rooms: [] } });
-    const data = await getAddresses(roomsEndpoint);
+    await getAddresses(roomsEndpoint);
     expect(mockedAxios).toBeCalledTimes(1);
   });
   it("should getApiData the specified room", async () => {
@@ -37,7 +37,7 @@ describe("getApiData", () => {
     mockedAxios.mockResolvedValueOnce({ data: { rooms: [] } });
     const data = await getAddresses(roomsEndpoint);
     expect(mockedAxios).toBeCalledTimes(1);
-    expect(Array.isArray(data)).toBeTruthy;
+    expect(Array.isArray(data)).toBeTruthy();
   });
   it("should return an error if the request fails", async () => {
     const error = new Error("unable to fetch data");
