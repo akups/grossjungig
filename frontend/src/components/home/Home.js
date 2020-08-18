@@ -34,7 +34,7 @@ const MainPanel = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
     -4px -4px 8px rgba(255, 255, 255, 0.15);
   background-color: white;
-  padding: 6rem;
+  padding: 3.5rem 4rem;
   margin: 6rem;
   width: 870px;
   height: 220px;

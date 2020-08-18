@@ -1,5 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
 import "./App.css";
 import Home from "./components/home/Home";
 import Navbar from "./components/Navbar.js";
@@ -12,6 +13,10 @@ import AddRoom from "./components/AddRoom.js";
 import UploadPhotos from "./components/UploadPhotos";
 import Details from "./components/Details";
 import MapView from "./components/MapView";
+
+const theme = {
+  main: "#ed8707",
+};
 
 class App extends React.Component {
   state = {
@@ -85,4 +90,8 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default (
+  <ThemeProvider theme={theme}>
+    <App />
+  </ThemeProvider>
+);
