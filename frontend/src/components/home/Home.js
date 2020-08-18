@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-//import homeLocales from "../../locales/locales.home.json";
+import { Link } from "react-router-dom";
+import homeLocales from "../../locales/locales.home.json";
 import styled from "styled-components";
 import "./home.css";
 import { H1 } from "../typography";
@@ -17,18 +18,23 @@ class Home extends Component {
   }; */
 
   render() {
-    //const lang = localStorage.getItem("lang");
+    const lang = localStorage.getItem("lang");
     return (
       <div className="home-component">
         <MainPanel>
           <H1>Find your second grand family</H1>
           <Row>
             Choose One:
-            <Button>Offers</Button>
+            <Link to="/berlin">
+              <Button>{homeLocales.offers[lang]}</Button>
+            </Link>
             <SecButton>Requests</SecButton>
           </Row>
           <Row>
-            <SearchField placeholder="City"></SearchField>
+            <SearchField
+              placeholder={homeLocales.city[lang]}
+              input=""
+            ></SearchField>
             <PrimaryButton>Search</PrimaryButton>
           </Row>
         </MainPanel>

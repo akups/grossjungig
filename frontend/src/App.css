@@ -62,6 +62,8 @@ nav {
 .login-nav {
   display: flex;
   justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
   padding-left: 4vw;
   width: 20vw;
 }

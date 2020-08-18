@@ -18,5 +18,17 @@
   "welcome": {
     "en": "Großjungig is an accommodation platform for seniors und youth.",
     "de": "Großjungig ist ein Wohn-platform für Senioren und junge Leute."
+  },
+  "city": {
+    "en": "City",
+    "de": "Stadt"
+  },
+  "offers": {
+    "en": "Offers",
+    "de": "Angebote"
+  },
+  "requests": {
+    "en": "Requests",
+    "de": "Anfrage"
   }
 }
