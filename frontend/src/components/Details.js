@@ -87,7 +87,12 @@ class Details extends Component {
             {this.state.data.images.map((image) => {
               console.log(image.secureUrl);
               return (
-                <img width="300px" height="auto" src={image.secureUrl}></img>
+                <img
+                  alt="room"
+                  width="300px"
+                  height="auto"
+                  src={image.secureUrl}
+                ></img>
               );
             })}
           </div>
@@ -145,11 +150,17 @@ class Details extends Component {
           </div>
         </div>
         <div className="photo-container">
+          {/* TODO: refactor markup */}
           {this.state.data.images &&
             this.state.data.images.map((image) => {
               console.log(image.secureUrl);
               return (
-                <img width="300px" height="auto" src={image.secureUrl}></img>
+                <img
+                  alt="room"
+                  width="300px"
+                  height="auto"
+                  src={image.secureUrl}
+                ></img>
               );
             })}
         </div>

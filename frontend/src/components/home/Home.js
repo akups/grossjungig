@@ -1,6 +1,5 @@
-import React from "react";
-import { Component } from "react";
-import homeLocales from "../../locales/locales.home.json";
+import React, { Component } from "react";
+//import homeLocales from "../../locales/locales.home.json";
 import styled from "styled-components";
 import "./home.css";
 
@@ -16,7 +15,7 @@ class Home extends Component {
   }; */
 
   render() {
-    const lang = localStorage.getItem("lang");
+    //const lang = localStorage.getItem("lang");
     return (
       <div className="home-component">
         <MainPanel>

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import roomsLocales from "../locales/locales.rooms.json";
 //import addroomLocales from "../locales/locales.addrooms.json";
