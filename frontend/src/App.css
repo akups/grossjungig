@@ -31,32 +31,9 @@ nav {
 .main-nav {
   display: flex;
   justify-content: flex-start;
-  padding-bottom: 15px;
+  /* padding-bottom: 15px; */
   width: 60vw;
   color: rgb(82, 75, 75);
-}
-
-.main-nav button {
-  /* display: block; */
-  height: 55px;
-  width: 120px;
-  margin-top: 3vh;
-  font-size: 20px;
-  border-radius: 20px;
-  border-width: medium;
-  border-color: rgb(82, 75, 75);
-  font-family: "Open Sans", sans-serif;
-  font-weight: 800;
-  padding: 10px;
-  color: rgb(82, 75, 75);
-}
-
-.berlin {
-  margin-right: 1vw;
-}
-
-.munich {
-  margin-right: 1vw;
 }
 
 .login-nav {
