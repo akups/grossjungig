@@ -9,13 +9,13 @@
 }
 
 * {
-  font-family: "Cabin", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Nav bar */
 nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-content: flex-start;
   background-color: white;
   height: 80px;
@@ -30,10 +30,11 @@ nav {
 
 .main-nav {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   /* padding-bottom: 15px; */
   width: 60vw;
   color: rgb(82, 75, 75);
+  margin-left: 0rem;
 }
 
 .login-nav {
@@ -42,6 +43,7 @@ nav {
   align-content: center;
   align-items: center;
   padding-left: 4vw;
+  padding-right: 2vw;
   width: 20vw;
 }
 

@@ -41,13 +41,13 @@ const Navbar = (props) => {
       </Link>
       <div className="main-nav">
         <Link to="/berlin">
-          <Button>{navbarLocales.berlin[lang]}</Button>
+          <Button label={navbarLocales.berlin[lang]}></Button>
         </Link>
         <Link to="/maps">
           <PrimaryButton>{navbarLocales.maps[lang]}</PrimaryButton>
         </Link>
         <Link to="/munich">
-          <Button>{navbarLocales.munich[lang]}</Button>
+          <Button label={navbarLocales.munich[lang]}></Button>
         </Link>
       </div>
       {props.user ? (
@@ -63,7 +63,7 @@ const Navbar = (props) => {
       ) : (
         <div className="login-nav">
           <Link to="/login">
-            <Button>{navbarLocales.login[lang]}</Button>
+            <Button label={navbarLocales.login[lang]}></Button>
           </Link>
           <Link to="/signup">
             <PrimaryButton>{navbarLocales.signup[lang]}</PrimaryButton>
