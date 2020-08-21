@@ -1,5 +1,7 @@
 ## Welcome to Grossjungig.
 
+Großjungig AI is reinventing intergenerational co-living in big cities. By bringing seniors and young people together, we make the world more connected and promote social cohesion.
+
 A platform intended to connect seniors with a room to spare in their apartment,
 with potential tenants who are youth, with the intention of mutual support and reducing loneliness whilst offering lower rent prices for
 the youth.
