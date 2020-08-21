@@ -6,11 +6,14 @@ export const basicButtonCSS = css`
   border-radius: 34px;
 `;
 
-export const Button = styled.button`
+export const SimpleButton = styled.button`
   ${basicButtonCSS};
   border: 1px solid grey;
   background-color: white;
 `;
+export const Button = ({ onClick, label }) => (
+  <SimpleButton onClick={onClick}>{label}</SimpleButton>
+);
 
 export const PrimaryButton = styled.button`
   ${basicButtonCSS};

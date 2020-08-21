@@ -41,7 +41,10 @@ const Navbar = (props) => {
       </Link>
       <div className="main-nav">
         <Link to="/berlin">
-          <Button>{navbarLocales.berlin[lang]}</Button>
+          <Button
+            label={navbarLocales.berlin[lang]}
+            onClick={() => console.log("it is working")}
+          ></Button>
         </Link>
         <Link to="/maps">
           <PrimaryButton>{navbarLocales.maps[lang]}</PrimaryButton>
