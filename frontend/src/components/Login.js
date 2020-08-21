@@ -52,7 +52,7 @@ class Login extends Component {
         <h1>{loginLocales.title[lang]}</h1>
         <h3>{loginLocales.prompt[lang]}</h3>
         <div className="login-form">
-          <form>
+          <form onSubmit={this.handleSubmit}>
             <label htmlFor="email">{loginLocales.email[lang]}</label>
             <input
               type="text"
@@ -69,9 +69,7 @@ class Login extends Component {
               value={this.state.password}
               onChange={this.setFormState}
             />
-            <button onClick={this.handleSubmit} type="submit">
-              {loginLocales.login[lang]}
-            </button>
+            <button type="submit">{loginLocales.login[lang]}</button>
           </form>
         </div>
         {this.state.message && <p>{this.state.message}</p>}
