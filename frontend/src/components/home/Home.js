@@ -4,26 +4,75 @@ import homeLocales from "../../locales/locales.home.json";
 import styled from "styled-components";
 import "./home.css";
 import { H1 } from "../typography";
-import { Button, SecButton, SearchField, PrimaryButton, Card } from "../styled";
+import {
+  Button,
+  SecButton,
+  SearchField,
+  PrimaryButton,
+  Card,
+  Card2,
+} from "../styled";
 
 const cards = [
   {
     title: "#1:COMMUNITY",
     image: "/image/community.png",
     text:
-      "We provide a solution for two social problems: loneliness and lack of affordable housing in big cities. Senior citizens post pictures of the rooms they offer for lease, and young people live with them.",
+      "We provide a solution for two social problems: loneliness and lack of affordable housing in big cities.",
   },
   {
     title: "#2:SAVINGS",
     image: "/image/savings.png",
     text:
-      "Senior citizens support the young with advice and get paid for their rooms, young people save money on rent (up to 20% vs. market price) and support seniors with everyday help and company. ",
+      "Seniors support youth with advice and get rent. Youth save, up to 20% vs. market price, on rent and support seniors by helping with chores and keeping them company.",
   },
   {
     title: "#3:CLARITY",
     image: "/image/clarity.png",
     text:
-      "Flexible and bespoke terms allow to find the best solution for everyone. No more two-year contracts in huge WGs, no more living alone in a big family apartment!",
+      "Flexible and bespoke terms - the best solution for everyone. No more huge 'Weges', no more living alone in big family apartments!",
+  },
+];
+
+const howR1Cards = [
+  {
+    title: "#1",
+    image: "/image/senior.png",
+    text:
+      "Seniors — create a profile with 5 clicks, select your roommate preferences, tell us about your room and post pictures.",
+  },
+  {
+    title: "#2",
+    image: "/image/youth.png",
+    text:
+      "Youth —  create a profile with 5 clicks, select your roommate preferences, look for a room on the map.",
+  },
+  {
+    title: "#3",
+    image: "/image/connect.png",
+    text:
+      "Connect with each other via Großjungig AI platform and agree on the test period, sign a contract, and pay for the room.",
+  },
+];
+
+const howR2Cards = [
+  {
+    title: "#4",
+    image: "/image/test.png",
+    text:
+      "After the test period, your contract is prolonged every month unless you cancel it with one month notice.",
+  },
+  {
+    title: "#5",
+    image: "/image/pay.png",
+    text:
+      "Young person: payment is secure and fast — pay with your cards or PayPal. You only pay for the room, and the deposit is returned within one week of moving out.",
+  },
+  {
+    title: "#6",
+    image: "/image/save.png",
+    text:
+      "Senior citizens get paid securely at the end of each period. We will never charge you, money flows only in one direction — payment to the seniors.",
   },
 ];
 
@@ -38,7 +87,7 @@ class Home extends Component {
             <Row>
               {homeLocales.choose[lang]}:
               <Link to="/berlin">
-                <Button>{homeLocales.offers[lang]}</Button>
+                <Button label={homeLocales.offers[lang]}></Button>
               </Link>
               <SecButton>{homeLocales.requests[lang]}</SecButton>
             </Row>
@@ -53,19 +102,32 @@ class Home extends Component {
         </div>
         <Mission>
           <h2>
-            Grossjungig AI is reinventing intergenerational co-living in big
-            cities. By bringing seniors and young people together, we make the
-            wolrd more connected and promote social cohersion
+            Grossjungig is reinventing intergenerational co-living in big cities
+            by bringing seniors and youth together. <br /> We make the world
+            more connected and promote social cohersion.
           </h2>
         </Mission>
         <Why>
-          <h3>Why should You use Großjungig AI?</h3>
+          <h3 style={{ fontSize: "25px" }}>Why should You use Großjungig?</h3>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             {cards.map(({ title, text, image }) => (
               <Card title={title} text={text} image={image} />
             ))}
           </div>
         </Why>
+        <h3 style={{ marginTop: "5rem", fontSize: "25px" }}>
+          How does it work?
+        </h3>
+        <HowFirstRow>
+          {howR1Cards.map(({ title, image, text }) => (
+            <Card2 title={title} text={text} image={image} />
+          ))}
+        </HowFirstRow>
+        <HowSecRow>
+          {howR2Cards.map(({ title, image, text }) => (
+            <Card2 title={title} text={text} image={image} />
+          ))}
+        </HowSecRow>
       </>
     );
   }
@@ -104,14 +166,36 @@ const Mission = styled.div`
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2rem;
+  font-style: normal;
+  font-size: 20px;
 `;
 
 const Why = styled.div`
   display: flex;
   flex-direction: column;
-
-  padding: 3rem;
+  padding: 0rem;
   max-width: 1092px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0rem;
+`;
+
+const HowFirstRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem;
+  max-width: 1092px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+`;
+const HowSecRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem;
+  max-width: 1092px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
 `;

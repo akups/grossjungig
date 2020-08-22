@@ -42,9 +42,16 @@ export const Card = ({ title, image, text, alt }) => (
     <CardText>{text}</CardText>
   </CardRoot>
 );
+export const Card2 = ({ title, image, text, alt }) => (
+  <Card2Root>
+    <Card2Title>{title}</Card2Title>
+    <img src={image} alt={alt} />
+    <Card2Text>{text}</Card2Text>
+  </Card2Root>
+);
 
 const CardRoot = styled.div`
-  border: 1px solid ${({ theme: { main } }) => main};
+  border: 0.2px solid lightgray;
   border-radius: 6px;
   width: 325px;
 `;
@@ -67,4 +74,46 @@ const CardText = styled.div`
   line-height: 21px;
   text-align: center;
   margin: 1rem;
+`;
+
+const Card2Root = styled.div`
+  background: #ffffff;
+  /* non-active */
+  border: 0.5px solid #baafa1;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 300px;
+`;
+
+const Card2Title = styled.div`
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border: 2px solid;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: black;
+  /* white */
+  color: #f9f8f8;
+  /* neun */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15),
+    -2px -2px 8px rgba(255, 255, 255, 0.15);
+`;
+
+const Card2Text = styled.div`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  margin: 2rem;
+
+  /* #202020 */
+
+  color: #202020;
 `;
