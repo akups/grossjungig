@@ -139,7 +139,7 @@ class Home extends Component {
           ))}
         </HowSecRow>
         <SecPanel>
-          <Card3 text={card3.text} source={card3.source} />
+          <Card3 text={card3[0].text} source={card3[0].source} />
         </SecPanel>
         <Footer />
       </>
