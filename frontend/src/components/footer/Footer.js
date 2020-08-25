@@ -31,7 +31,13 @@ const Footer = () => {
           <FooterSmall>2020 Grossjungig AI</FooterSmall>
         </Row>
       </MainPanel>
-      <SocialPanel> </SocialPanel>
+      <SocialPanel>
+        <Row>
+          <img src="../image/facebook.png" alt="facebook" />
+          <img src="../image/instagram.png" alt="instagram" />
+          <img src="../image/Twitter.png" alt="twitter" />
+        </Row>
+      </SocialPanel>
     </Root>
   );
 };
@@ -51,7 +57,8 @@ const ContactPanel = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-right: 2rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
   p {
     text-align: left;
     margin: 0;
@@ -76,9 +83,10 @@ const Row = styled.div`
 
 const SocialPanel = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-left: 2rem;
+  justify-content: space-between;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  margin-top: 0rem;
 `;
 
 const FooterLink = styled.a`
