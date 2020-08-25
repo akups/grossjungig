@@ -86,7 +86,6 @@ class App extends React.Component {
           />
           <Route exact path="/uploadphotos/:roomId" component={UploadPhotos} />
           <Route exact path="/maps" component={MapView} />
-          <Footer />
         </ThemeProvider>
       </div>
     );

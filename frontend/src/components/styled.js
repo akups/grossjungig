@@ -50,6 +50,13 @@ export const Card2 = ({ title, image, text, alt }) => (
   </Card2Root>
 );
 
+export const Card3 = ({ text, source }) => (
+  <Card3Root>
+    <Card3Text>{text}</Card3Text>
+    <Card3Source>{source}</Card3Source>
+  </Card3Root>
+);
+
 const CardRoot = styled.div`
   border: 0.2px solid lightgray;
   border-radius: 6px;
@@ -115,5 +122,42 @@ const Card2Text = styled.div`
 
   /* #202020 */
 
+  color: #202020;
+`;
+
+const Card3Root = styled.div`
+  position: absolute;
+  background: #ffffff;
+  /* non-active */
+  border: 0.5px solid #baafa1;
+  box-sizing: border-box;
+  /* neun */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15),
+    -2px -2px 8px rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  height: 240px;
+  width: 560px;
+  margin-top: 680px;
+  margin-left: 25rem;
+`;
+
+const Card3Text = styled.div`
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  /* #202020 */
+  color: #202020;
+`;
+
+const Card3Source = styled.div`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 9px;
+  line-height: 10px;
+  /* identical to box height */
+  text-align: center;
+  /* #202020 */
   color: #202020;
 `;

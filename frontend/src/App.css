@@ -1,6 +1,6 @@
 .App {
-  height: 95vh;
-  background-color: #aad7ee;
+  height: 55vh;
+  background-color: #ffffff;
   text-align: center;
 
   color: rgb(82, 75, 75);
@@ -18,7 +18,7 @@ nav {
   justify-content: flex-start;
   align-content: flex-start;
   background-color: white;
-  height: 80px;
+  height: 150px;
   align-items: center;
   padding: 10px;
 }
