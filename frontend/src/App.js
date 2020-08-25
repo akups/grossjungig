@@ -5,7 +5,6 @@ import { ThemeProvider } from "styled-components";
 import "./App.css";
 import Home from "./components/home/Home";
 import Navbar from "./components/Navbar.js";
-import Footer from "./components/Footer.js";
 import Signup from "./components/Signup.js";
 import Login from "./components/Login.js";
 import UserPortal from "./components/UserPortal.js";
