@@ -32,7 +32,6 @@ const Navbar = (props) => {
   };
 
   const lang = localStorage.getItem("lang");
-  console.log(props.user);
 
   return (
     <nav className="navilink">
