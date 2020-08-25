@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { Link, Redirect } from "react-router-dom";
 import homeLocales from "../../locales/locales.home.json";
 import styled from "styled-components";
+import Footer from "../Footer";
 import "./home.css";
 import { H1 } from "../typography";
 import {
@@ -11,6 +12,7 @@ import {
   PrimaryButton,
   Card,
   Card2,
+  Card3,
 } from "../styled";
 
 const cards = [
@@ -76,6 +78,14 @@ const howR2Cards = [
   },
 ];
 
+const card3 = [
+  {
+    text:
+      "We’ve learnt so much from each other. It’s nice to have someone to talk to.",
+    source: "Ulrich, 64",
+  },
+];
+
 class Home extends Component {
   render() {
     const lang = localStorage.getItem("lang");
@@ -104,7 +114,7 @@ class Home extends Component {
           <h2>
             Grossjungig is reinventing intergenerational co-living in big cities
             by bringing seniors and youth together. <br /> We make the world
-            more connected and promote social cohersion.
+            more connected and promote social cohesion.
           </h2>
         </Mission>
         <Why>
@@ -128,6 +138,10 @@ class Home extends Component {
             <Card2 title={title} text={text} image={image} />
           ))}
         </HowSecRow>
+        <SecPanel>
+          <Card3 text={card3[0].text} source={card3[0].source} />
+        </SecPanel>
+        <Footer />
       </>
     );
   }
@@ -150,6 +164,15 @@ const MainPanel = styled.div`
   height: 220px;
   left: 285px;
   top: 200px;
+`;
+
+const SecPanel = styled.div`
+  background-image: url("./image/learning.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  margin-top: 3rem;
+  scroll-margin-bottom: 3rem;
 `;
 
 const Row = styled.div`
