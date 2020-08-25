@@ -1,6 +1,6 @@
 .App {
-  height: 55vh;
-  background-color: #ffffff;
+  /* background-color: #aad7ee; */
+  background-color: transparent;
   text-align: center;
 
   color: rgb(82, 75, 75);
@@ -18,9 +18,13 @@ nav {
   justify-content: flex-start;
   align-content: flex-start;
   background-color: white;
-  height: 150px;
+  height: 120px;
   align-items: center;
   padding: 10px;
+  position: sticky;
+  top: 0px;
+  border-bottom: 1px solid grey;
+  margin-bottom: 1rem;
 }
 
 .logo-link {
@@ -160,6 +164,16 @@ h1 {
   margin: 20px auto;
 }
 
+.room-container {
+  text-decoration: none;
+  color: inherit;
+}
+
+.room-container:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 th {
   border: 2px solid #040759;
   width: 300px;
@@ -168,10 +182,13 @@ th {
 td {
   border: 2px solid #040759;
   width: 300px;
+  padding: 0.5rem;
+  margin: 0.25rem;
+  border-radius: 6px;
 }
 
 tbody {
-  /* background-color: #6ba6da; */
+  background-color: #6ba6da;
   color: white;
   font-family: "Oswald", sans-serif;
 }

@@ -6,8 +6,10 @@ import getGeocodes from "../api/getGeocodes";
 import getAddresses from "../api/getAddresses";
 
 const containerStyle = {
-  width: "50vw",
+  width: "80vw",
   height: "60vh",
+  marginLeft: "auto",
+  marginRight: "auto",
 };
 
 const center = {

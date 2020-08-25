@@ -62,9 +62,12 @@ class Berlin extends Component {
       return (
         <tbody className="table" key={el._id}>
           <tr>
-            <Link className="room-container" to={`/berlin/${el._id}`}>
-              <td>{el.name}</td>
-            </Link>
+            <td>
+              <Link className="room-container" to={`/berlin/${el._id}`}>
+                {el.name}
+              </Link>
+            </td>
+
             <td>{el.district}</td>
           </tr>
         </tbody>
