@@ -1,8 +1,8 @@
-import React, { Component, Fragment } from "react";
-import { Link, Redirect } from "react-router-dom";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import homeLocales from "../../locales/locales.home.json";
 import styled from "styled-components";
-import Footer from "../Footer";
+import Footer from "../footer/Footer";
 import "./home.css";
 import { H1 } from "../typography";
 import {
@@ -172,7 +172,7 @@ const SecPanel = styled.div`
   background-size: cover;
   height: 800px;
   margin-top: 3rem;
-  scroll-margin-bottom: 3rem;
+  margin-bottom: 10rem;
 `;
 
 const Row = styled.div`
