@@ -5,10 +5,9 @@ const Footer = () => {
   return (
     <Root>
       <ContactPanel>
-        <p>
-          Großjungig AI <br /> Bruchwitzstraße 13 <br />
-          12247 Berlin{" "}
-        </p>
+        <p>Großjungig AI</p>
+        <p>Bruchwitzstraße 13</p>
+        <p>12247 Berlin</p>
       </ContactPanel>
       <MainPanel>
         <Row>
@@ -16,6 +15,12 @@ const Footer = () => {
           <FooterLink>How does it work </FooterLink>
           <FooterLink>Newsletter </FooterLink>
           <FooterLink>Community</FooterLink>
+        </Row>
+        <Row>
+          <FooterLinkSmall>Privacy Policy</FooterLinkSmall>
+          <FooterLinkSmall>Cookies</FooterLinkSmall>
+          <FooterLinkSmall>Policy </FooterLinkSmall>
+          <FooterLinkSmall>FAQ</FooterLinkSmall>
         </Row>
       </MainPanel>
       <SocialPanel></SocialPanel>
@@ -35,6 +40,7 @@ const Root = styled.div`
 const ContactPanel = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 `;
 
 const MainPanel = styled.div`
@@ -63,4 +69,15 @@ const FooterLink = styled.a`
   line-height: 21px;
   color: #f9f8f8;
   padding: 0.25rem 1rem;
+`;
+
+const FooterLinkSmall = styled.a`
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  color: #f9f8f8;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
 `;
