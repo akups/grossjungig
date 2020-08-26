@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import homeLocales from "../../locales/locales.home.json";
 import styled from "styled-components";
-// import Footer from "../footer/Footer";
 import "./home.css";
 import { H1 } from "../typography";
 import {
@@ -141,7 +140,10 @@ class Home extends Component {
         <SecPanel>
           <Card3 text={card3[0].text} source={card3[0].source} />
         </SecPanel>
-        {/* <Footer /> */}
+        <CommunityPanel>
+          <p>Community</p>
+          <img src="/image/community-group.png" alt="community" />
+        </CommunityPanel>
       </>
     );
   }
@@ -221,4 +223,14 @@ const HowSecRow = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin-top: 3rem;
+`;
+
+const CommunityPanel = styled.div`
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 28px;
+  color: rgb(116, 109, 109);
 `;
