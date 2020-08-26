@@ -120,8 +120,8 @@ class Home extends Component {
         <Why>
           <h3 style={{ fontSize: "25px" }}>Why should You use Großjungig?</h3>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
-            {cards.map(({ title, text, image }) => (
-              <Card title={title} text={text} image={image} />
+            {cards.map(({ title, text, image }, index) => (
+              <Card key={index} title={title} text={text} image={image} />
             ))}
           </div>
         </Why>
@@ -129,13 +129,13 @@ class Home extends Component {
           How does it work?
         </h3>
         <HowFirstRow>
-          {howR1Cards.map(({ title, image, text }) => (
-            <Card2 title={title} text={text} image={image} />
+          {howR1Cards.map(({ title, image, text }, index) => (
+            <Card2 key={index} title={title} text={text} image={image} />
           ))}
         </HowFirstRow>
         <HowSecRow>
-          {howR2Cards.map(({ title, image, text }) => (
-            <Card2 title={title} text={text} image={image} />
+          {howR2Cards.map(({ title, image, text }, index) => (
+            <Card2 key={index} title={title} text={text} image={image} />
           ))}
         </HowSecRow>
         <SecPanel>
