@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import homeLocales from "../../locales/locales.home.json";
 import styled from "styled-components";
-import Footer from "../footer/Footer";
+// import Footer from "../footer/Footer";
 import "./home.css";
 import { H1 } from "../typography";
 import {
@@ -141,7 +141,7 @@ class Home extends Component {
         <SecPanel>
           <Card3 text={card3[0].text} source={card3[0].source} />
         </SecPanel>
-        <Footer />
+        {/* <Footer /> */}
       </>
     );
   }

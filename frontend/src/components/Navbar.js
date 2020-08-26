@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import navbarLocales from "../locales/locales.navbar.json";
 import Logo from "./Logo";
-import { PrimaryButton, Button } from "./styled";
+import { PrimaryButton, Button, NavbarLink } from "./styled";
 
 const Navbar = (props) => {
   const [img, setImage] = useState("/image/germany.png");
@@ -48,6 +48,11 @@ const Navbar = (props) => {
         <Link to="/munich">
           <Button label={navbarLocales.munich[lang]}></Button>
         </Link>
+        <div className="navbarlink">
+          <NavbarLink> About </NavbarLink>
+          <NavbarLink href="How does it work?">How does it work? </NavbarLink>
+          <NavbarLink href="Community">Community</NavbarLink>
+        </div>
       </div>
       {props.user ? (
         <div className="login-nav">

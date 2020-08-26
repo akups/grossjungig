@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 import "./App.css";
 import Home from "./components/home/Home";
 import Navbar from "./components/Navbar.js";
+import Footer from "./components/footer/Footer.js";
 import Signup from "./components/Signup.js";
 import Login from "./components/Login.js";
 import UserPortal from "./components/UserPortal.js";
@@ -86,6 +87,7 @@ class App extends React.Component {
           <Route exact path="/uploadphotos/:roomId" component={UploadPhotos} />
           <Route exact path="/maps" component={MapView} />
         </ThemeProvider>
+        <Footer />
       </div>
     );
   }
