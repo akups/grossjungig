@@ -58,7 +58,7 @@
   color: #ffffff;
 }
 
-h1 {
+.signup-container h1 {
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -66,7 +66,7 @@ h1 {
   color: #000000;
 }
 
-h2 {
+.signup-container h2 {
   font-style: normal;
   font-weight: 200;
   font-size: 16px;
@@ -74,7 +74,7 @@ h2 {
   color: rgb(82, 75, 75);
 }
 
-h3 {
+.signup-container h3 {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
