@@ -35,18 +35,26 @@ function MyComponent() {
     fetchData();
   }, []);
 
-  return coordinates.length ? (
-    <LoadScript googleMapsApiKey={process.env.REACT_APP_MY_MAP_API_KEY}>
-      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
-        {/* Child components, such as markers, info windows, etc. */}
-        {coordinates.map(({ lat, lng, id }) => (
-          <Marker key={id} onLoad={onLoad} position={{ lat, lng }} />
-        ))}
-        <></>
-      </GoogleMap>
-    </LoadScript>
-  ) : (
-    <p>Loading..</p>
+  return (
+    <div style={{ minHeight: "60vh" }}>
+      {coordinates.length ? (
+        <LoadScript googleMapsApiKey={process.env.REACT_APP_MY_MAP_API_KEY}>
+          <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={center}
+            zoom={10}
+          >
+            {/* Child components, such as markers, info windows, etc. */}
+            {coordinates.map(({ lat, lng, id }) => (
+              <Marker key={id} onLoad={onLoad} position={{ lat, lng }} />
+            ))}
+            <></>
+          </GoogleMap>
+        </LoadScript>
+      ) : (
+        <p>Loading..</p>
+      )}
+    </div>
   );
 }
 

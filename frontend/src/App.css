@@ -21,21 +21,17 @@ nav {
   padding: 10px;
   position: sticky;
   top: 0px;
-  border-bottom: 1px solid grey;
   margin: auto;
+  max-width: 1150px;
 }
 
 .logo-link {
-  padding-left: 10vw;
-  padding-right: 4vw;
-  /* position: absolute; */
 }
 
 .main-nav {
   display: flex;
   justify-content: center;
   width: 50vw;
-  margin-left: 8vw;
 }
 
 .login-nav {
@@ -43,9 +39,9 @@ nav {
   justify-content: space-evenly;
   align-content: center;
   align-items: center;
-  padding-left: 6vw;
-  padding-right: 2vw;
-  width: 15vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 20vw;
 }
 
 .navbarlink {
