@@ -6,7 +6,7 @@ import "./App.css";
 import Home from "./components/home/Home";
 import Navbar from "./components/Navbar.js";
 import Footer from "./components/footer/Footer.js";
-import Signup from "./components/Signup.js";
+import Signup from "./components/signup/Signup.js";
 import Login from "./components/Login.js";
 import UserPortal from "./components/UserPortal.js";
 import Berlin from "./components/Berlin.js";

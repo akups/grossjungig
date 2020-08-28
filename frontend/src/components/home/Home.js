@@ -109,22 +109,32 @@ class Home extends Component {
             </Row>
           </MainPanel>
         </div>
-        <Mission>
-          <h2>
+        <Mission id="about">
+          <h2 style={{ color: "#202020" }}>
             Grossjungig is reinventing intergenerational co-living in big cities
             by bringing seniors and youth together. <br /> We make the world
             more connected and promote social cohesion.
           </h2>
         </Mission>
         <Why>
-          <h3 style={{ fontSize: "25px" }}>Why should You use Großjungig?</h3>
+          <h3 style={{ fontSize: "25px", color: "black" }}>
+            Why should You use Großjungig?
+          </h3>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             {cards.map(({ title, text, image }, index) => (
               <Card key={index} title={title} text={text} image={image} />
             ))}
           </div>
         </Why>
-        <h3 id="how-it-works" style={{ marginTop: "5rem", fontSize: "25px" }}>
+        <h3
+          id="how-it-works"
+          style={{
+            marginTop: "2rem",
+            paddingTop: "9rem",
+            fontSize: "25px",
+            color: "black",
+          }}
+        >
           How does it work?
         </h3>
         <HowFirstRow>
@@ -144,6 +154,10 @@ class Home extends Component {
           <p>Community</p>
           <img src="/image/community-group.png" alt="community" />
         </CommunityPanel>
+        <ContactPanel>
+          <p>Contact</p>
+          <img src="/image/contact.png" alt="contact" />
+        </ContactPanel>
       </>
     );
   }
@@ -174,7 +188,7 @@ const SecPanel = styled.div`
   background-size: cover;
   height: 800px;
   margin-top: 3rem;
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
 `;
 
 const Row = styled.div`
@@ -187,11 +201,12 @@ const Row = styled.div`
 
 const Mission = styled.div`
   text-align: center;
-  padding: 3rem;
+  padding-top: 7rem;
+  padding-bottom: 3rem;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2rem;
+  margin-top: 0.2rem;
   font-style: normal;
   font-size: 20px;
 `;
@@ -226,11 +241,23 @@ const HowSecRow = styled.div`
 `;
 
 const CommunityPanel = styled.div`
-  margin-top: 3rem;
+  margin-top: 0.5rem;
   margin-bottom: 2rem;
+  padding-top: 7rem;
   text-align: center;
   font-weight: bold;
   font-size: 25px;
-  line-height: 28px;
-  color: rgb(116, 109, 109);
+  line-height: 26px;
+  color: black;
+`;
+
+const ContactPanel = styled.div`
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  padding-top: 7rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 26px;
+  color: black;
 `;

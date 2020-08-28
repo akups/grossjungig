@@ -1,7 +1,7 @@
 {
   "title": {
-    "en": "Create New Account",
-    "de": "Konto Erstellen"
+    "en": "Please create an account",
+    "de": "Bitte erstellen Sie ein Konto."
   },
   "senior": {
     "en": "Senior",
@@ -24,8 +24,12 @@
     "de": "Rolle "
   },
   "welcome": {
-    "en": "Welcome! Please create an account",
-    "de": "Willkommen! Bitte erstellen Sie ein Konto. "
+    "en": "Welcome to",
+    "de": "Willkommen an"
+  },
+  "grossjungig": {
+    "en": "Grossjungig AI! ",
+    "de": "Grossjungig AI! "
   },
   "submit": {
     "en": "Submit",

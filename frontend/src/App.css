@@ -24,9 +24,9 @@ nav {
   margin: auto;
   max-width: 1150px;
 }
-
+/* 
 .logo-link {
-}
+} */
 
 .main-nav {
   display: flex;
@@ -62,38 +62,6 @@ nav {
   color: grey;
 }
 
-/* Signup */
-.signup-component {
-  height: 60vh;
-  padding-left: 19vw;
-  padding-right: 19vw;
-}
-
-.signup-container {
-  display: table-caption;
-  padding-left: 22vw;
-}
-
-.signup-container input {
-  width: 15vw;
-  padding: 1vh;
-  border-radius: 3px;
-  border: 2px solid grey;
-}
-
-.signup-container button {
-  height: 55px;
-  width: 140px;
-  margin-top: 3vh;
-  background-color: #ffffff;
-  color: rgb(82, 75, 75);
-  font-size: 24px;
-  border-radius: 7px;
-  border: none;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 800;
-  padding: 10px;
-}
 /* Login */
 .login {
   height: 60vh;
@@ -115,7 +83,9 @@ nav {
   width: 15vw;
   padding: 1vh;
   border-radius: 3px;
-  border: 2px solid #97ebdb;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  border-radius: 8px;
 }
 
 .login-form button {
