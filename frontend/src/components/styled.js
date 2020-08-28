@@ -62,6 +62,7 @@ export const NavbarLink = styled.a`
   font-size: 15px;
   color: black;
   margin: auto;
+  padding: 0rem 1rem;
 `;
 
 const CardRoot = styled.div`

@@ -28,7 +28,7 @@ nav {
 .logo-link {
   padding-left: 10vw;
   padding-right: 4vw;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .main-nav {
