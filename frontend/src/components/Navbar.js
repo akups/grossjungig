@@ -34,53 +34,62 @@ const Navbar = (props) => {
   const lang = localStorage.getItem("lang");
 
   return (
-    <nav className="navilink">
-      <Link className="logo-link" to="/">
-        <Logo />
-      </Link>
-      <div className="main-nav">
-        <Link to="/berlin">
-          <Button label={navbarLocales.berlin[lang]}></Button>
+    <div
+      style={{
+        width: "100%",
+        position: "sticky",
+        top: "0px",
+        background: "white",
+      }}
+    >
+      <nav className="navilink">
+        <Link className="logo-link" to="/">
+          <Logo />
         </Link>
-        <Link to="/maps">
-          <PrimaryButton>{navbarLocales.maps[lang]}</PrimaryButton>
-        </Link>
-        <Link to="/munich">
-          <Button label={navbarLocales.munich[lang]}></Button>
-        </Link>
-        <div className="navbarlink">
-          <NavbarLink> About </NavbarLink>
-          <NavbarLink href="How does it work?">How does it work? </NavbarLink>
-          <NavbarLink href="Community">Community</NavbarLink>
+        <div className="main-nav">
+          <Link to="/berlin">
+            <Button label={navbarLocales.berlin[lang]}></Button>
+          </Link>
+          <Link to="/maps">
+            <PrimaryButton>{navbarLocales.maps[lang]}</PrimaryButton>
+          </Link>
+          <Link to="/munich">
+            <Button label={navbarLocales.munich[lang]}></Button>
+          </Link>
+          <div className="navbarlink">
+            <NavbarLink> About </NavbarLink>
+            <NavbarLink href="/#how-it-works">How does it work? </NavbarLink>
+            <NavbarLink href="/#community">Community</NavbarLink>
+          </div>
         </div>
-      </div>
-      {props.user ? (
-        <div className="login-nav">
-          <Link onClick={logout} to="/">
-            {navbarLocales.logout[lang]}
-          </Link>
-          <img onClick={imageChange} height="30px" src={img} alt="" />
-          <Link to="/userportal">
-            <img height="30px" src="/image/user.png" alt="User Portal" />
-          </Link>
-        </div>
-      ) : (
-        <div className="login-nav">
-          <Link to="/login">
-            <Button label={navbarLocales.login[lang]}></Button>
-          </Link>
-          <Link to="/signup">
-            <PrimaryButton>{navbarLocales.signup[lang]}</PrimaryButton>
-          </Link>
-          <img
-            onClick={imageChange}
-            height="20px"
-            src={img}
-            alt="Language Switcher"
-          />
-        </div>
-      )}
-    </nav>
+        {props.user ? (
+          <div className="login-nav">
+            <Link onClick={logout} to="/">
+              {navbarLocales.logout[lang]}
+            </Link>
+            <img onClick={imageChange} height="30px" src={img} alt="" />
+            <Link to="/userportal">
+              <img height="30px" src="/image/user.png" alt="User Portal" />
+            </Link>
+          </div>
+        ) : (
+          <div className="login-nav">
+            <Link to="/login">
+              <Button label={navbarLocales.login[lang]}></Button>
+            </Link>
+            <Link to="/signup">
+              <PrimaryButton>{navbarLocales.signup[lang]}</PrimaryButton>
+            </Link>
+            <img
+              onClick={imageChange}
+              height="20px"
+              src={img}
+              alt="Language Switcher"
+            />
+          </div>
+        )}
+      </nav>
+    </div>
   );
 };
 

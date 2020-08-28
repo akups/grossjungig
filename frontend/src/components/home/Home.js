@@ -124,7 +124,7 @@ class Home extends Component {
             ))}
           </div>
         </Why>
-        <h3 style={{ marginTop: "5rem", fontSize: "25px" }}>
+        <h3 id="how-it-works" style={{ marginTop: "5rem", fontSize: "25px" }}>
           How does it work?
         </h3>
         <HowFirstRow>
@@ -140,7 +140,7 @@ class Home extends Component {
         <SecPanel>
           <Card3 text={card3[0].text} source={card3[0].source} />
         </SecPanel>
-        <CommunityPanel>
+        <CommunityPanel id="community">
           <p>Community</p>
           <img src="/image/community-group.png" alt="community" />
         </CommunityPanel>
