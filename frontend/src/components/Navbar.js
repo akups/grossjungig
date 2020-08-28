@@ -57,7 +57,7 @@ const Navbar = (props) => {
             <Button label={navbarLocales.munich[lang]}></Button>
           </Link>
           <div className="navbarlink">
-            <NavbarLink> About </NavbarLink>
+            <NavbarLink href="/#about"> About </NavbarLink>
             <NavbarLink href="/#how-it-works">How does it work? </NavbarLink>
             <NavbarLink href="/#community">Community</NavbarLink>
           </div>
