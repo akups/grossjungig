@@ -57,6 +57,14 @@ export const Card3 = ({ text, source }) => (
   </Card3Root>
 );
 
+export const NavbarLink = styled.a`
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+  margin: auto;
+  padding: 0rem 1rem;
+`;
+
 const CardRoot = styled.div`
   border: 0.2px solid lightgray;
   border-radius: 6px;

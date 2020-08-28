@@ -2,8 +2,6 @@
   /* background-color: #aad7ee; */
   background-color: transparent;
   text-align: center;
-
-  color: rgb(82, 75, 75);
   margin: 0;
   padding: 0;
 }
@@ -24,21 +22,20 @@ nav {
   position: sticky;
   top: 0px;
   border-bottom: 1px solid grey;
-  margin-bottom: 1rem;
+  margin: auto;
 }
 
 .logo-link {
-  padding-left: 2vw;
-  position: absolute;
+  padding-left: 10vw;
+  padding-right: 4vw;
+  /* position: absolute; */
 }
 
 .main-nav {
   display: flex;
   justify-content: center;
-  /* padding-bottom: 15px; */
-  width: 60vw;
-  color: rgb(82, 75, 75);
-  margin-left: 0rem;
+  width: 50vw;
+  margin-left: 8vw;
 }
 
 .login-nav {
@@ -46,25 +43,27 @@ nav {
   justify-content: space-evenly;
   align-content: center;
   align-items: center;
-  padding-left: 4vw;
+  padding-left: 6vw;
   padding-right: 2vw;
-  width: 20vw;
+  width: 15vw;
 }
 
-.navilink a {
-  /* This is a link */
+.navbarlink {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2vw;
+  color: black;
+}
+
+/* .navilink a {
   text-decoration: none;
   color: grey;
   font-size: 20px;
   font-weight: bold;
-}
+} */
 
 .navilink a:hover {
   color: grey;
-}
-
-h1 {
-  color: rgb(82, 75, 75) ey;
 }
 
 /* Signup */
