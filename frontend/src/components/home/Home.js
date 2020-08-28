@@ -151,10 +151,11 @@ class Home extends Component {
           <Card3 text={card3[0].text} source={card3[0].source} />
         </SecPanel>
         <CommunityPanel id="community">
-          <p style={{ color: "black" }}>Community</p>
+          <p>Community</p>
           <img src="/image/community-group.png" alt="community" />
         </CommunityPanel>
         <ContactPanel>
+          <p>Contact</p>
           <img src="/image/contact.png" alt="contact" />
         </ContactPanel>
       </>
@@ -187,7 +188,7 @@ const SecPanel = styled.div`
   background-size: cover;
   height: 800px;
   margin-top: 3rem;
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
 `;
 
 const Row = styled.div`
@@ -240,22 +241,23 @@ const HowSecRow = styled.div`
 `;
 
 const CommunityPanel = styled.div`
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  padding-top: 7rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 26px;
+  color: black;
+`;
+
+const ContactPanel = styled.div`
   margin-top: 3rem;
   margin-bottom: 2rem;
   padding-top: 7rem;
   text-align: center;
   font-weight: bold;
   font-size: 25px;
-  line-height: 28px;
-  color: rgb(116, 109, 109);
-`;
-
-const ContactPanel = styled.div`
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-  /* text-align: center;
-  font-weight: bold;
-  font-size: 25px;
-  line-height: 28px;
-  color: rgb(116, 109, 109); */
+  line-height: 26px;
+  color: black;
 `;
