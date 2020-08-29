@@ -3,9 +3,17 @@
     "en": "Login",
     "de": "Anmelden"
   },
+  "welcome": {
+    "en": "Welcome back to",
+    "de": "Willkommen zurück an!"
+  },
+  "grossjungig": {
+    "en": "Grossjungig AI! ",
+    "de": "Grossjungig AI! "
+  },
   "prompt": {
-    "en": "Welcome back! Please log in to continue.",
-    "de": "Willkommen zurück! Bitte loggen Sie sich ein."
+    "en": "Please log in to continue.",
+    "de": "Bitte loggen Sie sich ein."
   },
   "email": {
     "en": "Email",

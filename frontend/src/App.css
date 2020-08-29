@@ -62,45 +62,6 @@ nav {
   color: grey;
 }
 
-/* Login */
-.login {
-  height: 60vh;
-  padding-left: 19vw;
-  padding-right: 19vw;
-}
-
-.login-form {
-  display: table-caption;
-  padding-left: 22vw;
-  padding-bottom: 2vh;
-}
-
-.login-form label {
-  padding-top: 2vh;
-}
-
-.login-form input {
-  width: 15vw;
-  padding: 1vh;
-  border-radius: 3px;
-  border: 1px solid #e0e0e0;
-  box-sizing: border-box;
-  border-radius: 8px;
-}
-
-.login-form button {
-  height: 55px;
-  width: 140px;
-  margin-top: 3vh;
-  background-color: #ffffff;
-  color: grey;
-  font-size: 24px;
-  border-radius: 7px;
-  border: none;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 800;
-  padding: 10px;
-}
 /* User Portal */
 .portal-container {
   height: 60vh;

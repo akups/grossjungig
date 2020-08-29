@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-import styled from "styled-components";
 import "./signup.css";
 import axios from "axios";
 import signupLocales from "../../locales/locales.signup.json";
