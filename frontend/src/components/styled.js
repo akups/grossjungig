@@ -7,6 +7,19 @@ export const basicButtonCSS = css`
   border-radius: 34px;
 `;
 
+export const submitButtons = css`
+  margin-top: 3vh;
+  border: none;
+  padding: 10px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  background: #baafa1;
+  border-radius: 16px;
+  color: #ffffff;
+`;
+
 export const SimpleButton = styled.button`
   ${basicButtonCSS};
   border: 1px solid grey;

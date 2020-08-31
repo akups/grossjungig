@@ -14,6 +14,7 @@ import AddRoom from "./components/AddRoom.js";
 import UploadPhotos from "./components/UploadPhotos";
 import Details from "./components/Details";
 import MapView from "./components/MapView";
+import ForgotPassword from "./components/forgotpassword/ForgotPassword";
 
 const theme = {
   main: "#ed8707",
@@ -86,6 +87,7 @@ class App extends React.Component {
           />
           <Route exact path="/uploadphotos/:roomId" component={UploadPhotos} />
           <Route exact path="/maps" component={MapView} />
+          <Route exact path="/forgotpassword" component={ForgotPassword} />
         </ThemeProvider>
         <Footer />
       </div>
