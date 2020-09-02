@@ -35,7 +35,7 @@ class ForgotPassword extends Component {
       });
     } else {
       axios
-        .post(`${process.env.REACT_APP_BACKENDURL}/forgotPassword`, {
+        .post(`${process.env.REACT_APP_BACKENDURL}forgotPassword`, {
           email: this.state.email,
         })
         .then((response) => {
