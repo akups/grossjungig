@@ -35,7 +35,7 @@ class ForgotPassword extends Component {
       });
     } else {
       axios
-        .post(`${process.env.REACT_APP_BACKENDURL}/forgotPassword`, {
+        .post(`${process.env.REACT_APP_BACKENDURL}forgotPassword`, {
           email: this.state.email,
         })
         .then((response) => {
@@ -90,12 +90,22 @@ class ForgotPassword extends Component {
                 <p>The email address cannot be null.</p>
               </div>
             )}
+            {/* {showError && (
+              <div>
+                <p>
+                  The email address isn't recognized. Please try again or
+                  register for a new account
+                </p>
+              </div>
+            )} */}
             {messageFromServer === "email sent" && (
               <div>
                 <h3>Password Reset Email Successfully Sent!</h3>
               </div>
             )}
-            <Link to="/"></Link>
+            <Link to="/">
+              <button type="">{forgotLocales.return[lang]}</button>
+            </Link>
           </div>
         </div>
       </div>

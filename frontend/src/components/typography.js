@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components";
 
 export const h1CSS = css`
-  font-size: 45px;
+  font-family: "Poppins";
+  font-size: 3em;
   color: #202020;
 `;
 

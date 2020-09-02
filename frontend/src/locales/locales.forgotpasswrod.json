@@ -21,6 +21,11 @@
     "en": "Grossjungig AI! ",
     "de": "Grossjungig AI! "
   },
+
+  "return": {
+    "en": "Return to Home",
+    "de": "Zurrcuk zur Startseite"
+  },
   "submit": {
     "en": "Submit",
     "de": "Weiter"
