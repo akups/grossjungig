@@ -2,6 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const usersRoutes = require("./users");
+const forgotPasswordRoutes = require("./forgotPassword");
 
 // const commentsRoutes = require("./comments");
 const roomsRoutes = require("./rooms");
@@ -14,6 +15,7 @@ const roomsRoutes = require("./rooms");
 
 router.use("/api/auth", usersRoutes);
 router.use("/api", roomsRoutes);
+router.use("/api/auth/forgotPassword", forgotPasswordRoutes);
 // router.use("/api", commentsRoutes);
 
 module.exports = router;
