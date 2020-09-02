@@ -11,7 +11,7 @@ const cors = require("cors");
 
 require("./passport")(app);
 app.use(fileUpload());
-// app.use("nodemailer");
+// app.use(nodemailer);
 
 app.use(express.urlencoded({ extended: true })); // sets the `body` object in the `request` with the values from an HTML POST form
 

@@ -5,6 +5,7 @@ const router = express.Router();
 const User = require("../models/User");
 
 router.post("/forgotPassword", (req, res) => {
+  console.log(req);
   if (req.body.email === "") {
     res.status(400).send("email required");
   }
