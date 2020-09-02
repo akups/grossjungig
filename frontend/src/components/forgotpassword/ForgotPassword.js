@@ -94,7 +94,7 @@ class ForgotPassword extends Component {
               <div>
                 <p>
                   The email address isn't recognized. Please try again or
-                  register for a new account
+                  signup for a new account
                 </p>
               </div>
             )} */}

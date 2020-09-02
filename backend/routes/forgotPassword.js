@@ -11,9 +11,7 @@ router.post("/forgotPassword", (req, res) => {
   }
   console.error(req.body.email);
   User.findOne({
-    where: {
-      email: req.body.email,
-    },
+    email: req.body.email,
   }).then((user) => {
     if (user === null) {
       console.error("email not in database");
