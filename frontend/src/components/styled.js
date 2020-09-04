@@ -4,7 +4,7 @@ import React from "react";
 export const basicButtonCSS = css`
   padding: 0.5rem 1.5rem;
   margin: 0.25rem;
-  border-radius: 34px;
+  border-radius: 0.9375rem;
 `;
 
 export const submitButtons = css`
@@ -13,10 +13,10 @@ export const submitButtons = css`
   padding: 10px;
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 19px;
   background: #baafa1;
-  border-radius: 16px;
+  border-radius: 1rem;
   color: #ffffff;
 `;
 
@@ -45,7 +45,7 @@ export const SecButton = styled.button`
 export const SearchField = styled.input`
   ${basicButtonCSS};
   border: 1px solid grey;
-  background-color: white;
+  background-color: #f2f0f0;
 `;
 
 export const Card = ({ title, image, text, alt }) => (
