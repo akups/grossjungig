@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import "./login.css";
 import loginLocales from "../../locales/locales.login.json";
 
@@ -77,9 +77,9 @@ class Login extends Component {
               />
               <h5>
                 Don’t remember your password?{" "}
-                <a href="/#forgotpassword" style={{ textDecoration: "none" }}>
+                <Link to="/forgotpassword" style={{ textDecoration: "none" }}>
                   Click here
-                </a>{" "}
+                </Link>
               </h5>
               <button type="submit">{loginLocales.login[lang]}</button>
             </form>

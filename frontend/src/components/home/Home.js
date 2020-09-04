@@ -31,7 +31,7 @@ const cards = [
     title: "#3:CLARITY",
     image: "/image/clarity.png",
     text:
-      "Flexible and bespoke terms - the best solution for everyone. No more huge 'Weges', no more living alone in big family apartments!",
+      "Flexible and bespoke terms - the best solution for everyone. No more huge shared apartments, no more living alone in big family apartments!",
   },
 ];
 
@@ -67,13 +67,13 @@ const howR2Cards = [
     title: "#5",
     image: "/image/pay.png",
     text:
-      "Young person: payment is secure and fast — pay with your cards or PayPal. You only pay for the room, and the deposit is returned within one week of moving out.",
+      "Young person: payment is secure and fast. You only pay for the room, and the deposit is returned within one week of moving out.",
   },
   {
     title: "#6",
     image: "/image/save.png",
     text:
-      "Senior citizens get paid securely at the end of each period. We will never charge you, money flows only in one direction — payment to the seniors.",
+      "Senior citizens: get secure payment. Everything is transparent. Money goes directly to your bank account.",
   },
 ];
 
@@ -93,20 +93,20 @@ class Home extends Component {
         <div className="home-component">
           <MainPanel>
             <H1>Find your second grand family</H1>
-            <Row>
+            <RowChoose>
               {homeLocales.choose[lang]}:
               <Link to="/berlin">
                 <Button label={homeLocales.offers[lang]}></Button>
               </Link>
               <SecButton>{homeLocales.requests[lang]}</SecButton>
-            </Row>
-            <Row>
+            </RowChoose>
+            <RowSelect>
               <SearchField
                 placeholder={homeLocales.city[lang]}
                 input=""
               ></SearchField>
               <PrimaryButton>{homeLocales.search[lang]}</PrimaryButton>
-            </Row>
+            </RowSelect>
           </MainPanel>
         </div>
         <Mission id="about">
@@ -168,6 +168,7 @@ export default Home;
 const MainPanel = styled.div`
   display: flex;
   flex-direction: column;
+  align-content: center;
   border-radius: 24px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
     -4px -4px 8px rgba(255, 255, 255, 0.15);
@@ -176,27 +177,40 @@ const MainPanel = styled.div`
   margin: 6rem;
   margin-bottom: 20rem;
   margin-top: 8rem;
-  width: 870px;
-  height: 220px;
-  left: 285px;
-  top: 200px;
+  width: 54.375rem;
+  height: 20rem;
+  /* margin-left: 17.8125rem;
+  margin-top: 12.5rem; */
 `;
 
 const SecPanel = styled.div`
   background-image: url("./image/learning.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 800px;
+  height: 50rem;
   margin-top: 3rem;
   margin-bottom: 8rem;
 `;
 
-const Row = styled.div`
+const RowChoose = styled.div`
+  display: flex;
+  padding: 0.15rem 0.5rem;
+  margin-left: 4rem;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 2.25rem;
+  width: 20.625rem;
+`;
+
+const RowSelect = styled.div`
   display: flex;
   padding: 0.15rem;
   justify-content: center;
   align-content: center;
   align-items: center;
+  height: 3rem;
+  width: 27.625rem;
 `;
 
 const Mission = styled.div`
