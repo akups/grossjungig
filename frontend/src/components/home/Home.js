@@ -117,7 +117,7 @@ class Home extends Component {
           </h2>
         </Mission>
         <Why>
-          <h3 style={{ fontSize: "25px", color: "black" }}>
+          <h3 style={{ fontSize: "25px", color: "black", textAlign: "center" }}>
             Why should You use Großjungig?
           </h3>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -133,6 +133,7 @@ class Home extends Component {
             paddingTop: "9rem",
             fontSize: "25px",
             color: "black",
+            textAlign: "center",
           }}
         >
           How does it work?
