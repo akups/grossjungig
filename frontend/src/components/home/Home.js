@@ -169,6 +169,7 @@ const MainPanel = styled.div`
   display: flex;
   flex-direction: column;
   align-content: center;
+  align-items: center;
   border-radius: 24px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
     -4px -4px 8px rgba(255, 255, 255, 0.15);
@@ -195,7 +196,6 @@ const SecPanel = styled.div`
 const RowChoose = styled.div`
   display: flex;
   padding: 0.15rem 0.5rem;
-  margin-left: 4rem;
   justify-content: center;
   align-content: center;
   align-items: center;

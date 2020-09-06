@@ -150,7 +150,7 @@ const Card2Text = styled.div`
 `;
 
 const Card3Root = styled.div`
-  position: absolute;
+  position: relative;
   background: #ffffff;
   /* non-active */
   border: 0.5px solid #baafa1;
@@ -161,8 +161,8 @@ const Card3Root = styled.div`
   border-radius: 24px;
   height: 240px;
   width: 560px;
-  margin-top: 680px;
-  margin-left: 25rem;
+  top: 680px;
+  left: 12rem;
   padding: 1rem;
 `;
 
