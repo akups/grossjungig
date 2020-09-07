@@ -153,7 +153,11 @@ class Home extends Component {
         </SecPanel>
         <CommunityPanel id="community">
           <p>Community</p>
-          <img src="/image/community-group.png" alt="community" />
+          <img
+            src="/image/community-group.png"
+            alt="community"
+            style={{ maxWidth: "100%", height: "auto" }}
+          />
         </CommunityPanel>
         <ContactPanel>
           <p>Contact</p>
@@ -183,8 +187,9 @@ const MainPanel = styled.div`
   height: 20rem;
   /* Media Queries: Tablet Landscape */
   @media screen and (max-width: 1060px) {
-    width: 72%;
-    margin-left: 5%;
+    width: 69%;
+    margin-left: 15%;
+    padding: auto;
   }
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -196,10 +201,21 @@ const MainPanel = styled.div`
 const SecPanel = styled.div`
   background-image: url("./image/learning.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
   height: 50rem;
   margin-top: 3rem;
   margin-bottom: 8rem;
+  @media (min-device-width: 600px) {
+    img[data-src-600px] {
+      content: attr(data-src-600px, "./image/learning.png");
+    }
+  }
+
+  @media (min-device-width: 800px) {
+    img[data-src-800px] {
+      content: attr(data-src-800px, "./image/learning.png");
+    }
+  }
 `;
 
 const RowChoose = styled.div`
@@ -231,7 +247,7 @@ const Mission = styled.div`
   margin-right: auto;
   margin-top: 0.2rem;
   font-style: normal;
-  font-size: 20px;
+  font-size: 1.25rem;
   /* Media Queries: Tablet Landscape */
   @media screen and (max-width: 1060px) {
     width: 65%;
@@ -242,6 +258,11 @@ const Mission = styled.div`
     width: 100%;
     margin: 0;
     border: none;
+  }
+  /* Media Queries: Mobile */
+  @media screen and (max-width: 360px) {
+    width: 250%;
+    text-align: center;
   }
 `;
 
@@ -255,13 +276,18 @@ const Why = styled.div`
   margin-top: 0rem;
   /* Media Queries: Tablet Landscape */
   @media screen and (max-width: 1060px) {
-    width: 72%;
+    width: 30%;
     margin-left: 5%;
   }
+  /* Media Queries: Tablet Portrait */
   @media screen and (max-width: 768px) {
     width: 50%;
     margin: 0;
     border: none;
+  }
+  /* Media Queries: Mobile */
+  @media screen and (max-width: 360px) {
+    width: 120%;
   }
 `;
 
@@ -273,6 +299,10 @@ const HowFirstRow = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
+  @media screen and (max-width: 1060px) {
+    width: 30%;
+    margin-left: 5%;
+  }
 `;
 const HowSecRow = styled.div`
   display: flex;
@@ -282,6 +312,10 @@ const HowSecRow = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin-top: 3rem;
+  @media screen and (max-width: 1060px) {
+    width: 30%;
+    margin-left: 5%;
+  }
 `;
 
 const CommunityPanel = styled.div`
@@ -293,6 +327,38 @@ const CommunityPanel = styled.div`
   font-size: 25px;
   line-height: 26px;
   color: black;
+  /* Media Queries: Tablet Landscape */
+  @media screen and (max-width: 1060px) {
+    width: 69%;
+    margin-left: 5%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 0;
+    border: none;
+  }
+  @media screen and (max-width: 360px) {
+    width: 225%;
+    margin: 0;
+    border: none;
+  }
+
+  @media (min-device-width: 800px) {
+    img[data-src-800px] {
+      content: attr(data-src-800px, "/image/community-group.png");
+    }
+  }
+  @media (min-device-width: 800px) {
+    img[data-src-800px] {
+      content: attr(data-src-800px, "/image/community-group.png");
+    }
+  }
+
+  @media (min-device-width: 1000px) {
+    img[data-src-1000px] {
+      content: attr(data-src-1000px, "/image/community-group.png");
+    }
+  }
 `;
 
 const ContactPanel = styled.div`

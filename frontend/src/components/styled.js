@@ -106,6 +106,9 @@ const CardTitle = styled.div`
   @media screen and (max-width: 768px) {
     font-size: 1.5rem;
   }
+  @media screen and (max-width: 1060px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const CardText = styled.div`
