@@ -74,7 +74,10 @@ class Berlin extends Component {
       );
     });
     return (
-      <div style={{ height: "60vh" }} data-testid="berlin-root">
+      <div
+        style={{ height: "60vh", textAlign: "center" }}
+        data-testid="berlin-root"
+      >
         <h1>{roomsLocales.title[lang]}</h1>
         <label htmlFor="searchbypostcode">{roomsLocales.search[lang]}: </label>
         <input
