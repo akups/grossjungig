@@ -28,7 +28,7 @@
 /* Media Queries: Mobile */
 @media screen and (max-width: 360px) {
   .home-component {
-    width: 270%;
+    width: 225%;
     margin-left: none;
   }
 }
