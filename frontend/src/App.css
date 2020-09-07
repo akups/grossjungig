@@ -12,9 +12,6 @@ nav {
   margin: auto;
   max-width: 1150px;
 }
-/* 
-.logo-link {
-} */
 
 .main-nav {
   display: flex;
@@ -39,15 +36,52 @@ nav {
   color: black;
 }
 
-/* .navilink a {
-  text-decoration: none;
-  color: grey;
-  font-size: 20px;
-  font-weight: bold;
-} */
-
 .navilink a:hover {
   color: grey;
+}
+
+/* Media Queries: Tablet Landscape */
+@media screen and (max-width: 1060px) {
+  nav {
+    width: 72%;
+  }
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+    margin-left: 6%;
+  }
+  .login-nav {
+    width: 20%;
+    margin-left: 5%;
+  }
+
+  .logo.link {
+    width: 20%;
+    margin-left: none;
+  }
+}
+
+/* Media Queries: Tabled Portrait */
+@media screen and (max-width: 768px) {
+  nav {
+    width: 67%;
+  }
+  .main-nav {
+    width: 80%;
+    margin: 0;
+    border: none;
+  }
+  .login-nav {
+    width: 100%;
+    margin: 0;
+    border: none;
+  }
+  .logo.link {
+    width: 80%;
+    margin: 0;
+    border: none;
+  }
 }
 
 /* User Portal */
