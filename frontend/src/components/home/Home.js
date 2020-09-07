@@ -181,8 +181,16 @@ const MainPanel = styled.div`
   margin-top: 8rem;
   width: 54.375rem;
   height: 20rem;
-  /* margin-left: 17.8125rem;
-  margin-top: 12.5rem; */
+  /* Media Queries: Tablet Landscape */
+  @media screen and (max-width: 1060px) {
+    width: 72%;
+    margin-left: 5%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 0;
+    border: none;
+  }
 `;
 
 const SecPanel = styled.div`
@@ -224,6 +232,17 @@ const Mission = styled.div`
   margin-top: 0.2rem;
   font-style: normal;
   font-size: 20px;
+  /* Media Queries: Tablet Landscape */
+  @media screen and (max-width: 1060px) {
+    width: 65%;
+    margin-left: 3%;
+  }
+  /* Media Queries: Tabled Portrait */
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 0;
+    border: none;
+  }
 `;
 
 const Why = styled.div`
@@ -234,6 +253,16 @@ const Why = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin-top: 0rem;
+  /* Media Queries: Tablet Landscape */
+  @media screen and (max-width: 1060px) {
+    width: 72%;
+    margin-left: 5%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 50%;
+    margin: 0;
+    border: none;
+  }
 `;
 
 const HowFirstRow = styled.div`

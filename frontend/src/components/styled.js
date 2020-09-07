@@ -82,16 +82,30 @@ const CardRoot = styled.div`
   border: 0.2px solid lightgray;
   border-radius: 6px;
   width: 325px;
+  @media screen and (max-width: 1060px) {
+    width: 65%;
+    margin-left: 3%;
+  }
+  /* Media Queries: Tabled Portrait */
+  @media screen and (max-width: 768px) {
+    width: 53%;
+    margin-left: 1%;
+    border: none;
+  }
 `;
 
 const CardTitle = styled.div`
   color: ${({ theme: { main } }) => main};
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 2.25rem;
+  line-height: 2.625rem;
   text-align: center;
   padding: 0.5rem 0rem;
+  /* Media Queries: Tabled Portrait */
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const CardText = styled.div`

@@ -2,11 +2,33 @@
 
 .home-component {
   height: 45rem;
-  /* width: 90rem; */
   background-image: url("./header_image.png");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
   border-top: 1px solid grey;
+}
+
+/* Media Queries: Tablet Landscape */
+@media screen and (max-width: 1060px) {
+  .home-component {
+    width: 69%;
+    padding-top: 20%;
+  }
+}
+
+/* Media Queries: Tabled Portrait */
+@media screen and (max-width: 768px) {
+  .home-component {
+    width: 100%;
+  }
+}
+
+/* Media Queries: Mobile */
+@media screen and (max-width: 360px) {
+  .home-component {
+    width: 270%;
+    margin-left: none;
+  }
 }
