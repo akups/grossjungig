@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import navbarLocales from "../locales/locales.navbar.json";
@@ -42,10 +43,10 @@ const Navbar = (props) => {
         background: "white",
       }}
     >
-      <nav className="navilink">
-        <Link className="logo-link" to="/">
+      <nav>
+        <LinkBox to="/">
           <Logo />
-        </Link>
+        </LinkBox>
         <div className="main-nav">
           <Link to="/berlin">
             <Button label={navbarLocales.berlin[lang]}></Button>
@@ -94,3 +95,8 @@ const Navbar = (props) => {
 };
 
 export default Navbar;
+
+const LinkBox = styled(Link)`
+  height: 40px;
+  flex-basis: 30%;
+`;

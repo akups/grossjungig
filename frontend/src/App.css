@@ -1,6 +1,16 @@
+/*App*/
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flexbox > * {
+  flex: 1 1 280px;
+}
+
 /* Nav bar */
 nav {
   display: flex;
+  flex-basis: 100%;
   justify-content: flex-start;
   align-content: flex-start;
   background-color: white;
@@ -11,12 +21,13 @@ nav {
   top: 0px;
   margin: auto;
   max-width: 1150px;
+  flex-wrap: wrap;
 }
 
 .main-nav {
   display: flex;
+  flex-basis: 70%;
   justify-content: center;
-  width: 50vw;
 }
 
 .login-nav {
@@ -36,51 +47,25 @@ nav {
   color: black;
 }
 
-.navilink a:hover {
-  color: grey;
-}
-
 /* Media Queries: Tablet Landscape */
-@media screen and (max-width: 1060px) {
+
+/* media queries for mobile*/
+@media screen and (min-width: 759px) {
   nav {
-    width: 72%;
+    flex-basis: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   .main-nav {
     display: flex;
-    flex-wrap: wrap;
-    width: 20%;
-    margin-left: 6%;
-  }
-  .login-nav {
-    width: 20%;
-    margin-left: 5%;
-  }
-
-  .logo.link {
-    width: 20%;
-    margin-left: none;
+    flex-basis: 50%;
+    justify-content: center;
   }
 }
 
-/* Media Queries: Tabled Portrait */
-@media screen and (max-width: 768px) {
+@media (min-width: 1091px) {
   nav {
-    width: 67%;
-  }
-  .main-nav {
-    width: 80%;
-    margin: 0;
-    border: none;
-  }
-  .login-nav {
-    width: 100%;
-    margin: 0;
-    border: none;
-  }
-  .logo.link {
-    width: 80%;
-    margin: 0;
-    border: none;
+    flex-basis: 25%;
   }
 }
 

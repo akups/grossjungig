@@ -327,38 +327,6 @@ const CommunityPanel = styled.div`
   font-size: 25px;
   line-height: 26px;
   color: black;
-  /* Media Queries: Tablet Landscape */
-  @media screen and (max-width: 1060px) {
-    width: 69%;
-    margin-left: 5%;
-  }
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    margin: 0;
-    border: none;
-  }
-  @media screen and (max-width: 360px) {
-    width: 225%;
-    margin: 0;
-    border: none;
-  }
-
-  @media (min-device-width: 800px) {
-    img[data-src-800px] {
-      content: attr(data-src-800px, "/image/community-group.png");
-    }
-  }
-  @media (min-device-width: 800px) {
-    img[data-src-800px] {
-      content: attr(data-src-800px, "/image/community-group.png");
-    }
-  }
-
-  @media (min-device-width: 1000px) {
-    img[data-src-1000px] {
-      content: attr(data-src-1000px, "/image/community-group.png");
-    }
-  }
 `;
 
 const ContactPanel = styled.div`
