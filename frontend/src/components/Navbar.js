@@ -44,7 +44,7 @@ const Navbar = (props) => {
       }}
     >
       <nav>
-        <LinkBox to="/">
+        <LinkBox class="logo-box" to="/">
           <Logo />
         </LinkBox>
         <div className="main-nav">

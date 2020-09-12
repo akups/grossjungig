@@ -1,11 +1,11 @@
 /*App*/
-.flexbox {
+/* .flexbox {
   display: flex;
   flex-wrap: wrap;
 }
 .flexbox > * {
   flex: 1 1 280px;
-}
+} */
 
 /* Nav bar */
 nav {
@@ -27,7 +27,9 @@ nav {
 .main-nav {
   display: flex;
   flex-basis: 70%;
+  flex-wrap: wrap;
   justify-content: center;
+  order: 3;
 }
 
 .login-nav {
@@ -38,6 +40,11 @@ nav {
   padding-left: 2rem;
   padding-right: 2rem;
   width: 20vw;
+  order: 2;
+}
+
+.logo-box {
+  order: 1;
 }
 
 .navbarlink {
@@ -48,24 +55,17 @@ nav {
 }
 
 /* Media Queries: Tablet Landscape */
-
-/* media queries for mobile*/
 @media screen and (min-width: 759px) {
   nav {
     flex-basis: 100%;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-wrap: nowrap;
   }
   .main-nav {
     display: flex;
     flex-basis: 50%;
     justify-content: center;
-  }
-}
-
-@media (min-width: 1091px) {
-  nav {
-    flex-basis: 25%;
   }
 }
 
