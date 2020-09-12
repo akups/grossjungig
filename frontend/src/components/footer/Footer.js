@@ -74,29 +74,28 @@ const MainPanel = styled.div`
   align-content: center;
   align-items: center;
 `;
+
 const Row = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-content: center;
   align-items: center;
 `;
 
 const SocialPanel = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding-right: 3rem;
   padding-left: 3rem;
-  margin-top: 0rem;
 `;
 
 const FooterLink = styled.a`
   text-decoration: none;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 16px;
   color: #f9f8f8;
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 0.2rem;
 `;
 
 const FooterLinkSmall = styled.a`
@@ -104,20 +103,18 @@ const FooterLinkSmall = styled.a`
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 15px;
   color: #f9f8f8;
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 0.2rem;
   text-transform: uppercase;
 `;
 
 const FooterBig = styled.p`
   text-decoration: none;
   font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 23px;
+  font-weight: 500;
+  font-size: 18px;
   color: #f9f8f8;
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 0.2rem;
 `;
 
 const FooterSmall = styled.p`
@@ -125,7 +122,6 @@ const FooterSmall = styled.p`
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 15px;
   color: #f9f8f8;
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 0.2rem;
 `;

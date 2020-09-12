@@ -1,12 +1,3 @@
-/*App*/
-/* .flexbox {
-  display: flex;
-  flex-wrap: wrap;
-}
-.flexbox > * {
-  flex: 1 1 280px;
-} */
-
 /* Nav bar */
 nav {
   display: flex;
@@ -73,6 +64,33 @@ nav {
   }
 }
 
+/* Media Queries: Desktop */
+@media screen and (min-width: 759px) {
+  nav {
+    flex-basis: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+  .main-nav {
+    display: flex;
+    flex-basis: 70%;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .login-nav {
+    display: flex;
+    flex-basis: 20%;
+    justify-content: center;
+  }
+
+  .logo-box {
+    display: flex;
+    flex-basis: 10%;
+    justify-content: center;
+  }
+}
 /* User Portal */
 .portal-container {
   height: 60vh;
