@@ -35,7 +35,7 @@ const cards = [
   },
 ];
 
-const howR1Cards = [
+const howCards = [
   {
     title: "#1",
     image: "/image/senior.png",
@@ -54,9 +54,7 @@ const howR1Cards = [
     text:
       "Connect with each other via Großjungig AI platform and agree on the test period, sign a contract, and pay for the room.",
   },
-];
 
-const howR2Cards = [
   {
     title: "#4",
     image: "/image/test.png",
@@ -137,8 +135,8 @@ class Home extends Component {
         <h3
           id="how-it-works"
           style={{
-            marginTop: "2rem",
-            paddingTop: "9rem",
+            margin: "1.5rem",
+
             fontSize: "25px",
             color: "black",
             textAlign: "center",
@@ -146,16 +144,11 @@ class Home extends Component {
         >
           How does it work?
         </h3>
-        <HowFirstRow>
-          {howR1Cards.map(({ title, image, text }, index) => (
+        <HowGrid>
+          {howCards.map(({ title, image, text }, index) => (
             <Card2 key={index} title={title} text={text} image={image} />
           ))}
-        </HowFirstRow>
-        <HowSecRow>
-          {howR2Cards.map(({ title, image, text }, index) => (
-            <Card2 key={index} title={title} text={text} image={image} />
-          ))}
-        </HowSecRow>
+        </HowGrid>
         <SecPanel>
           <Card3 text={card3[0].text} source={card3[0].source} />
         </SecPanel>
@@ -291,27 +284,16 @@ const Why = styled.div`
   } */
 `;
 
-const HowFirstRow = styled.div`
-  display: flex;
+const HowGrid = styled.div`
+  display: grid;
+  grid-gap: 0.25rem;
+  grid-template-columns: auto auto;
   justify-content: space-between;
   padding: 0rem;
   max-width: 1092px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
-  /* @media screen and (max-width: 1060px) {
-    width: 30%;
-    margin-left: 5%;
-  } */
-`;
-const HowSecRow = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 0rem;
-  max-width: 1092px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3rem;
   /* @media screen and (max-width: 1060px) {
     width: 30%;
     margin-left: 5%;

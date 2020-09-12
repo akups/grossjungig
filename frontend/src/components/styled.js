@@ -79,9 +79,12 @@ export const NavbarLink = styled.a`
 `;
 
 const CardRoot = styled.div`
+  display: flex;
+  flex-direction: column;
   border: 0.2px solid lightgray;
   border-radius: 6px;
-  margin: 0.5rem;
+  margin: 1.5rem;
+
   /* @media screen and (max-width: 1060px) {
     width: 65%;
   }
@@ -97,7 +100,7 @@ const CardTitle = styled.div`
   color: ${({ theme: { main } }) => main};
   font-style: normal;
   font-weight: bold;
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   line-height: 2.625rem;
   text-align: center;
   padding: 0.5rem 0rem;
