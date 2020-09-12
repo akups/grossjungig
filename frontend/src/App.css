@@ -15,7 +15,7 @@ nav {
   align-content: center;
   align-items: center;
   background-color: white;
-  padding: 1rem;
+  padding: 0.25rem;
   position: sticky;
   top: 0px;
   margin: auto;
@@ -47,6 +47,10 @@ nav {
   flex-basis: 30%;
 }
 
+.logo-box img {
+  height: 60px;
+}
+
 .navbarlink {
   display: flex;
   justify-content: space-between;
@@ -54,7 +58,7 @@ nav {
   color: black;
 }
 
-/* Media Queries: Tablet Landscape */
+/* Media Queries: Tablet Portrait */
 @media screen and (min-width: 759px) {
   nav {
     flex-basis: 100%;

@@ -44,9 +44,9 @@ const Navbar = (props) => {
       }}
     >
       <nav>
-        <LinkBox class="logo-box" to="/">
-          <Logo />
-        </LinkBox>
+        <Link class="logo-box" to="/">
+          <img src="/image/new_logo.png" alt="logo_image" />
+        </Link>
         <div className="main-nav">
           <Link to="/berlin">
             <Button label={navbarLocales.berlin[lang]}></Button>
@@ -95,8 +95,3 @@ const Navbar = (props) => {
 };
 
 export default Navbar;
-
-const LinkBox = styled(Link)`
-  height: 40px;
-  flex-basis: 30%;
-`;

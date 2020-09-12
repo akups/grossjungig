@@ -84,12 +84,11 @@ const CardRoot = styled.div`
   width: 325px;
   @media screen and (max-width: 1060px) {
     width: 65%;
-    margin-left: 3%;
   }
   /* Media Queries: Tabled Portrait */
   @media screen and (max-width: 768px) {
     width: 53%;
-    margin-left: 1%;
+
     border: none;
   }
 `;
