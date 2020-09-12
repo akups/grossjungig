@@ -162,7 +162,11 @@ class Home extends Component {
         </CommunityPanel>
         <ContactPanel>
           <p>Contact</p>
-          <img src="/image/contact.png" alt="contact" />
+          <img
+            src="/image/contact.png"
+            alt="contact"
+            style={{ maxWidth: "100%", height: "auto" }}
+          />
         </ContactPanel>
       </>
     );
@@ -202,12 +206,12 @@ const MainPanel = styled.div`
 
 const SecPanel = styled.div`
   background-image: url("./image/learning.png");
+  height: 200px;
   background-repeat: no-repeat;
-  background-size: auto;
-  height: 50rem;
-  margin-top: 3rem;
-  margin-bottom: 8rem;
-  @media (min-device-width: 600px) {
+  background-size: cover;
+  margin-top: 0.5rem;
+
+  /* @media (min-device-width: 600px) {
     img[data-src-600px] {
       content: attr(data-src-600px, "./image/learning.png");
     }
@@ -217,7 +221,7 @@ const SecPanel = styled.div`
     img[data-src-800px] {
       content: attr(data-src-800px, "./image/learning.png");
     }
-  }
+  } */
 `;
 
 const RowChoose = styled.div`
@@ -293,7 +297,7 @@ const HowGrid = styled.div`
   max-width: 1092px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   /* @media screen and (max-width: 1060px) {
     width: 30%;
     margin-left: 5%;
@@ -303,7 +307,7 @@ const HowGrid = styled.div`
 const CommunityPanel = styled.div`
   margin-top: 0.5rem;
   margin-bottom: 2rem;
-  padding-top: 7rem;
+  padding-top: 3rem;
   text-align: center;
   font-weight: bold;
   font-size: 25px;
@@ -312,9 +316,9 @@ const CommunityPanel = styled.div`
 `;
 
 const ContactPanel = styled.div`
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-  padding-top: 7rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-top: 3rem;
   text-align: center;
   font-weight: bold;
   font-size: 25px;

@@ -4,11 +4,11 @@ import styled from "styled-components";
 const Footer = () => {
   return (
     <Root>
-      <ContactPanel>
+      {/* <ContactPanel>
         <p>Großjungig AI</p>
         <p>Bruchwitzstraße 13</p>
         <p>12247 Berlin</p>
-      </ContactPanel>
+      </ContactPanel> */}
       <MainPanel>
         <Row>
           <FooterLink> About </FooterLink>
@@ -46,33 +46,33 @@ export default Footer;
 
 const Root = styled.div`
   display: flex;
-  padding: 3rem;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0.5rem;
   background-color: black;
   color: white;
-  margin-left: auto;
-  margin-right: auto;
 `;
 
-const ContactPanel = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-right: 3rem;
-  padding-left: 3rem;
-  p {
-    text-align: left;
-    margin: 0;
-  }
-`;
+// const ContactPanel = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   padding-right: 3rem;
+//   padding-left: 3rem;
+//   p {
+//     text-align: left;
+//     margin: 0;
+//   }
+// `;
 
 const MainPanel = styled.div`
   display: flex;
+  flex-basis: 100%;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
 `;
 const Row = styled.div`
   display: flex;

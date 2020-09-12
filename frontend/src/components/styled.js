@@ -173,35 +173,32 @@ const Card3Root = styled.div`
   position: relative;
   background: #ffffff;
   /* non-active */
-  border: 0.5px solid #baafa1;
+  border: 0.2px solid #baafa1;
   box-sizing: border-box;
+  width: 50%;
+  height: 60%;
   /* neun */
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15),
     -2px -2px 8px rgba(255, 255, 255, 0.15);
-  border-radius: 24px;
-  height: 240px;
-  width: 560px;
-  top: 680px;
-  left: 12rem;
-  padding: 1rem;
+  border-radius: 16px;
+  top: 75%;
+  left: 50%;
+  padding: 0.5rem;
 `;
 
 const Card3Text = styled.div`
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
-  line-height: 42px;
-  text-align: center;
+  font-size: 16px;
+  text-align: justify;
   /* #202020 */
   color: #202020;
-  margin-top: 1.5rem;
 `;
 
 const Card3Source = styled.div`
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 14px;
   /* identical to box height */
   text-align: center;
   /* #202020 */
