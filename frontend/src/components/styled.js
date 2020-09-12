@@ -58,7 +58,7 @@ export const Card = ({ title, image, text, alt }) => (
 export const Card2 = ({ title, image, text, alt }) => (
   <Card2Root>
     <Card2Title>{title}</Card2Title>
-    <img src={image} alt={alt} />
+    <img src={image} alt={alt} width="150px" />
     <Card2Text>{text}</Card2Text>
   </Card2Root>
 );
@@ -124,12 +124,13 @@ const CardText = styled.div`
 `;
 
 const Card2Root = styled.div`
+  display: flex;
+  flex-direction: column;
   background: #ffffff;
   /* non-active */
   border: 0.5px solid #baafa1;
   box-sizing: border-box;
   border-radius: 10px;
-  width: 300px;
   padding: 0.5rem;
 `;
 
