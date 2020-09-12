@@ -112,7 +112,7 @@ class Home extends Component {
           </MainPanel>
         </div>
         <Mission id="about">
-          <h2 style={{ color: "#202020" }}>
+          <h2 style={{ color: "#202020", fontWeight: "500" }}>
             Grossjungig is reinventing intergenerational co-living in big cities
             by bringing seniors and youth together. <br /> We make the world
             more connected and promote social cohesion.
@@ -239,30 +239,25 @@ const RowSelect = styled.div`
 
 const Mission = styled.div`
   text-align: center;
-  padding-top: 7rem;
-  padding-bottom: 3rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0.2rem;
+  padding: 1rem;
   font-style: normal;
-  font-size: 1.25rem;
+  font-size: 1rem;
   /* Media Queries: Tablet Landscape */
-  @media screen and (max-width: 1060px) {
+  /* @media screen and (max-width: 1060px) {
     width: 65%;
     margin-left: 3%;
-  }
+  } */
   /* Media Queries: Tabled Portrait */
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     width: 100%;
     margin: 0;
     border: none;
-  }
+  } */
   /* Media Queries: Mobile */
-  @media screen and (max-width: 360px) {
+  /* @media screen and (max-width: 360px) {
     width: 250%;
     text-align: center;
-  }
+  } */
 `;
 
 const Why = styled.div`
