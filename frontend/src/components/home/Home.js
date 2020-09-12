@@ -183,10 +183,10 @@ const MainPanel = styled.div`
   margin: 6rem;
   margin-bottom: 20rem;
   margin-top: 8rem;
-  width: 54.375rem;
-  height: 20rem;
+  /* width: 54.375rem;
+  height: 20rem; */
   /* Media Queries: Tablet Landscape */
-  @media screen and (max-width: 1060px) {
+  /* @media screen and (max-width: 1060px) {
     width: 69%;
     margin-left: 15%;
     padding: auto;
@@ -194,8 +194,8 @@ const MainPanel = styled.div`
   @media screen and (max-width: 768px) {
     width: 100%;
     margin: 0;
-    border: none;
-  }
+    border: none; */
+  /* } */
 `;
 
 const SecPanel = styled.div`

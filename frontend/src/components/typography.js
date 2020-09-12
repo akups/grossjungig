@@ -4,7 +4,7 @@ export const h1CSS = css`
   font-family: "Poppins", sans-serif;
   font-style: medium;
   font-size: 3em;
-  height: 4.5rem;
+  /* height: 4.5rem; */
   color: #202020;
 `;
 
