@@ -104,8 +104,6 @@ class Signup extends Component {
               >
                 <option value={"senior"}>{signupLocales.senior[lang]}</option>
                 <option value={"youth"}>{signupLocales.youth[lang]}</option>
-                {/* <option>{signupLocales.senior[lang]}</option>
-              <option>{signupLocales.youth[lang]}</option> */}
               </select>
               <br />
               <button onClick={this.handleSubmit} type="submit">
