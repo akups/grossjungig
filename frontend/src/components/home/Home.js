@@ -92,7 +92,9 @@ class Home extends Component {
       <>
         <div className="home-component">
           <MainPanel>
-            <H1>Find your second grand family</H1>
+            <H1 style={{ textAlign: "center" }}>
+              Find your second grand family
+            </H1>
             <RowChoose>
               {homeLocales.choose[lang]}:
               <Link to="/berlin">
@@ -179,10 +181,11 @@ const MainPanel = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
     -4px -4px 8px rgba(255, 255, 255, 0.15);
   background-color: white;
-  padding: 3.5rem 4rem;
-  margin: 6rem;
+  margin: 3rem;
+  /* padding: 3.5rem 4rem;
+ 
   margin-bottom: 20rem;
-  margin-top: 8rem;
+  margin-top: 8rem; */
   /* width: 54.375rem;
   height: 20rem; */
   /* Media Queries: Tablet Landscape */
@@ -224,8 +227,6 @@ const RowChoose = styled.div`
   justify-content: center;
   align-content: center;
   align-items: center;
-  height: 2.25rem;
-  width: 20.625rem;
 `;
 
 const RowSelect = styled.div`
@@ -234,8 +235,6 @@ const RowSelect = styled.div`
   justify-content: center;
   align-content: center;
   align-items: center;
-  height: 3rem;
-  width: 27.625rem;
 `;
 
 const Mission = styled.div`
