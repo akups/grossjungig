@@ -122,7 +122,13 @@ class Home extends Component {
           <h3 style={{ fontSize: "25px", color: "black", textAlign: "center" }}>
             Why should You use Großjungig?
           </h3>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+            }}
+          >
             {cards.map(({ title, text, image }, index) => (
               <Card key={index} title={title} text={text} image={image} />
             ))}
@@ -269,20 +275,20 @@ const Why = styled.div`
   margin-right: auto;
   margin-top: 0rem;
   /* Media Queries: Tablet Landscape */
-  @media screen and (max-width: 1060px) {
+  /* @media screen and (max-width: 1060px) {
     width: 30%;
     margin-left: 5%;
-  }
+  } */
   /* Media Queries: Tablet Portrait */
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     width: 50%;
     margin: 0;
     border: none;
-  }
+  } */
   /* Media Queries: Mobile */
-  @media screen and (max-width: 360px) {
+  /* @media screen and (max-width: 360px) {
     width: 120%;
-  }
+  } */
 `;
 
 const HowFirstRow = styled.div`
@@ -293,10 +299,10 @@ const HowFirstRow = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
-  @media screen and (max-width: 1060px) {
+  /* @media screen and (max-width: 1060px) {
     width: 30%;
     margin-left: 5%;
-  }
+  } */
 `;
 const HowSecRow = styled.div`
   display: flex;
@@ -306,10 +312,10 @@ const HowSecRow = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin-top: 3rem;
-  @media screen and (max-width: 1060px) {
+  /* @media screen and (max-width: 1060px) {
     width: 30%;
     margin-left: 5%;
-  }
+  } */
 `;
 
 const CommunityPanel = styled.div`

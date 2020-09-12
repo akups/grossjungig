@@ -81,16 +81,16 @@ export const NavbarLink = styled.a`
 const CardRoot = styled.div`
   border: 0.2px solid lightgray;
   border-radius: 6px;
-  width: 325px;
-  @media screen and (max-width: 1060px) {
+  margin: 0.5rem;
+  /* @media screen and (max-width: 1060px) {
     width: 65%;
   }
   /* Media Queries: Tabled Portrait */
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     width: 53%;
 
     border: none;
-  }
+  } */
 `;
 
 const CardTitle = styled.div`
@@ -102,12 +102,12 @@ const CardTitle = styled.div`
   text-align: center;
   padding: 0.5rem 0rem;
   /* Media Queries: Tabled Portrait */
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     font-size: 1.5rem;
   }
   @media screen and (max-width: 1060px) {
     font-size: 1.5rem;
-  }
+  } */
 `;
 
 const CardText = styled.div`
