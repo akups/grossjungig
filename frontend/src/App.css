@@ -82,7 +82,7 @@ nav {
   .login-nav {
     display: flex;
     flex-basis: 20%;
-    justify-content: center;
+    /* justify-content: ; */
   }
 
   .logo-box {
