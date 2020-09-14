@@ -27,8 +27,6 @@ class Signup extends Component {
       .then((response) => {
         console.log("RSPONSE", response);
 
-        // this.props.history.push("/");
-
         // this.props.setUser(this.response.data);
         // this.setState({
         //   redirect: true,
