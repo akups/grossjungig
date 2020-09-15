@@ -120,13 +120,7 @@ class Home extends Component {
           <h3 style={{ fontSize: "25px", color: "black", textAlign: "center" }}>
             Why should You use Großjungig?
           </h3>
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "space-between",
-            }}
-          >
+          <div className="why-use">
             {cards.map(({ title, text, image }, index) => (
               <Card key={index} title={title} text={text} image={image} />
             ))}
@@ -157,7 +151,7 @@ class Home extends Component {
           <img
             src="/image/community-group.png"
             alt="community"
-            style={{ maxWidth: "100%", height: "auto" }}
+            style={{ width: "100%", height: "auto" }}
           />
         </CommunityPanel>
         <ContactPanel>
@@ -165,7 +159,7 @@ class Home extends Component {
           <img
             src="/image/contact.png"
             alt="contact"
-            style={{ maxWidth: "100%", height: "auto" }}
+            style={{ width: "100%", height: "auto" }}
           />
         </ContactPanel>
       </>
@@ -185,23 +179,17 @@ const MainPanel = styled.div`
     -4px -4px 8px rgba(255, 255, 255, 0.15);
   background-color: white;
   margin: 3rem;
-  /* padding: 3.5rem 4rem;
- 
-  margin-bottom: 20rem;
-  margin-top: 8rem; */
-  /* width: 54.375rem;
-  height: 20rem; */
-  /* Media Queries: Tablet Landscape */
-  /* @media screen and (max-width: 1060px) {
-    width: 69%;
-    margin-left: 15%;
-    padding: auto;
+  padding: 0.5rem;
+
+  /* Media Queries: Tablet */
+  @media screen and (min-width: 768px) {
+    padding: 2rem;
   }
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    margin: 0;
-    border: none; */
-  /* } */
+  /* Media Queries: Desktop */
+  @media screen and (min-width: 1060px) {
+    margin: 8rem;
+    padding: 8rem;
+  }
 `;
 
 const SecPanel = styled.div`
@@ -211,17 +199,14 @@ const SecPanel = styled.div`
   background-size: cover;
   margin-top: 0.5rem;
 
-  /* @media (min-device-width: 600px) {
-    img[data-src-600px] {
-      content: attr(data-src-600px, "./image/learning.png");
-    }
+  @media (min-width: 768px) {
+    /* height: 400px; */
+    padding: 6rem;
   }
 
-  @media (min-device-width: 800px) {
-    img[data-src-800px] {
-      content: attr(data-src-800px, "./image/learning.png");
-    }
-  } */
+  @media (min-width: 1060px) {
+    padding: 10rem;
+  }
 `;
 
 const RowChoose = styled.div`
@@ -245,63 +230,51 @@ const Mission = styled.div`
   padding: 1rem;
   font-style: normal;
   font-size: 1rem;
-  /* Media Queries: Tablet Landscape */
-  /* @media screen and (max-width: 1060px) {
-    width: 65%;
-    margin-left: 3%;
-  } */
-  /* Media Queries: Tabled Portrait */
-  /* @media screen and (max-width: 768px) {
-    width: 100%;
-    margin: 0;
-    border: none;
-  } */
-  /* Media Queries: Mobile */
-  /* @media screen and (max-width: 360px) {
-    width: 250%;
-    text-align: center;
-  } */
 `;
 
 const Why = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0rem;
-  max-width: 1092px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0rem;
-  /* Media Queries: Tablet Landscape */
-  /* @media screen and (max-width: 1060px) {
-    width: 30%;
-    margin-left: 5%;
-  } */
+
   /* Media Queries: Tablet Portrait */
-  /* @media screen and (max-width: 768px) {
-    width: 50%;
-    margin: 0;
-    border: none;
-  } */
-  /* Media Queries: Mobile */
-  /* @media screen and (max-width: 360px) {
-    width: 120%;
-  } */
+  @media screen and (min-width: 768px) {
+    padding: 1rem 10rem;
+  }
+  /* Media Queries: Desktop */
+  @media screen and (min-width: 1060px) {
+    padding: 1.5rem 10rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 `;
 
 const HowGrid = styled.div`
   display: grid;
-  grid-gap: 0.25rem;
+  grid-gap: 0.3rem;
   grid-template-columns: auto auto;
   justify-content: space-between;
   padding: 0rem;
-  max-width: 1092px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
   margin-top: 1.5rem;
-  /* @media screen and (max-width: 1060px) {
-    width: 30%;
-    margin-left: 5%;
-  } */
+  /* Media Queries: Tablet Portrait */
+  @media screen and (min-width: 768px) {
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+  }
+  /* Media Queries: Desktop */
+  @media screen and (min-width: 1060px) {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 `;
 
 const CommunityPanel = styled.div`
@@ -313,12 +286,21 @@ const CommunityPanel = styled.div`
   font-size: 25px;
   line-height: 26px;
   color: black;
+  @media (min-width: 768px) {
+    margin-bottom: 0.5rem;
+    padding-top: 1.5rem;
+  }
+
+  @media (min-width: 1060px) {
+    margin-bottom: 0.5rem;
+    padding-top: 1.5rem;
+  }
 `;
 
 const ContactPanel = styled.div`
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  padding-top: 3rem;
+  padding-top: 1rem;
   text-align: center;
   font-weight: bold;
   font-size: 25px;

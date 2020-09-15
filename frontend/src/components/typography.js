@@ -6,6 +6,9 @@ export const h1CSS = css`
   font-size: 2rem;
   /* height: 4.5rem; */
   color: #202020;
+  @media screen and (min-width: 1060px) {
+    font-size: 3rem;
+  }
 `;
 
 export const H1 = styled.h1`

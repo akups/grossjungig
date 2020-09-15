@@ -50,7 +50,7 @@ nav {
 }
 
 /* Media Queries: Tablet Portrait */
-@media screen and (min-width: 759px) {
+/* @media screen and (min-width: 759px) {
   nav {
     flex-basis: 100%;
     justify-content: flex-start;
@@ -62,18 +62,20 @@ nav {
     flex-basis: 50%;
     justify-content: center;
   }
-}
+} */
 
 /* Media Queries: Desktop */
 @media screen and (min-width: 759px) {
   nav {
     flex-basis: 100%;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
     flex-wrap: nowrap;
   }
   .main-nav {
     display: flex;
+    order: 2;
     flex-basis: 70%;
     justify-content: flex-start;
     flex-wrap: nowrap;
@@ -82,6 +84,7 @@ nav {
   .login-nav {
     display: flex;
     flex-basis: 20%;
+    order: 3;
     /* justify-content: ; */
   }
 

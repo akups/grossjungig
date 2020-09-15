@@ -1,7 +1,6 @@
 /* home */
 
 .home-component {
-  /* height: 45rem; */
   background-image: url("./header_image.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,24 +9,23 @@
   border-top: 1px solid grey;
 }
 
-/* @media screen and (max-width: 1060px) {
-  .home-component {
-    width: 69%;
-    padding-top: 20%;
-  }
+.why-use {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-
+/*Media queries Desktop*/
 @media screen and (max-width: 768px) {
-  .home-component {
-    width: 100%;
+  .why-use {
+    display: flex;
   }
 }
-
-
-@media screen and (max-width: 360px) {
-  .home-component {
-    width: 225%;
-    margin-left: none;
+/*Media queries Desktop*/
+@media screen and (min-width: 1060px) {
+  .why-use {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
-} */
+}

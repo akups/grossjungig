@@ -84,16 +84,14 @@ const CardRoot = styled.div`
   border: 0.2px solid lightgray;
   border-radius: 6px;
   margin: 1.5rem;
-
-  /* @media screen and (max-width: 1060px) {
-    width: 65%;
+  /*Media queries Desktop*/
+  @media screen and (min-width: 1060px) {
+    .why-use {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
   }
-  /* Media Queries: Tabled Portrait */
-  /* @media screen and (max-width: 768px) {
-    width: 53%;
-
-    border: none;
-  } */
 `;
 
 const CardTitle = styled.div`
@@ -184,6 +182,15 @@ const Card3Root = styled.div`
   top: 75%;
   left: 50%;
   padding: 0.5rem;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+    margin-top: 4rem;
+  }
+  @media (min-width: 1060px) {
+    padding: 2rem 3rem;
+    margin: 9rem;
+  }
 `;
 
 const Card3Text = styled.div`
@@ -193,6 +200,12 @@ const Card3Text = styled.div`
   text-align: justify;
   /* #202020 */
   color: #202020;
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+  @media (min-width: 1060px) {
+    font-size: 20px;
+  }
 `;
 
 const Card3Source = styled.div`
@@ -205,4 +218,12 @@ const Card3Source = styled.div`
   color: #202020;
   position: absolute;
   right: 1rem;
+  @media (min-width: 768px) {
+    font-size: 16px;
+    right: 2rem;
+  }
+  @media (min-width: 1060px) {
+    font-size: 18px;
+    right: 3rem;
+  }
 `;
