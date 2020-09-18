@@ -246,9 +246,8 @@ const Why = styled.div`
   }
   /* Media Queries: Desktop */
   @media screen and (min-width: 1060px) {
-    padding: 1.5rem 10rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    display: flex;
+    justify-content: space-between;
   }
 `;
 
@@ -269,7 +268,7 @@ const HowGrid = styled.div`
   /* Media Queries: Desktop */
   @media screen and (min-width: 1060px) {
     display: grid;
-    grid-gap: 1rem;
+    grid-gap: 2rem;
     grid-template-columns: auto auto auto;
     justify-content: space-between;
     margin-left: 1rem;
