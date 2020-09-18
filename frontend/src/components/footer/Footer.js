@@ -52,6 +52,17 @@ const Root = styled.div`
   padding: 0.5rem;
   background-color: black;
   color: white;
+  /*Media quries Destop*/
+  @media (min-width: 1060px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 3rem;
+    background-color: black;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 // const ContactPanel = styled.div`
@@ -73,6 +84,15 @@ const MainPanel = styled.div`
   justify-content: center;
   align-content: center;
   align-items: center;
+  /*Media quries Destop*/
+  @media (min-width: 1060px) {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 const Row = styled.div`

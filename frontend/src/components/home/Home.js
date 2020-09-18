@@ -268,11 +268,14 @@ const HowGrid = styled.div`
   /* Media Queries: Desktop */
   @media screen and (min-width: 1060px) {
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: 8rem;
     grid-template-columns: auto auto auto;
-    justify-content: space-between;
+    justify-content: center;
     margin-left: 1rem;
     margin-right: 1rem;
+    align-items: center;
+    padding-right: 8rem;
+    padding-left: 8rem;
   }
 `;
 

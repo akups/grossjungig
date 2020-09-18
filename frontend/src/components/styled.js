@@ -130,6 +130,16 @@ const Card2Root = styled.div`
   box-sizing: border-box;
   border-radius: 10px;
   padding: 0.5rem;
+
+  /*For desktop*/
+  @media (min-width: 1060px) {
+    flex-direction: column;
+    background: #ffffff;
+    border: 0.5px solid #baafa1;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 0.5rem;
+  }
 `;
 
 const Card2Title = styled.div`
