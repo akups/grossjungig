@@ -188,7 +188,7 @@ const MainPanel = styled.div`
   /* Media Queries: Desktop */
   @media screen and (min-width: 1060px) {
     margin: 8rem;
-    padding: 8rem;
+    padding: 6rem;
   }
 `;
 

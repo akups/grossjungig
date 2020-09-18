@@ -198,8 +198,15 @@ const Card3Root = styled.div`
     margin-top: 4rem;
   }
   @media (min-width: 1060px) {
-    padding: 2rem 3rem;
-    margin: 9rem;
+    font-style: normal;
+    font-weight: medium;
+    font-size: 36px;
+
+    color: rgb(32, 32, 32);
+    padding-top: 0.1rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    padding-bottom: 12rem;
   }
 `;
 
@@ -214,7 +221,13 @@ const Card3Text = styled.div`
     font-size: 18px;
   }
   @media (min-width: 1060px) {
-    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: rgb(32, 32, 32);
+    margin-top: 1.5rem;
   }
 `;
 
