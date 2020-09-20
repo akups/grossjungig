@@ -84,6 +84,7 @@ const CardRoot = styled.div`
   border: 0.2px solid lightgray;
   border-radius: 6px;
   margin: 1.5rem;
+  max-width: 330px;
   /*Media queries Desktop*/
   @media screen and (min-width: 1060px) {
     .why-use {
@@ -129,7 +130,10 @@ const Card2Root = styled.div`
   border: 0.5px solid #baafa1;
   box-sizing: border-box;
   border-radius: 10px;
-  padding: 0.5rem;
+  padding: 1.5rem;
+  max-width: 300px;
+  min-width: 250px;
+  align-items: center;
 
   /*For desktop*/
   @media (min-width: 1060px) {

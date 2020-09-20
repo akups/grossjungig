@@ -65,7 +65,7 @@ const howCards = [
     title: "#5",
     image: "/image/pay.png",
     text:
-      "Young person: payment is secure and fast. You only pay for the room, and the deposit is returned within one week of moving out.",
+      "Youth: payment is secure and fast. You pay for the room the deposit is returned within one week of moving out.",
   },
   {
     title: "#6",
@@ -242,7 +242,6 @@ const Why = styled.div`
 
   /* Media Queries: Tablet Portrait */
   @media screen and (min-width: 768px) {
-    padding: 1rem 10rem;
   }
   /* Media Queries: Desktop */
   @media screen and (min-width: 1060px) {
@@ -268,11 +267,10 @@ const HowGrid = styled.div`
   /* Media Queries: Desktop */
   @media screen and (min-width: 1060px) {
     display: grid;
-    grid-gap: 8rem;
+    grid-gap: 3rem;
     grid-template-columns: auto auto auto;
     justify-content: center;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 2rem;
     align-items: center;
     padding-right: 8rem;
     padding-left: 8rem;
@@ -295,6 +293,7 @@ const CommunityPanel = styled.div`
 
   @media (min-width: 1060px) {
     margin-bottom: 0.5rem;
+    margin-top: 9rem;
     padding-top: 1.5rem;
   }
 `;
