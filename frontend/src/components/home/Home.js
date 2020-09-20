@@ -263,6 +263,7 @@ const HowGrid = styled.div`
   @media screen and (min-width: 768px) {
     margin-left: 0.3rem;
     margin-right: 0.3rem;
+    grid-template-columns: auto auto auto;
   }
   /* Media Queries: Desktop */
   @media screen and (min-width: 1060px) {

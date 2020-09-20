@@ -135,6 +135,11 @@ const Card2Root = styled.div`
   align-items: center;
   box-sizing: border-box;
 
+  /*For tablet*/
+  @media (min-width: 768px) {
+    max-width: 250px;
+  }
+
   /*For desktop*/
   @media (min-width: 1060px) {
     flex-direction: column;
@@ -271,5 +276,7 @@ const Card3Source = styled.div`
   @media (min-width: 1060px) {
     font-size: 18px;
     right: 3rem;
+    position: static;
+    text-align: left;
   }
 `;
