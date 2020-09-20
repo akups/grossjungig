@@ -78,7 +78,7 @@ const howCards = [
 const card3 = [
   {
     text:
-      "We’ve learnt so much from each other. It’s nice to have someone to talk to.",
+      "We’ve learnt so much from each other.It’s nice to have someone to talk to.",
     source: "Ulrich, 64",
   },
 ];
@@ -294,7 +294,7 @@ const CommunityPanel = styled.div`
 
   @media (min-width: 1060px) {
     margin-bottom: 0.5rem;
-    margin-top: 9rem;
+    margin-top: 11rem;
     padding-top: 1.5rem;
   }
 `;
