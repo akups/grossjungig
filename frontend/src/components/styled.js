@@ -198,7 +198,7 @@ const Card3Root = styled.div`
     margin-top: 4rem;
   }
   @media (min-width: 1060px) {
-    font-style: normal;
+    /* font-style: normal;
     font-weight: medium;
     font-size: 36px;
 
@@ -206,7 +206,20 @@ const Card3Root = styled.div`
     padding-top: 0.1rem;
     padding-right: 4rem;
     padding-left: 4rem;
-    padding-bottom: 12rem;
+    padding-bottom: 12rem; */
+    position: static;
+    background: rgb(255, 255, 255);
+    border: 0.5px solid rgb(186, 175, 161);
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 4px,
+      rgba(255, 255, 255, 0.15) -2px -2px 8px;
+    border-radius: 24px;
+    height: 240px;
+    width: 560px;
+    /* top: 680px;
+    left: 12rem; */
+    padding: 1rem;
+    margin-top: 20rem;
   }
 `;
 
@@ -241,10 +254,14 @@ const Card3Source = styled.div`
   color: #202020;
   position: absolute;
   right: 1rem;
+
+  /*for  tablet*/
   @media (min-width: 768px) {
     font-size: 16px;
     right: 2rem;
   }
+
+  /* for desktop*/
   @media (min-width: 1060px) {
     font-size: 18px;
     right: 3rem;
