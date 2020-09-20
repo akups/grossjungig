@@ -130,10 +130,10 @@ const Card2Root = styled.div`
   border: 0.5px solid #baafa1;
   box-sizing: border-box;
   border-radius: 10px;
-  padding: 1.5rem;
-  max-width: 300px;
-  min-width: 250px;
+  padding: 0.15rem;
+  max-width: 170px;
   align-items: center;
+  box-sizing: border-box;
 
   /*For desktop*/
   @media (min-width: 1060px) {
@@ -143,6 +143,8 @@ const Card2Root = styled.div`
     box-sizing: border-box;
     border-radius: 10px;
     padding: 0.5rem;
+    max-width: 300px;
+    min-width: 250px;
   }
 `;
 
