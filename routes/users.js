@@ -32,7 +32,7 @@ router.post("/signup", (req, res) => {
           });
         })
         .then((newUser) => {
-          // console.log("HELLO", newUser);
+          console.log("HELLO", newUser);
           // passport login
           console.log("before automatic login");
           req.login(newUser, (err) => {
