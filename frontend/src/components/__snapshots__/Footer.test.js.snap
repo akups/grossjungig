@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer it should take a snapshot test 1`] = `
+<DocumentFragment>
+  <div
+    class="footer"
+    data-testid="footer-root"
+  >
+    <div
+      class="footer-flex"
+    >
+      <div
+        class="social-icons"
+      >
+        <span
+          class="Facebook"
+        >
+          <img
+            alt="Facebook"
+            src="../image/Facebook_White.png"
+          />
+        </span>
+        <span
+          class="Twitter"
+        >
+          <img
+            alt="Twitter"
+            src="../image/Twitter_White.png"
+          />
+        </span>
+        <span
+          class="Instagram"
+        >
+          <img
+            alt="Instagram"
+            src="../image/Instagram_White.png"
+          />
+        </span>
+      </div>
+    </div>
+    <footer>
+      <p>
+        © 2020 Grossjungig
+      </p>
+    </footer>
+  </div>
+</DocumentFragment>
+`;

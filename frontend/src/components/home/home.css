@@ -1,0 +1,31 @@
+/* home */
+
+.home-component {
+  background-image: url("./header_image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid grey;
+}
+
+.why-use {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/*Media queries Desktop*/
+@media screen and (max-width: 768px) {
+  .why-use {
+    display: flex;
+  }
+}
+/*Media queries Desktop*/
+@media screen and (min-width: 1060px) {
+  .why-use {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}

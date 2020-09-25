@@ -1,0 +1,19 @@
+{
+  "name": "grossjungig",
+  "version": "1.0.0",
+  "description": "Großjungig AI is reinventing intergenerational co-living in big cities. By bringing seniors and young people together, we make the world more connected and promote social cohesion.",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "git subtree push --prefix=backend heroku master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akups/grossjungig.git"
+  },
+  "license": "ISC",
+  "author": "Akua Appiah-Lindberg",
+  "bugs": {
+    "url": "https://github.com/akups/grossjungig/issues"
+  },
+  "homepage": "https://github.com/akups/grossjungig#readme"
+}

@@ -1,0 +1,38 @@
+{
+  "title": {
+    "en": "Please create an account",
+    "de": "Bitte erstellen Sie ein Konto."
+  },
+  "senior": {
+    "en": "Senior",
+    "de": "Senioren"
+  },
+  "youth": {
+    "en": "youth",
+    "de": "Jugend"
+  },
+  "password": {
+    "en": "Password",
+    "de": "Passwort"
+  },
+  "email": {
+    "en": "Email",
+    "de": "E-Mail Adresse"
+  },
+  "role": {
+    "en": "Role",
+    "de": "Rolle "
+  },
+  "welcome": {
+    "en": "Welcome to",
+    "de": "Willkommen an"
+  },
+  "grossjungig": {
+    "en": "Grossjungig AI! ",
+    "de": "Grossjungig AI! "
+  },
+  "submit": {
+    "en": "Submit",
+    "de": "Weiter"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": {
+    "en": "Name",
+    "de": "Name"
+  },
+  "address": {
+    "en": "Address",
+    "de": "Adresse"
+  },
+  "postcode": {
+    "en": "Postcode",
+    "de": "Postleitzahl"
+  },
+  "district": {
+    "en": "District",
+    "de": "Bezirk"
+  },
+  "describe": {
+    "en": "Description",
+    "de": "Beschreibung"
+  },
+  "phone": {
+    "en": "Phone Number",
+    "de": "Telefonnummer"
+  },
+  "delete": {
+    "en": "Delete Room",
+    "de": "Zimmer entfehrnen"
+  },
+  "email": {
+    "en": "Email",
+    "de": "E-mail"
+  },
+  "images": {
+    "en": "Upload your pictures",
+    "de": "Bildern hochladen"
+  },
+  "return": {
+    "en": "Return to Berlin",
+    "de": "Zurück zu Berlin"
+  },
+  "suburb": {
+    "en": "Suburb",
+    "de": "Stadteil"
+  }
+}

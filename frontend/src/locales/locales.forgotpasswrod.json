@@ -1,0 +1,33 @@
+{
+  "prompt": {
+    "en": "Set a new password",
+    "de": "Erstellen Sie eine neue Passwort."
+  },
+
+  "password": {
+    "en": "Password",
+    "de": "Passwort"
+  },
+  "email": {
+    "en": "Email",
+    "de": "E-Mail Adresse"
+  },
+
+  "welcome": {
+    "en": "Welcome to",
+    "de": "Willkommen an"
+  },
+  "grossjungig": {
+    "en": "Grossjungig AI! ",
+    "de": "Grossjungig AI! "
+  },
+
+  "return": {
+    "en": "Return to Home",
+    "de": "Zurrcuk zur Startseite"
+  },
+  "submit": {
+    "en": "Submit",
+    "de": "Weiter"
+  }
+}

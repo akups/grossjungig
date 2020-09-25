@@ -1,0 +1,62 @@
+/* Login */
+
+.full-block {
+  display: flex;
+  max-width: 35vw;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0.1rem solid lightgray;
+  width: 40rem;
+  height: 45rem;
+}
+.login {
+  height: 60vh;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.login-form {
+  display: table-caption;
+}
+
+.login-form label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  /* identical to box height */
+
+  /* Gray 1 */
+
+  color: #333333;
+  /* @media (max-width: 768px) {
+    font-size: 14px;
+  } */
+}
+
+.login-form input {
+  width: 15vw;
+  padding: 1vh;
+  margin: 1rem;
+  background: #ffffff;
+  /* Gray 5 */
+
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.login-form button {
+  margin-top: 3vh;
+  border: none;
+  padding: 0.625rem;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  background: #baafa1;
+  border-radius: 1rem;
+  color: #ffffff;
+}

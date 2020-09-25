@@ -1,0 +1,30 @@
+{
+  "title": {
+    "en": "Login",
+    "de": "Anmelden"
+  },
+  "welcome": {
+    "en": "Welcome back to",
+    "de": "Willkommen zurück an!"
+  },
+  "grossjungig": {
+    "en": "Grossjungig AI! ",
+    "de": "Grossjungig AI! "
+  },
+  "prompt": {
+    "en": "Please log in to continue.",
+    "de": "Bitte loggen Sie sich ein."
+  },
+  "email": {
+    "en": "Email",
+    "de": "E-Mail Adresse"
+  },
+  "password": {
+    "en": "Password",
+    "de": "Passwort"
+  },
+  "login": {
+    "en": "Login",
+    "de": "Weiter"
+  }
+}
