@@ -2,7 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const usersRoutes = require("./users");
-const forgotPasswordRoutes = require("./forgotPassword");
+//const forgotPasswordRoutes = require("./forgotPassword");
 
 // const commentsRoutes = require("./comments");
 const roomsRoutes = require("./rooms");

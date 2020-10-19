@@ -67,10 +67,10 @@ router.post("/login", (req, res, next) => {
     req.login(user, (err) => {
       console.log("USER???????", user);
 
-      // if (err) {
-      //   return res.status(500).json({ message: "Error while logging in" });
-      // }
-      // req.user = user; //setting user to be the requested user
+      if (err) {
+        return res.status(500).json({ message: "Error while logging in" });
+      }
+      req.user = user; //setting user to be the requested user
       res.json(user);
     });
   })(req, res, next);
