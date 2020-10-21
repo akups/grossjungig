@@ -30,7 +30,6 @@ class Signup extends Component {
         this.props.history.push("/userportal");
       })
       .catch((err) => {
-        console.log("this is the error", err);
         this.setState({
           message: err.response.data.message,
         });
