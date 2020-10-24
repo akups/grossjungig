@@ -67,6 +67,7 @@ class AddRoom extends Component {
         <input
           type="text"
           name="name"
+          id="name"
           value={this.state.name}
           onChange={this.setFormState}
         />
@@ -99,6 +100,7 @@ class AddRoom extends Component {
         <input
           type="text"
           name="address"
+          id="address"
           value={this.state.address}
           onChange={this.setFormState}
         />
@@ -106,6 +108,7 @@ class AddRoom extends Component {
         <input
           type="text"
           name="postcode"
+          id="postcode"
           value={this.state.postcode}
           onChange={this.setFormState}
         />
@@ -113,6 +116,7 @@ class AddRoom extends Component {
         <input
           type="text"
           name="phoneNumber"
+          id="phoneNumber"
           value={this.state.phoneNumber}
           onChange={this.setFormState}
         />
@@ -120,6 +124,7 @@ class AddRoom extends Component {
         <input
           type="text"
           name="email"
+          id="email"
           value={this.state.email}
           onChange={this.setFormState}
         />
@@ -127,6 +132,7 @@ class AddRoom extends Component {
         <input
           type="text"
           name="description"
+          id="description"
           value={this.state.description}
           onChange={this.setFormState}
         />
@@ -134,6 +140,7 @@ class AddRoom extends Component {
         <input
           type="number"
           name="price"
+          id="price"
           value={this.state.price}
           onChange={this.setFormState}
         />

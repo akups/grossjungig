@@ -12,28 +12,21 @@ class Login extends Component {
     message: "",
   };
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
-    //1)
 
-    axios
-      .post(`${process.env.REACT_APP_BACKENDURL}api/auth/login`, {
+    const response = await axios.post(
+      `${process.env.REACT_APP_BACKENDURL}api/auth/login`,
+      {
         email: this.state.email,
         password: this.state.password,
-      })
-      //3)
-      .then((response) => {
-        console.log("loginuser", response.data);
-        this.props.setUser(response.data);
-        this.setState({
-          redirect: true,
-        });
-      })
-      .catch((err) => {
-        this.setState({
-          message: err.response.data.message,
-        });
-      });
+      }
+    );
+
+    this.props.setUser(response.data);
+    this.setState({
+      redirect: true,
+    });
   };
 
   setFormState = (event) => {
@@ -81,7 +74,9 @@ class Login extends Component {
                   Click here
                 </Link>
               </h5>
-              <button type="submit">{loginLocales.login[lang]}</button>
+              <button id="login-submit-button" type="submit">
+                {loginLocales.login[lang]}
+              </button>
             </form>
           </div>
           {this.state.message && <p>{this.state.message}</p>}
