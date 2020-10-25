@@ -5,6 +5,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
 import axios from "axios";
+import { ChakraProvider } from "@chakra-ui/core";
 
 // Language Switcher Setup
 if (!localStorage.getItem("lang")) {
