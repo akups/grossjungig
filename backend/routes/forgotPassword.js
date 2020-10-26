@@ -23,7 +23,7 @@ router.post("/forgotPassword", (req, res) => {
   }).then((user) => {
     if (user === null) {
       console.error("email not in database");
-      res.status(200).send("email not in db");
+      res.status(200).send("If the email is in our database you will receive an email.");
     } else {
       const token = crypto.randomBytes(20).toString("hex");
       user.update({
