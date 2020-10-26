@@ -17,6 +17,10 @@ const userSchema = new Schema({
     enum: ["youth", "senior"],
     required: true,
   },
+  profile: {
+    type: Schema.Types.ObjectId,
+    ref: "Profile",
+  },
   timestamps: {
     type: Date,
     default: Date.now,
