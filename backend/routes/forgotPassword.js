@@ -35,12 +35,12 @@ router.post("/forgotPassword", async (req, res) => {
 
   const user = await User.findOne({
     email: req.body.email,
-<<<<<<< HEAD
-=======
   }).then((user) => {
     if (user === null) {
       console.error("email not in database");
-      res.status(200).send("If the email is in our database you will receive an email.");
+      res
+        .status(200)
+        .send("If the email is in our database you will receive an email.");
     } else {
       const token = crypto.randomBytes(20).toString("hex");
       user.update({
@@ -70,7 +70,6 @@ router.post("/forgotPassword", async (req, res) => {
         }
       });
     }
->>>>>>> cf4ae30cf956c7ac27caa8d37dcb125f13ffed28
   });
 
   if (user === null) {
