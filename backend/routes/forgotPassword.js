@@ -48,6 +48,11 @@ router.post("/forgotPassword", async (req, res) => {
         resetPasswordExpires: Date.now() + 3600000,
       });
 
+      const host =
+        process.env.NODE_ENV === "development"
+          ? "http://localhost:3000"
+          : "https://grossjungig.vercel.app/";
+
       const mailOptions = {
         from: "grossjungigplatform@gmail.com",
         to: `${user.email}`,
@@ -55,7 +60,7 @@ router.post("/forgotPassword", async (req, res) => {
         text:
           "You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n" +
           "Please click on the following link, or paste this into your browser to complete the process within one hour of receiving it:\n\n" +
-          `http://localhost:3031/reset/${token}\n\n` +
+          `${host}/reset/${token}\n\n` +
           "If you did not request this, please ignore this email and your password will remain unchanged.\n",
       };
 
