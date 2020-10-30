@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Modal, { ModalProvider, BaseModalBackground } from "styled-react-modal";
 
-import portalLocales from "../locales/locales.portal.json";
+import dashboardLocales from "../locales/locales.dashboard.json";
 import UserCarousel from "../components/UserCarousel";
 
 const Dashboard = (props) => {
@@ -27,24 +27,24 @@ const Dashboard = (props) => {
   return (
     <div className="portal-container">
       <h1>
-        {portalLocales.greeting[lang]} {props.user.name}!
+        {dashboardLocales.greeting[lang]} {props.user.name}!
       </h1>
-      <article>{portalLocales.article[lang]}</article>
+      <article>{dashboardLocales.article[lang]}</article>
       <p></p>
       <Link to="/berlin">
-        <button>{portalLocales.rooms[lang]}</button>
+        <button>{dashboardLocales.rooms[lang]}</button>
       </Link>
       <Link to="/map">
-        <button>{portalLocales.map[lang]}</button>
+        <button>{dashboardLocales.map[lang]}</button>
       </Link>
       <Link to="/addroom">
         {props.user.role === "senior" ? (
           <button id="create-room-button" type="submit">
-            {portalLocales.add[lang]}
+            {dashboardLocales.add[lang]}
           </button>
         ) : null}
       </Link>
-      <button onClick={toggleModal}>Click me</button>
+      <button onClick={toggleModal}>{dashboardLocales.create[lang]}</button>
       <StyledModal
         isOpen={isOpen}
         onBackgroundClick={toggleModal}
