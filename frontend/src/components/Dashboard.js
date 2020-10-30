@@ -50,7 +50,13 @@ const Dashboard = (props) => {
         onBackgroundClick={toggleModal}
         onEscapeKeydown={toggleModal}
       >
-        <div>{/* leftimage */}</div>
+        <div>
+          <img
+            src="../image/pattern_logo.png"
+            alt="grossjungig-pattern"
+            style={{ height: "20rem", width: "10rem" }}
+          />
+        </div>
         <div>
           <button onClick={toggleModal}>X</button>
           <UserCarousel></UserCarousel>
