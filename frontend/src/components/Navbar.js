@@ -69,7 +69,7 @@ const Navbar = (props) => {
               {navbarLocales.logout[lang]}
             </Link>
             <img onClick={imageChange} height="30px" src={img} alt="" />
-            <Link to="/userportal">
+            <Link to="/Dashboard">
               <img height="30px" src="/image/user.png" alt="User Portal" />
             </Link>
           </div>

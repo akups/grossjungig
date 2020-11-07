@@ -39,7 +39,7 @@ class Login extends Component {
     const lang = localStorage.getItem("lang");
     // TODO: local should be injected using the context api, reading localStorage is expensive
     if (this.state.redirect) {
-      return <Redirect to="/userportal" />;
+      return <Redirect to="/Dashboard" />;
     }
     return (
       <div className="full-block">

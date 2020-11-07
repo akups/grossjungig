@@ -28,7 +28,8 @@ router.post("/signup", async (req, res) => {
         password: hash,
       });
 
-      // sendign response
+      // sending response
+      //sendemail(email,name)
       req.login(newUser, (err) => {
         if (err) {
           console.log("error login", err);
