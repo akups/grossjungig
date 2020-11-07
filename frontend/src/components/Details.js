@@ -8,19 +8,17 @@ class Details extends Component {
     data: {},
   };
 
-  componentDidMount() {
+  async componentDidMount() {
     const roomId = this.props.match.params.id;
 
-    axios
-      .get(`${process.env.REACT_APP_BACKENDURL}api/rooms/${roomId}`) // passing roomId to the axios call
-      .then(({ data }) => {
-        // destructuring data from the response
-        //console.log(data);
-        this.setState({
-          data, //same as data:data,shorthand notation for objects
-        });
-        //console.log(this.state.data.images);
-      });
+    const { data } = await axios.get(
+      `${process.env.REACT_APP_BACKENDURL}api/rooms/${roomId}`
+    ); // passing roomId to the axios call
+
+    this.setState({
+      data, //same as data:data,shorthand notation for objects
+    });
+
     console.log("This is the user", this.props.user);
   }
 

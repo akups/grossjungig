@@ -6,25 +6,27 @@ import navbarLocales from "../locales/locales.navbar.json";
 import Logo from "./Logo";
 import { PrimaryButton, Button, NavbarLink } from "./styled";
 
+const imageChange = (updatePage, setImage) => {
+  //console.log("imagechange", localStorage.getItem("lang"));
+  const lang = localStorage.getItem("lang");
+  //console.log("LANG", lang);
+  if (lang === "en") {
+    setImage("/image/uk.png");
+    localStorage.setItem("lang", "de");
+  } else if (lang === "de") {
+    setImage("/image/germany.png");
+    localStorage.setItem("lang", "en");
+  }
+  updatePage();
+  //This is coming from App.js
+};
+
 const Navbar = (props) => {
   const [img, setImage] = useState("/image/germany.png");
 
-  const imageChange = () => {
-    //console.log("imagechange", localStorage.getItem("lang"));
-    const lang = localStorage.getItem("lang");
-    //console.log("LANG", lang);
-    if (lang === "en") {
-      setImage("/image/uk.png");
-      localStorage.setItem("lang", "de");
-    } else if (lang === "de") {
-      setImage("/image/germany.png");
-      localStorage.setItem("lang", "en");
-    }
-    props.updatePage();
-    //This is coming from App.js
-  };
   // TODO:refactor this and get rid of update page (we will refactor to global state)
-  const logout = () => {
+  const logout = (e) => {
+    console.log(e);
     axios
       .delete(`${process.env.REACT_APP_BACKENDURL}api/auth/logout`)
       .then(() => {
@@ -82,7 +84,7 @@ const Navbar = (props) => {
               <PrimaryButton>{navbarLocales.signup[lang]}</PrimaryButton>
             </Link>
             <img
-              onClick={imageChange}
+              onClick={(e) => imageChange(props.updatePage, setImage)}
               height="20px"
               src={img}
               alt="Language Switcher"
