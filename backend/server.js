@@ -30,8 +30,6 @@ app.use(
       "http://localhost:3000",
       "https://grossjungig.vercel.app",
       "https://grossjungig.de",
-      "https://grossjungig.com",
-      "https://großjungig.de",
     ],
     credentials: true,
   })
