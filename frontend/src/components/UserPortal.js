@@ -22,7 +22,7 @@ class UserPortal extends Component {
         <Link to="/berlin">
           <button>{portalLocales.rooms[lang]}</button>
         </Link>
-        <Link to="/map">
+        <Link to="/maps">
           <button>{portalLocales.map[lang]}</button>
         </Link>
         <Link to="/addroom">

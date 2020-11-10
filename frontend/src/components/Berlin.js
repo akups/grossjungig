@@ -12,15 +12,15 @@ class Berlin extends Component {
     photos: [], //[urls pointing to the images]
   };
   //1. from frontend, axios request a room data-> route rooms.js
-  componentDidMount() {
-    axios
-      .get(`${process.env.REACT_APP_BACKENDURL}api/rooms`)
-      .then((response) => {
-        console.log(response.data.rooms);
-        this.setState({
-          rooms: response.data.rooms,
-        });
-      });
+  async componentDidMount() {
+    const response = await axios.get(
+      `${process.env.REACT_APP_BACKENDURL}api/rooms`
+    );
+
+    // Set state
+    this.setState({
+      rooms: response.data.rooms,
+    });
   }
   searchedName = (event) => {
     this.setState({
