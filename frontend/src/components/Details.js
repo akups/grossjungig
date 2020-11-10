@@ -22,7 +22,7 @@ class Details extends Component {
     console.log("This is the user", this.props.user);
   }
 
-  //delete kita
+  //delete room
   deleteRoom = (event) => {
     event.preventDefault();
     const deleteRoomId = this.props.match.params.id;
@@ -63,7 +63,7 @@ class Details extends Component {
                 <h3>{detailsLocales.describe[lang]}:</h3>
                 <p>{this.state.data.description}</p>
               </div>
-              <div className="paragraphs">
+              {/* <div className="paragraphs">
                 <h3>{detailsLocales.phone[lang]}:</h3>
                 <p>
                   <a href={"tel:" + this.state.data.phoneNumber}>
@@ -78,7 +78,7 @@ class Details extends Component {
                     {this.state.data.email}
                   </a>
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="photo-container">
@@ -129,7 +129,7 @@ class Details extends Component {
               <h3>{detailsLocales.describe[lang]}:</h3>
               <p>{this.state.data.description}</p>
             </div>
-            <div className="paragraphs">
+            {/* <div className="paragraphs">
               <h3>{detailsLocales.phone[lang]}:</h3>
               <p>
                 <a href={"tel:" + this.state.data.phoneNumber}>
@@ -144,7 +144,7 @@ class Details extends Component {
                   {this.state.data.email}
                 </a>
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="photo-container">
