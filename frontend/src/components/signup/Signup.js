@@ -14,26 +14,29 @@ class Signup extends Component {
     message: "",
   };
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
 
-    axios
-      .post(`${process.env.REACT_APP_BACKENDURL}api/auth/signup`, {
+    const response = await axios.post(
+      `${process.env.REACT_APP_BACKENDURL}api/auth/signup`,
+      {
         name: this.state.name,
         email: this.state.email,
         password: this.state.password,
         role: this.state.role,
-      })
-      .then((response) => {
-        console.log("RSPONSE", response);
-        this.props.setUser(response.data);
-        this.props.history.push("/userportal");
-      })
-      .catch((err) => {
-        this.setState({
-          message: err.response.data.message,
-        });
+      }
+    );
+    {
+      console.log("RSPONSE", response);
+      this.props.setUser(response.data);
+      this.props.history.push("/userportal");
+    }
+
+    const err = await ((err) => {
+      this.setState({
+        message: err.response.data.message,
       });
+    });
   };
 
   setFormState = (event) => {

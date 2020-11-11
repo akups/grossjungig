@@ -26,7 +26,7 @@ class ForgotPassword extends Component {
     });
   };
 
-  sendEmail = (e) => {
+  sendEmail = async (e) => {
     e.preventDefault();
     if (this.state.email === "") {
       this.setState({
