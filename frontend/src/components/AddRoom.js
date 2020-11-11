@@ -25,12 +25,13 @@ class AddRoom extends Component {
     });
   };
 
-  addNewRoom = (event) => {
+  addNewRoom = async (event) => {
     //console.log("WORKING?");
     event.preventDefault();
     //1. post the data to backend -> routes rooms.js
-    axios
-      .post(`${process.env.REACT_APP_BACKENDURL}api/addRoom`, {
+    const response = axios.post(
+      `${process.env.REACT_APP_BACKENDURL}api/addRoom`,
+      {
         name: this.state.name,
         district: this.state.district,
         postcode: this.state.postcode,
@@ -40,16 +41,17 @@ class AddRoom extends Component {
         description: this.state.description,
         price: this.state.price,
         owner: this.props.user._id,
-      })
-      .then((response) => {
-        this.props.history.push("/rooms");
-        console.log("this is response", response);
-      })
-      .catch((err) => {
-        this.setState({
-          message: err.response.data.message,
-        });
+      }
+    );
+    {
+      this.props.history.push("/rooms");
+      console.log("this is response", response);
+    }
+    const err = await ((err) => {
+      this.setState({
+        message: err.response.data.message,
       });
+    });
   };
 
   render() {
